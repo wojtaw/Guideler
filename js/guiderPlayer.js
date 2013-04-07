@@ -17,8 +17,7 @@ document.onkeypress=function(e){
 
 function initPlayer(guiderID){
 	if(typeof(guiderID)=='undefined'){
-		printOutput("Undegined guider ID", outputTypes.ERROR);
-		return false;	
+		return printOutput("Undegined guider ID", outputTypes.ERROR);
 	}
 	showLoading();
 	getGuiderData(guiderID)
@@ -42,15 +41,30 @@ function getGuiderData(guiderID){
 function initStage(){
 	initStepBoxes();
 	positionStepBoxes();
+	initListeners();
 	hideLoading();
+}
+
+function showStep(stepNumber){
+	//Check if number is valid
+	if(stepNumber > guiderJSON.steps.length || stepNumber <= 0)
+		return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
 }
 
 function initStepBoxes() {
 	var stepBoxes= [];
+	var stepButtons= [];	
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		stepBoxes.push('<div id="step-'+i+'" class="gl-playerStepWrapper">' + guiderJSON.steps[i].externalLink + '</div>');
+		var stepBoxString = '<div id="gl-step-'+(i+1)+'" class="gl-playerStepWrapper">'+
+			'<iframe src="'+guiderJSON.steps[i].externalLink+'" width="100%" height="100%">'+
+			'</iframe>'+
+			'</div>';
+		var stepButtonString = '<div id="gl-stepButton-'+i+'" class="tmpButton">'+i+'</div>';
+		stepBoxes.push(stepBoxString);
+		stepButtons.push(stepButtonString);
 	}
 	$("#gl-stepsContent").append(stepBoxes.join(''));
+	$("#gl-playerControls").append(stepButtons.join(''));	
 	
 }
 
@@ -58,16 +72,20 @@ function positionStepBoxes() {
 	var heightMax = -1;
 	var widthMax = -1;		
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		$("#step-"+i).css("left",guiderJSON.steps[i].positionX);
-		$("#step-"+i).css("top",guiderJSON.steps[i].positionY);	
+		$("#gl-step-"+i).css("left",guiderJSON.steps[i].positionX);
+		$("#gl-step-"+i).css("top",guiderJSON.steps[i].positionY);	
 		if(guiderJSON.steps[i].positionX > widthMax)
-			 widthMax = guiderJSON.steps[i].positionX + $("#step-"+i).width();
+			 widthMax = guiderJSON.steps[i].positionX + $("#gl-step-"+i).width();
 		if(guiderJSON.steps[i].positionY > heightMax)
-			heightMax = guiderJSON.steps[i].positionY + $("#step-"+i).height();									
+			heightMax = guiderJSON.steps[i].positionY + $("#gl-step-"+i).height();									
 	}	
 	$("#gl-stepsContent").width(widthMax);
 	$("#gl-stepsContent").height(heightMax);
 	$( "#gl-stepsWrapper" ).draggable();	
+}
+
+function initListeners() {
+	
 }
 
 function moveLeft(){
@@ -88,4 +106,5 @@ function moveDown(){
 
 function printOutput(message, outputTypes){
 	console.log(outputTypes + " " + message);
+	return false;
 }

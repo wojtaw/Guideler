@@ -10,14 +10,14 @@
 {
 "id":2,
 "type":"VIDEO",
-"externalLink":"https://www.youtube.com/watch?v=J1IJpHDalvk",
+"externalLink":"http://www.youtube.com/embed/J1IJpHDalvk",
 "positionX":1300,
 "positionY":0
 },
 {
 "id":1,
 "type":"ARTICLE",
-"externalLink":"www.slideslive.com/w/38889951",
+"externalLink":"http://www.slideslive.com/w/38889951",
 "positionX":600,
 "positionY":800
 }

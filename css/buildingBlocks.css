@@ -19,9 +19,27 @@
 	background-color:#090;	
 }
 
-.gl-playerStep {
+#gl-loading {
+	display:none;
+	position:fixed;
+	background-image:url(../images/loading.gif);
+	width:100px;
+	height:100px;
+	top:50%;
+	left:50%;
+	background-color:;
+}
+
+#gl-stepsWrapper {
+	background-color:#999;	
+	width:800px;
+	padding:20px;
+}
+
+.gl-playerStepWrapper {
 	display:block;
-	width:600px;
-	height:300px;
+	width:400px;
+	height:100px;
 	background-color:#FF0;	
+	position:relative;
 }

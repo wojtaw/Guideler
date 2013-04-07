@@ -66,7 +66,8 @@ function positionStepBoxes() {
 			heightMax = guiderJSON.steps[i].positionY + $("#step-"+i).height();									
 	}	
 	$("#gl-stepsContent").width(widthMax);
-	$("#gl-stepsContent").height(heightMax);	
+	$("#gl-stepsContent").height(heightMax);
+	$( "#gl-stepsWrapper" ).draggable();	
 }
 
 function moveLeft(){

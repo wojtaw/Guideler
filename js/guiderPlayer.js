@@ -7,6 +7,14 @@ outputTypes = {
 var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 
+document.onkeypress=function(e){
+	var e=window.event || e
+	if(e.keyCode == 37) moveLeft();		
+	if(e.keyCode == 38) moveUp();
+	if(e.keyCode == 39) moveRight();		
+	if(e.keyCode == 40) moveDown();					
+};
+
 function initPlayer(guiderID){
 	if(typeof(guiderID)=='undefined'){
 		printOutput("Undegined guider ID", outputTypes.ERROR);
@@ -55,10 +63,18 @@ function initStepBoxes() {
 }
 
 function positionStepBoxes() {
+	var heightMax = -1;
+	var widthMax = -1;		
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#step-"+i).css("left",guiderJSON.steps[i].positionX);
-		$("#step-"+i).css("top",guiderJSON.steps[i].positionY);		
+		$("#step-"+i).css("top",guiderJSON.steps[i].positionY);	
+		if(guiderJSON.steps[i].positionX > widthMax)
+			 widthMax = guiderJSON.steps[i].positionX;
+		if(guiderJSON.steps[i].positionY > heightMax)
+			heightMax = guiderJSON.steps[i].positionY;									
 	}	
+	$("#gl-stepsContent").width(widthMax);
+	$("#gl-stepsContent").height(heightMax);	
 }
 
 function moveLeft(){

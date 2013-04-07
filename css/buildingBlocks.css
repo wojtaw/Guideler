@@ -36,11 +36,12 @@
 	height:100px;
 	top:50%;
 	left:50%;
-	background-color:;
+	background-color:#FFF;
 }
 
 #gl-stepsContent {
-	background-color:#FFF;	
+	background-color:#FFF;
+	width:10000px;	
 }
 
 #gl-stepsWrapper {
@@ -54,6 +55,5 @@
 	width:400px;
 	height:100px;
 	background-color:#FF0;	
-	position:relative;
-	float:left;
+	position:absolute;
 }

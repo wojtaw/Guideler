@@ -1,4 +1,12 @@
 /* CSS Document */
+.tmpButton {
+	display:block;
+	background-color:#333;
+	color:#FFF;
+	padding:10px;
+	float:left;	
+}
+
 #gl-playerWindow {
 	width:100%;
 	height:600px;
@@ -17,6 +25,7 @@
 	width:inherit;
 	height:400px;
 	background-color:#090;	
+	overflow:hidden;
 }
 
 #gl-loading {
@@ -30,10 +39,14 @@
 	background-color:;
 }
 
+#gl-stepsContent {
+	background-color:#FFF;	
+}
+
 #gl-stepsWrapper {
 	background-color:#999;	
-	width:800px;
 	padding:20px;
+	position:relative;
 }
 
 .gl-playerStepWrapper {
@@ -42,4 +55,5 @@
 	height:100px;
 	background-color:#FF0;	
 	position:relative;
+	float:left;
 }

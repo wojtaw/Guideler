@@ -42,14 +42,6 @@ function getGuiderData(guiderID){
 function initStage(){
 	initStepBoxes();
 	positionStepBoxes();
-	var items = [];
-	$.each(this.guiderJSON, function(key, val) {
-	items.push('<li id="' + key + '">' + val + '</li>');
-	});
-	$('<ul/>', {
-	'class': 'my-new-list',
-	html: items.join('')
-	}).appendTo('body');	
 	hideLoading();
 }
 
@@ -69,9 +61,9 @@ function positionStepBoxes() {
 		$("#step-"+i).css("left",guiderJSON.steps[i].positionX);
 		$("#step-"+i).css("top",guiderJSON.steps[i].positionY);	
 		if(guiderJSON.steps[i].positionX > widthMax)
-			 widthMax = guiderJSON.steps[i].positionX;
+			 widthMax = guiderJSON.steps[i].positionX + $("#step-"+i).width();
 		if(guiderJSON.steps[i].positionY > heightMax)
-			heightMax = guiderJSON.steps[i].positionY;									
+			heightMax = guiderJSON.steps[i].positionY + $("#step-"+i).height();									
 	}	
 	$("#gl-stepsContent").width(widthMax);
 	$("#gl-stepsContent").height(heightMax);	

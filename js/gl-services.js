@@ -1,3 +1,16 @@
+var boxTypes =["video","article","map","gallery"];
+
+webProviders = {
+    "youtube.com" : "YOUTUBE",
+    "youtu.be" : "YOUTUBE",	
+    "vimeo.com" : "VIMEO",
+    "slideslive.com" : "SLIDESLIVE",
+    "flickr.com" : "FLICKR",
+    "picasaweb.google.com" : "PICASA",					
+}
+
+
+
 // Decode the link, identifz service and create appropriate window
 function createStepString(externalLink){
 	console.log("Analyzing link"+externalLink);
@@ -9,6 +22,7 @@ function getURLBase(url){
 	var workingString = tmpa.hostname;
 	if(workingString.indexOf("www.") == 0) 
 		workingString = workingString.slice(4,workingString.length);
+	workingString = workingString.toLowerCase();
 	return workingString;	
 }
 

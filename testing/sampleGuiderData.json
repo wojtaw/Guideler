@@ -15,7 +15,14 @@
 "positionY":0
 },
 {
-"id":1,
+"id":3,
+"type":"VIDEO",
+"externalLink":"http://player.vimeo.com/video/11153565",
+"positionX":3400,
+"positionY":2900
+},
+{
+"id":4,
 "type":"ARTICLE",
 "externalLink":"http://www.slideslive.com/w/38889951",
 "positionX":600,

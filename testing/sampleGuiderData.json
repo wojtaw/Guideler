@@ -1,0 +1,25 @@
+{"guiderID":525896,"guiderName":"Gardening for dummies","steps": 
+[
+{
+"id":1,
+"type":"ARTICLE",
+"externalLink":"http://hobby.idnes.cz/uprava-zahrady-navsteva-planovani-dtk-/hobby-zahrada.aspx?c=A121212_154632_hobby-zahrada_mce",
+"positionX":1,
+"positionY":1
+},
+{
+"id":2,
+"type":"VIDEO",
+"externalLink":"https://www.youtube.com/watch?v=J1IJpHDalvk",
+"positionX":1,
+"positionY":1
+},
+{
+"id":1,
+"type":"ARTICLE",
+"externalLink":"www.slideslive.com/w/38889951",
+"positionX":1,
+"positionY":1
+}
+]
+}

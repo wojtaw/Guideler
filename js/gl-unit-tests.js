@@ -1,7 +1,7 @@
 // JavaScript Document	
 var testDomainBase = {
-    'http://youtu.be/Z6xJJMIifi8': "youtu", 
-    'http://www.youtube.com/watch?v=J1IJpHDalvk': "youtube", 
+    'http://youtu.be/Z6xJJMIifi8': "youtu.be", 
+    'http://www.youtube.com/watch?v=J1IJpHDalvk': "youtube.com", 
 };	
 
 function runTests(){

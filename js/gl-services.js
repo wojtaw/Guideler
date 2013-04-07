@@ -4,10 +4,12 @@ function createStepString(externalLink){
 }
 
 function getURLBase(url){
-  var regexS = "a";
-  var regex = new RegExp(regexS);
-  var results = regex.exec(window.location.search);
-  return results;
+	var tmpa = document.createElement('a');
+	tmpa.href = url;
+	var workingString = tmpa.hostname;
+	if(workingString.indexOf("www.") == 0) 
+		workingString = workingString.slice(4,workingString.length);
+	return workingString;	
 }
 
 function getLinkParameterByName(name)

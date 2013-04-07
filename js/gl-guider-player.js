@@ -43,19 +43,26 @@ function initStage(){
 	positionStepBoxes();
 	initListeners();
 	hideLoading();
+	showStep(1);
 }
 
 function showStep(stepNumber){
 	//Check if number is valid
 	if(stepNumber > guiderJSON.steps.length || stepNumber <= 0)
 		return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
+	$('#gl-stepsWrapper').animate({
+	left: -guiderJSON.steps[stepNumber - 1].positionX,
+	top: -guiderJSON.steps[stepNumber - 1].positionY,	
+	}, 1500, function() {
+	// Animation complete.
+	});		
 }
 
 function initStepBoxes() {
 	var stepBoxes= [];
 	var stepButtons= [];	
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		var stepBoxString = '<div id="gl-step-'+(i+1)+'" class="gl-playerStepWrapper">'+
+		var stepBoxString = '<div id="gl-step-'+i+'" class="gl-playerStepWrapper">'+
 			'<iframe src="'+guiderJSON.steps[i].externalLink+'" width="100%" height="100%">'+
 			'</iframe>'+
 			'</div>';
@@ -85,7 +92,12 @@ function positionStepBoxes() {
 }
 
 function initListeners() {
-	
+	for(var i=0;i<guiderJSON.steps.length;i++){
+		$("#gl-stepButton-"+i).click(function(e) {
+			var tmpNumber =  parseInt(e.target.id.split('-')[2]);
+			showStep(tmpNumber+1);
+		});
+	}	
 }
 
 function moveLeft(){

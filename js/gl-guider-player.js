@@ -1,4 +1,4 @@
-outputTypes = {
+qoutputTypes = {
     ERROR : "error: ",
     LOG : "log: ",
     DEBUG : "debug: "

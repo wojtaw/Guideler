@@ -1,19 +1,33 @@
-var boxTypes =["video","article","map","gallery"];
-
-webProviders = {
-    "youtube.com" : "YOUTUBE",
-    "youtu.be" : "YOUTUBE",	
-    "vimeo.com" : "VIMEO",
-    "slideslive.com" : "SLIDESLIVE",
-    "flickr.com" : "FLICKR",
-    "picasaweb.google.com" : "PICASA",					
-}
-
+var boxTypes =['video','article','map','gallery'];
+boxTypes['video'] = ["youtube.com","youtu.be","vimeo.com"];
+boxTypes['article'] = ["idnes.cz"];
+boxTypes['map'] = ["maps.google.com"];
+boxTypes['gallery'] = ["flickr.com","picasaweb.google.com"];
 
 
 // Decode the link, identifz service and create appropriate window
 function createStepString(externalLink){
 	console.log("Analyzing link"+externalLink);
+	var urlBase = getURLBase(externalLink);
+	boxType = getBoxType(urlBase);
+	console.log(boxType);
+	if(boxType == "video") createVideoBox(externalLink, urlBase);
+	else if(boxType == "gallery") createImageGaleryBox(externalLink, urlBase);	
+	else if(boxType == "article") createArticleBox(externalLink, urlBase);	
+	else if(boxType == "map") createMapBox(externalLink, urlBase);			
+	else createCustomCodeBox(externalLink, urlBase);
+}
+
+function getBoxType(urlBase){
+	console.log("RR");
+	for(var i=0;i < boxTypes.length;i++){
+		currentType = boxTypes[i];
+		for(var j=0; j< boxTypes[currentType].length; j++){
+			console.log(boxTypes[currentType][j]+" comparing with "+urlBase);
+			if(boxTypes[currentType][j] == urlBase) return boxTypes[i];
+		}		
+	}
+	return "UNKNOWN";
 }
 
 function getURLBase(url){
@@ -26,34 +40,22 @@ function getURLBase(url){
 	return workingString;	
 }
 
-function getLinkParameterByName(name)
-{
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-  var regexS = "[\\?&]" + name + "=([^&#]*)";
-  var regex = new RegExp(regexS);
-  var results = regex.exec(window.location.search);
-  if(results == null)
-    return "";
-  else
-    return decodeURIComponent(results[1].replace(/\+/g, " "));
+function createVideoBox(externalLink, urlBase){
+	console.log("video box");
 }
 
-function createVideoBox(){
+function createArticleBox(externalLink, urlBase){
+	console.log("article");
+}
+
+function createMapBox(externalLink, urlBase){
+	console.log("map box");	
+}
+
+function createImageGaleryBox(externalLink, urlBase){
 	
 }
 
-function createArticleBox(){
-	
-}
-
-function createMapBox(){
-	
-}
-
-function createImageGaleryBox(){
-	
-}
-
-function createCustomCodeBox(){
-	
+function createCustomCodeBox(externalLink, urlBase){
+	console.log("custom box");
 }

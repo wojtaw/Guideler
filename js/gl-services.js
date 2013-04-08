@@ -7,10 +7,9 @@ boxTypes['gallery'] = ["flickr.com","picasaweb.google.com"];
 
 // Decode the link, identifz service and create appropriate window
 function createStepString(externalLink){
-	console.log("Analyzing link"+externalLink);
+	console.log("Analyzing link "+externalLink);
 	var urlBase = getURLBase(externalLink);
 	boxType = getBoxType(urlBase);
-	console.log(boxType);
 	if(boxType == "video") createVideoBox(externalLink, urlBase);
 	else if(boxType == "gallery") createImageGaleryBox(externalLink, urlBase);	
 	else if(boxType == "article") createArticleBox(externalLink, urlBase);	
@@ -19,11 +18,9 @@ function createStepString(externalLink){
 }
 
 function getBoxType(urlBase){
-	console.log("RR");
 	for(var i=0;i < boxTypes.length;i++){
 		currentType = boxTypes[i];
 		for(var j=0; j< boxTypes[currentType].length; j++){
-			console.log(boxTypes[currentType][j]+" comparing with "+urlBase);
 			if(boxTypes[currentType][j] == urlBase) return boxTypes[i];
 		}		
 	}
@@ -40,8 +37,29 @@ function getURLBase(url){
 	return workingString;	
 }
 
+function getURLquery(query,url) {
+	query = query.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+	var expr = "[\\?&]"+query+"=([^&#]*)";
+	var regex = new RegExp( expr );
+	var results = regex.exec( url );
+	if ( results !== null ) {
+		return results[1];
+	} else {
+		return false;
+	}
+}
+
+//Helper functions for boxes
+function parseVideoID(externalLink){
+	console.log(getURLquery("watch",externalLink));
+}
+
+
+//Individual boxes and their strings
 function createVideoBox(externalLink, urlBase){
 	console.log("video box");
+	parseVideoID(externalLink);
+	var htmlString = "<h1>Video box</h1>";
 }
 
 function createArticleBox(externalLink, urlBase){

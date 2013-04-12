@@ -10,12 +10,12 @@ var guiderJSON = new Object();
 var boxStandartWidth = ($(window).width() * 0.7);
 var boxStandartSpacing = ($(window).width() * 1.3);
 
-document.onkeypress=function(e){
-	var e=window.event || e
+document.onkeydown = keyboardHandler;
+
+function keyboardHandler(e){
+	var e= window.event || e
 	if(e.keyCode == 37) moveLeft();		
-	if(e.keyCode == 38) moveUp();
-	if(e.keyCode == 39) moveRight();		
-	if(e.keyCode == 40) moveDown();					
+	if(e.keyCode == 39) moveRight();						
 };
 
 function initPlayer(guiderID){
@@ -104,19 +104,13 @@ function initListeners() {
 }
 
 function moveLeft(){
-	$("#gl-stepsWrapper").css('left','-=10px');		
+	console.log("left");
+	$("#gl-stepsContent").css('left','-=10px');	
+	console.log("left - "+$("#gl-stepsContent").css('left'));	
 }
 
 function moveRight(){
-	$("#gl-stepsWrapper").css('left','+=10px');			
-}
-
-function moveUp(){
-	$("#gl-stepsWrapper").css('top','-=10px');			
-}
-
-function moveDown(){
-	$("#gl-stepsWrapper").css('top','+=10px');			
+	$("#gl-stepsContent").css('left','+=10px');			
 }
 
 function printOutput(message, outputTypes){

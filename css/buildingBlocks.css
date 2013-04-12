@@ -47,6 +47,8 @@ body {
 #gl-stepsContent {
 	background-color:#FFF;
 	width:10000px;	
+	position:relative;
+	left:0px;
 }
 
 #gl-stepsWrapper {

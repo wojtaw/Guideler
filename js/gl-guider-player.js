@@ -53,8 +53,8 @@ function showStep(stepNumber){
 	if(stepNumber > guiderJSON.steps.length || stepNumber <= 0)
 		return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
 	$('#gl-stepsWrapper').animate({
-	left: -guiderJSON.steps[stepNumber - 1].positionX,
-	top: -guiderJSON.steps[stepNumber - 1].positionY,	
+	//left: -guiderJSON.steps[stepNumber - 1].positionX,
+	//top: -guiderJSON.steps[stepNumber - 1].positionY,	
 	}, 1500, function() {
 	// Animation complete.
 	});		
@@ -80,18 +80,14 @@ function initStepBoxes() {
 }
 
 function positionStepBoxes() {
-	var heightMax = -1;
-	var widthMax = -1;		
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		$("#gl-step-"+i).css("left",guiderJSON.steps[i].positionX);
-		$("#gl-step-"+i).css("top",guiderJSON.steps[i].positionY);	
-		if(guiderJSON.steps[i].positionX > widthMax)
-			 widthMax = guiderJSON.steps[i].positionX + $("#gl-step-"+i).width();
-		if(guiderJSON.steps[i].positionY > heightMax)
-			heightMax = guiderJSON.steps[i].positionY + $("#gl-step-"+i).height();									
-	}	
+		$("#gl-step-"+i).css("left",guiderJSON.steps[i]);									
+	}
+	widthMax = $("#gl-step-"+(guiderJSON.steps.length-1)).css("left");	
+	console.log("width "+widthMax+" - "+(guiderJSON.steps.length-1));
+	
 	$("#gl-stepsContent").width(widthMax);
-	$("#gl-stepsContent").height(heightMax);
+	//$("#gl-stepsContent").height(heightMax);
 	$( "#gl-stepsWrapper" ).draggable();	
 }
 

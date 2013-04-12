@@ -54,7 +54,6 @@ body {
 	padding:0px;
 	margin:0px;
 	position:relative;
-	-webkit-transform: scale(0.5); /* Safari and Chrome */			
 }
 
 .gl-playerStepWrapper {

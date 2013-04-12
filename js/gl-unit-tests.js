@@ -15,7 +15,6 @@ var testDomainBase = {
 
 function runTests(){
 	testServices();
-	createStepString("http://www.youtube.com/watch?v=J1IJpHDalvk");
 }
 
 function testServices(){

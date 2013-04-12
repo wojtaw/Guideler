@@ -5,7 +5,9 @@ qoutputTypes = {
 }
 
 var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
+//var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
+var boxStandartWidth = ($(window).width() * 0.7);
 
 document.onkeypress=function(e){
 	var e=window.event || e
@@ -63,15 +65,17 @@ function initStepBoxes() {
 	var stepButtons= [];	
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		var stepBoxString = '<div id="gl-step-'+i+'" class="gl-playerStepWrapper">'+
-			'<iframe src="'+guiderJSON.steps[i].externalLink+'" width="100%" height="100%">'+
-			'</iframe>'+
+			createStepString(guiderJSON.steps[i].externalLink)+
 			'</div>';
 		var stepButtonString = '<div id="gl-stepButton-'+i+'" class="tmpButton">'+i+'</div>';
 		stepBoxes.push(stepBoxString);
 		stepButtons.push(stepButtonString);
 	}
 	$("#gl-stepsContent").append(stepBoxes.join(''));
-	$("#gl-playerControls").append(stepButtons.join(''));	
+	$("#gl-playerControls").append(stepButtons.join(''));
+	
+	//Count size of one box
+	$(".gl-playerStepWrapper").css("width",boxStandartWidth);		
 	
 }
 

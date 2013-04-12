@@ -1,4 +1,8 @@
 /* CSS Document */
+body {
+	overflow:hidden;	
+}
+
 .tmpButton {
 	display:block;
 	background-color:#333;
@@ -9,21 +13,21 @@
 
 #gl-playerWindow {
 	width:100%;
-	height:600px;
+	height:100%;
 	background-color:#960;
 }
 
 #gl-playerControls {
 	display:block;
 	width:960px;
-	height:150px;
+	height:100px;
 	background-color:#6CF;
 }
 
 #gl-playerCanvas {
 	display:block;
 	width:inherit;
-	height:400px;
+	height:100%;
 	background-color:#090;	
 	overflow:hidden;
 }
@@ -50,12 +54,13 @@
 	padding:0px;
 	margin:0px;
 	position:relative;
+	-webkit-transform: scale(0.5); /* Safari and Chrome */			
 }
 
 .gl-playerStepWrapper {
 	display:block;
 	width:600px;
-	height:200px;
+
 	background-color:#FF0;	
 	position:absolute;
 }

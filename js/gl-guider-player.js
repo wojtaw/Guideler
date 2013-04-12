@@ -8,6 +8,7 @@ var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
 //var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 var boxStandartWidth = ($(window).width() * 0.7);
+var boxStandartSpacing = ($(window).width() * 1.3);
 
 document.onkeypress=function(e){
 	var e=window.event || e
@@ -81,14 +82,16 @@ function initStepBoxes() {
 
 function positionStepBoxes() {
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		$("#gl-step-"+i).css("left",guiderJSON.steps[i]);									
+		$("#gl-step-"+i).css("left",i*boxStandartSpacing);									
 	}
 	widthMax = $("#gl-step-"+(guiderJSON.steps.length-1)).css("left");	
 	console.log("width "+widthMax+" - "+(guiderJSON.steps.length-1));
 	
 	$("#gl-stepsContent").width(widthMax);
-	//$("#gl-stepsContent").height(heightMax);
-	$( "#gl-stepsWrapper" ).draggable();	
+	$("#gl-stepsContent").height("1000px");	
+	$("#gl-stepsContent").draggable({
+		axis: 'x'
+	});	
 }
 
 function initListeners() {

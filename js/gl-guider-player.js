@@ -9,6 +9,7 @@ var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 var boxStandartWidth = ($(window).width() * 0.7);
 var boxStandartSpacing = ($(window).width() * 1.3);
+var currentStepNumber = 1;
 
 document.onkeydown = keyboardHandler;
 
@@ -46,19 +47,25 @@ function initStage(){
 	positionStepBoxes();
 	initListeners();
 	hideLoading();
-	showStep(1);
+	showStep(currentStepNumber);
 }
 
 function showStep(stepNumber){
 	//Check if number is valid
 	if(stepNumber > guiderJSON.steps.length || stepNumber <= 0)
 		return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
-	$('#gl-stepsWrapper').animate({
-	//left: -guiderJSON.steps[stepNumber - 1].positionX,
-	//top: -guiderJSON.steps[stepNumber - 1].positionY,	
+	$('#gl-stepsContent').animate({
+	left: - calculateStepCenterPosition(stepNumber-1),
 	}, 1500, function() {
 	// Animation complete.
 	});		
+}
+
+function calculateStepCenterPosition(stepNumber){
+	console.log($("#gl-step-"+stepNumber).width()+ " and " +$(window).width());
+	var leftSpace = ($(window).width() - $("#gl-step-"+stepNumber).width()) / 2;
+	console.log(leftSpace);
+	return $("#gl-step-"+stepNumber).position().left - leftSpace;
 }
 
 function initStepBoxes() {
@@ -84,8 +91,7 @@ function positionStepBoxes() {
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-step-"+i).css("left",i*boxStandartSpacing);									
 	}
-	widthMax = $("#gl-step-"+(guiderJSON.steps.length-1)).css("left");	
-	console.log("width "+widthMax+" - "+(guiderJSON.steps.length-1));
+	widthMax = $("#gl-step-"+(guiderJSON.steps.length-1)).css("left") + $("#gl-step-"+(guiderJSON.steps.length-1)).width();	
 	
 	$("#gl-stepsContent").width(widthMax);
 	$("#gl-stepsContent").height("1000px");	
@@ -104,13 +110,21 @@ function initListeners() {
 }
 
 function moveLeft(){
-	console.log("left");
-	$("#gl-stepsContent").css('left','-=10px');	
-	console.log("left - "+$("#gl-stepsContent").css('left'));	
+	console.log("Current:"+currentStepNumber);
+	currentStepNumber--;
+	checkBoundary();
+	showStep(currentStepNumber);
 }
 
 function moveRight(){
-	$("#gl-stepsContent").css('left','+=10px');			
+	currentStepNumber++;
+	checkBoundary();	
+	showStep(currentStepNumber);
+}
+
+function checkBoundary(){
+	if(currentStepNumber > guiderJSON.steps.length) currentStepNumber = 1;
+	if(currentStepNumber < 1) currentStepNumber = guiderJSON.steps.length;
 }
 
 function printOutput(message, outputTypes){

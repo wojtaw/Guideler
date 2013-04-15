@@ -1,4 +1,4 @@
-qoutputTypes = {
+outputTypes = {
     ERROR : "error: ",
     LOG : "log: ",
     DEBUG : "debug: "
@@ -7,6 +7,7 @@ qoutputTypes = {
 var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
 //var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
+var isLoaded = new Array();
 var boxStandartWidth = ($(window).width() * 0.7);
 var boxStandartSpacing = ($(window).width() * 1.3);
 var currentStepNumber = 1;
@@ -52,21 +53,47 @@ function initStage(){
 	showStep(currentStepNumber);
 }
 
+//Helper function
+function isStepLoaded(stepNumber){
+	return isLoaded[stepNumber];
+}
+
+function isValidStep(stepNumber){
+	if(stepNumber > guiderJSON.steps.length || stepNumber <= 0)	return false;
+	else return true;
+}
+
 function showStep(stepNumber){
-	//Check if number is valid
-	if(stepNumber > guiderJSON.steps.length || stepNumber <= 0)
-		return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
+	if(!isValidStep(stepNumber))	return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
+	//Check if step is loaded, otherwise load it
+	if(!isStepLoaded(stepNumber)) loadStep(stepNumber);
+
+	//Match current step number in special cases and refresh controls
+	currentStepNumber = stepNumber;
+	showCurrentControls();
+	
+	//Bring on the requested step
 	$('#gl-stepsContent').animate({
 	left: - calculateStepCenterPosition(stepNumber-1),
-	}, 1500, 'easeOutBack', function() {
+	}, 1000, 'easeOutBack', function() {
 	// Animation complete.
 	});		
+
+	//Start loading next steps
+	loadStep(stepNumber+1);
+	loadStep(stepNumber-1);	
+}
+
+function loadStep(stepNumber){
+	if(!isValidStep(stepNumber)) return;
+	if(isLoaded[stepNumber-1]) return;
+	printOutput("Loading step number"+stepNumber+"with URL"+guiderJSON.steps[stepNumber-1].externalLink, outputTypes.LOG);	
+	$("#gl-step-"+(stepNumber-1)).html(createStepString(guiderJSON.steps[stepNumber-1].externalLink));
+	isLoaded[stepNumber-1] = true;
 }
 
 function calculateStepCenterPosition(stepNumber){
-	console.log($("#gl-step-"+stepNumber).width()+ " and " +$(window).width());
 	var leftSpace = ($(window).width() - $("#gl-step-"+stepNumber).width()) / 2;
-	console.log(leftSpace);
 	return $("#gl-step-"+stepNumber).position().left - leftSpace;
 }
 
@@ -75,7 +102,6 @@ function initStepBoxes() {
 	var stepButtons= [];	
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		var stepBoxString = '<div id="gl-step-'+i+'" class="gl-playerStepWrapper">'+
-			createStepString(guiderJSON.steps[i].externalLink)+
 			'</div>';
 		var stepButtonString = '<div id="gl-stepButton-'+i+'" class="tmpButton">'+i+'</div>';
 		stepBoxes.push(stepBoxString);
@@ -117,6 +143,16 @@ function positionStepBoxes() {
 	});	
 }
 
+function showCurrentControls(){
+	for(var i=0;i<guiderJSON.steps.length;i++){
+		if(currentStepNumber == (i+1)){
+			$("#gl-stepButton-"+(i)).css("color","green");			
+		}else{
+			$("#gl-stepButton-"+(i)).css("color","white");						
+		}
+	}
+}
+
 function initListeners() {
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-stepButton-"+i).click(function(e) {
@@ -127,7 +163,6 @@ function initListeners() {
 }
 
 function moveLeft(){
-	console.log("Current:"+currentStepNumber);
 	currentStepNumber--;
 	checkBoundary();
 	showStep(currentStepNumber);
@@ -145,6 +180,6 @@ function checkBoundary(){
 }
 
 function printOutput(message, outputTypes){
-	console.log(outputTypes + " " + message);
+	console.log("GL-"+outputTypes + " " + message);
 	return false;
 }

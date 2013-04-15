@@ -7,7 +7,6 @@ boxTypes['gallery'] = ["flickr.com","picasaweb.google.com"];
 
 // Decode the link, identifz service and create appropriate window
 function createStepString(externalLink){
-	console.log("Analyzing link "+externalLink);
 	var urlBase = getURLBase(externalLink);
 	boxType = getBoxType(urlBase);
 	if(boxType == "video") return createVideoBox(externalLink, urlBase);

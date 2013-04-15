@@ -67,12 +67,8 @@ function createVideoBox(externalLink, urlBase){
 		videoID = getURLquery("v",externalLink);
 		var countedWidth = boxStandartWidth;
 		var countedHeight = (boxStandartWidth * 9) / 16;		
-		htmlString += '<object width="'+countedWidth+'" height="'+countedHeight+'">'+
-			'<param name="movie" value="http://www.youtube.com/v/'+videoID+'?version=3&amp;hl=cs_CZ">'+
-			'</param><param name="allowFullScreen" value="true"></param>'+
-			'<param name="allowscriptaccess" value="always"></param>'+
-			'<embed src="http://www.youtube.com/v/'+videoID+'?version=3&amp;hl=cs_CZ" type="application/x-shockwave-flash" width="'+countedWidth+'" height="'+countedHeight+'" allowscriptaccess="always" allowfullscreen="true"></embed>'+
-			'</object>';
+		htmlString += '<iframe width="'+countedWidth+'" height="'+countedHeight+'" src="http://www.youtube.com/embed/'+videoID+'" frameborder="0" allowfullscreen>'+
+					'</iframe>';
 	}
 	console.log(htmlString);
 	return htmlString;

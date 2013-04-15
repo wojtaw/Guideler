@@ -4,8 +4,8 @@ outputTypes = {
     DEBUG : "debug: "
 }
 
-var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
-//var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
+//var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
+var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 var isLoaded = new Array();
 var boxStandartWidth = ($(window).width() * 0.7);
@@ -75,7 +75,7 @@ function showStep(stepNumber){
 	//Bring on the requested step
 	$('#gl-stepsContent').animate({
 	left: - calculateStepCenterPosition(stepNumber-1),
-	}, 1000, 'easeOutBack', function() {
+	}, 2000, 'easeOutBack', function() {
 	// Animation complete.
 	});		
 
@@ -145,9 +145,11 @@ function positionStepBoxes() {
 function showCurrentControls(){
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		if(currentStepNumber == (i+1)){
-			$("#gl-stepButton-"+(i)).css("color","green");			
+			$("#gl-stepButton-"+(i)).css("color","black");			
+			$("#gl-stepButton-"+(i)).css("background-color","orange");						
 		}else{
 			$("#gl-stepButton-"+(i)).css("color","white");						
+			$("#gl-stepButton-"+(i)).css("background-color","#333");									
 		}
 	}
 }

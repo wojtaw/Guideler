@@ -119,8 +119,7 @@ function positionStepBoxes() {
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-step-"+i).css("left",i*boxStandartSpacing);									
 	}
-	widthMax = $("#gl-step-"+(guiderJSON.steps.length-1)).css("left") + $("#gl-step-"+(guiderJSON.steps.length-1)).width();	
-	
+	widthMax = parseInt(($("#gl-step-"+(guiderJSON.steps.length-1)).css("left")), 10) + ($("#gl-step-"+(guiderJSON.steps.length-1)).width());	
 	$("#gl-stepsContent").width(widthMax);
 	$("#gl-stepsContent").height("1000px");	
 	$("#gl-stepsContent").draggable({

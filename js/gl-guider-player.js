@@ -30,14 +30,14 @@ function recalculatePlayer(){
 	console.log("recalculating player");
 	boxStandartWidth = ($(window).width() * 0.7);
 	boxStandartSpacing = ($(window).width() * 1.3);	
-	
-	var videoWidth = boxStandartWidth * 0.85;
-	var videoHeight = (9*videoWidth) / 16;	
-	console.log("setting new video css with "+videoWidth+" / "+videoHeight);
-    $('.videoAspectRatio').css("width", videoWidth+"px");	
-    $('.videoAspectRatio').css("height", videoHeight+"px");		
+	modifyCSSclass();
 	positionStepBoxes();
-	showStep(currentStepNumber);
+}
+
+function modifyCSSclass(){
+	var videoWidth = boxStandartWidth * 0.85;
+	var videoHeight = (9*videoWidth) / 16;		
+	$('<style type="text/css"> .videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';} </style>').appendTo("head");	
 }
 
 function initPlayer(guiderID){
@@ -105,8 +105,8 @@ function showStep(stepNumber){
 function loadStep(stepNumber){
 	if(!isValidStep(stepNumber)) return;
 	if(isLoaded[stepNumber-1]) return;
-	printOutput("Loading step number"+stepNumber+"with URL"+guiderJSON.steps[stepNumber-1].externalData, outputTypes.LOG);	
-	$("#gl-step-"+(stepNumber-1)).html(createStepString(guiderJSON.steps[stepNumber-1].externalData));
+	printOutput("Loading step number"+stepNumber, outputTypes.LOG);	
+	$("#gl-step-"+(stepNumber-1)).html(createStepString(guiderJSON.steps[stepNumber-1].serviceType,guiderJSON.steps[stepNumber-1].externalData));
 	isLoaded[stepNumber-1] = true;
 }
 

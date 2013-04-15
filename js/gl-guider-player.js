@@ -105,8 +105,8 @@ function showStep(stepNumber){
 function loadStep(stepNumber){
 	if(!isValidStep(stepNumber)) return;
 	if(isLoaded[stepNumber-1]) return;
-	printOutput("Loading step number"+stepNumber+"with URL"+guiderJSON.steps[stepNumber-1].externalLink, outputTypes.LOG);	
-	$("#gl-step-"+(stepNumber-1)).html(createStepString(guiderJSON.steps[stepNumber-1].externalLink));
+	printOutput("Loading step number"+stepNumber+"with URL"+guiderJSON.steps[stepNumber-1].externalData, outputTypes.LOG);	
+	$("#gl-step-"+(stepNumber-1)).html(createStepString(guiderJSON.steps[stepNumber-1].externalData));
 	isLoaded[stepNumber-1] = true;
 }
 

@@ -10,21 +10,21 @@ function createStepString(serviceType,externalData){
 //Individual boxes and their strings
 function createYoutubeBox(externalData){
 	var htmlString = "<h1>Youtube box</h1>";
-	htmlString += '<iframe src="http://www.youtube.com/embed/'+externalData+'" class="videoAspectRatio" frameborder="0" allowfullscreen>'+
+	htmlString += '<iframe src="http://www.youtube.com/embed/'+externalData+'" class="videoAspectRatio center" frameborder="0" allowfullscreen>'+
 					'</iframe>';
 	return htmlString;
 }
 
 function createVimeoBox(externalData){
 	var htmlString = "<h1>Vimeo box</h1>";
-		htmlString += '<iframe src="http://player.vimeo.com/video/'+externalData+'" class="videoAspectRatio" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>'+
+		htmlString += '<iframe src="http://player.vimeo.com/video/'+externalData+'" class="videoAspectRatio center" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>'+
 					'</iframe>';
 	return htmlString;	
 }
 
 function createSLBox(externalData){
 	var htmlString = "<h1>Vimeo box</h1>";
-		htmlString += '<iframe src="http://player.vimeo.com/video/'+externalData+'" class="videoAspectRatio" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>'+
+		htmlString += '<iframe src="http://player.vimeo.com/video/'+externalData+'" class="videoAspectRatio center" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>'+
 					'</iframe>';
 	return htmlString;	
 }
@@ -33,7 +33,7 @@ function createGeneralBox(externalData){
 	var countedWidth = boxStandartWidth * 0.9;
 	var countedHeight = (countedWidth * 9) / 16;		
 	var htmlString = "<h1>General box</h1>";
-	htmlString += '<iframe src="'+externalData+'" width="'+countedWidth+'" height="'+countedHeight+'"></iframe>'
+	htmlString += '<iframe src="'+externalData+'" width="'+countedWidth+'" height="'+countedHeight+'" class="generalBox center"></iframe>'
 	return htmlString;	
 }
 

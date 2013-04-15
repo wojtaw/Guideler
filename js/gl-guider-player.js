@@ -37,7 +37,11 @@ function recalculatePlayer(){
 function modifyCSSclass(){
 	var videoWidth = boxStandartWidth * 0.85;
 	var videoHeight = (9*videoWidth) / 16;		
-	$('<style type="text/css"> .videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';} </style>').appendTo("head");	
+	
+
+	$('#gl-dynamic-classes').html('.videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';}');
+	
+//	$('<style type="text/css"> .videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';} </style>').appendTo("head");	
 }
 
 function initPlayer(guiderID){

@@ -4,8 +4,8 @@ outputTypes = {
     DEBUG : "debug: "
 }
 
-//var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
-var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
+var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
+//var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 var isLoaded = new Array();
 var boxStandartWidth = ($(window).width() * 0.7);
@@ -16,11 +16,29 @@ var draggableStartPosition = 0;
 
 document.onkeydown = keyboardHandler;
 
+$(window).ready(function() {
+	$(window).resize(recalculatePlayer);	
+});
+
 function keyboardHandler(e){
 	var e= window.event || e
 	if(e.keyCode == 37) moveLeft();		
 	if(e.keyCode == 39) moveRight();						
 };
+
+function recalculatePlayer(){
+	console.log("recalculating player");
+	boxStandartWidth = ($(window).width() * 0.7);
+	boxStandartSpacing = ($(window).width() * 1.3);	
+	
+	var videoWidth = boxStandartWidth * 0.85;
+	var videoHeight = (9*videoWidth) / 16;	
+	console.log("setting new video css with "+videoWidth+" / "+videoHeight);
+    $('.videoAspectRatio').css("width", videoWidth+"px");	
+    $('.videoAspectRatio').css("height", videoHeight+"px");		
+	positionStepBoxes();
+	showStep(currentStepNumber);
+}
 
 function initPlayer(guiderID){
 	if(typeof(guiderID)=='undefined'){
@@ -47,7 +65,7 @@ function getGuiderData(guiderID){
 
 function initStage(){
 	initStepBoxes();
-	positionStepBoxes();
+	recalculatePlayer();
 	initListeners();
 	hideLoading();
 	showStep(currentStepNumber);
@@ -108,14 +126,14 @@ function initStepBoxes() {
 		stepButtons.push(stepButtonString);
 	}
 	$("#gl-stepsContent").append(stepBoxes.join(''));
-	$("#gl-playerControls").append(stepButtons.join(''));
-	
-	//Count size of one box
-	$(".gl-playerStepWrapper").css("width",boxStandartWidth);		
+	$("#gl-playerControls").append(stepButtons.join(''));		
 	
 }
 
-function positionStepBoxes() {
+function positionStepBoxes() {	
+	//Count size of one box
+	$(".gl-playerStepWrapper").css("width",boxStandartWidth);	
+		
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-step-"+i).css("left",i*boxStandartSpacing);									
 	}

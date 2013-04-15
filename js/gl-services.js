@@ -62,12 +62,13 @@ function createVideoBox(externalLink, urlBase){
 	//http://www.youtube.com/embed/J1IJpHDalvk
 	//http://www.youtube.com/watch?feature=player_embedded&v=J1IJpHDalvk
 	//
-
 	if(urlBase == "youtube.com"){
 		videoID = getURLquery("v",externalLink);
-		var countedWidth = boxStandartWidth;
-		var countedHeight = (boxStandartWidth * 9) / 16;		
-		htmlString += '<iframe width="'+countedWidth+'" height="'+countedHeight+'" src="http://www.youtube.com/embed/'+videoID+'" frameborder="0" allowfullscreen>'+
+		htmlString += '<iframe src="http://www.youtube.com/embed/'+videoID+'" class="videoAspectRatio" frameborder="0" allowfullscreen>'+
+					'</iframe>';
+	}else if(urlBase == "vimeo.com"){
+		videoID = getURLquery("v",externalLink);
+		htmlString += '<iframe src="http://player.vimeo.com/video/'+videoID+'" class="videoAspectRatio" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>'+
 					'</iframe>';
 	}
 	console.log(htmlString);

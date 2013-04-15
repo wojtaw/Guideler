@@ -10,6 +10,8 @@ var guiderJSON = new Object();
 var boxStandartWidth = ($(window).width() * 0.7);
 var boxStandartSpacing = ($(window).width() * 1.3);
 var currentStepNumber = 1;
+var draggableStartPosition = 0;
+
 
 document.onkeydown = keyboardHandler;
 
@@ -56,7 +58,7 @@ function showStep(stepNumber){
 		return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
 	$('#gl-stepsContent').animate({
 	left: - calculateStepCenterPosition(stepNumber-1),
-	}, 1500, function() {
+	}, 1500, 'easeOutBack', function() {
 	// Animation complete.
 	});		
 }
@@ -96,7 +98,22 @@ function positionStepBoxes() {
 	$("#gl-stepsContent").width(widthMax);
 	$("#gl-stepsContent").height("1000px");	
 	$("#gl-stepsContent").draggable({
-		axis: 'x'
+		axis: 'x',
+		start: function() {
+			draggableStartPosition = $("#gl-stepsContent").position().left;
+		},
+		stop: function(){
+			var currentPosition = $("#gl-stepsContent").position().left;
+			if(draggableStartPosition > currentPosition){
+				$('#gl-stepsContent').animate({
+				left:'-=200px',
+				}, 500, 'easeOutBack');		
+			}else{
+				$('#gl-stepsContent').animate({
+				left:'+=200px',
+				}, 500, 'easeOutBack');					
+			}
+        }
 	});	
 }
 

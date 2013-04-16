@@ -38,8 +38,13 @@ function modifyCSSclass(){
 	var videoWidth = boxStandartWidth * 0.85;
 	var videoHeight = (9*videoWidth) / 16;		
 	
-
-	$('#gl-dynamic-classes').html('.videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';}');
+	var generalBoxWidth = boxStandartWidth * 0.9;
+	var generalBoxHeight = (generalBoxWidth * 9) / 16;			
+	
+	var cssHtmlString = '.videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';}'+
+			'.generalBox{ width:'+generalBoxWidth+'; height:'+generalBoxHeight+';}';
+	
+	$('#gl-dynamic-classes').html(cssHtmlString);
 	
 //	$('<style type="text/css"> .videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';} </style>').appendTo("head");	
 }
@@ -68,6 +73,7 @@ function getGuiderData(guiderID){
 }
 
 function initStage(){
+	console.log("Initing stage");
 	initStepBoxes();
 	recalculatePlayer();
 	initListeners();
@@ -130,7 +136,7 @@ function initStepBoxes() {
 		stepButtons.push(stepButtonString);
 	}
 	$("#gl-stepsContent").append(stepBoxes.join(''));
-	$("#gl-playerControls").append(stepButtons.join(''));		
+	$("#gl-playerBottomBar").append(stepButtons.join(''));		
 	
 }
 
@@ -143,7 +149,11 @@ function positionStepBoxes() {
 	}
 	widthMax = parseInt(($("#gl-step-"+(guiderJSON.steps.length-1)).css("left")), 10) + ($("#gl-step-"+(guiderJSON.steps.length-1)).width());	
 	$("#gl-stepsContent").width(widthMax);
-	$("#gl-stepsContent").height("1000px");	
+	//Count height depending on top and bottom bar
+	var countedPlayerHeight = $(window).height() - $("#gl-playerTopBar").height() - $("#gl-playerBottomBar").height();
+	console.log("Counted height "+countedPlayerHeight);
+	
+	$("#gl-stepsContent").height(countedPlayerHeight+"px");	
 	$("#gl-stepsContent").draggable({
 		axis: 'x',
 		start: function() {

@@ -1,64 +1,118 @@
 {"guiderID":525896,"guiderName":"Gardening for dummies","steps": 
-[
-{
-"id":1,
-"serviceType":"YOUTUBE",
-"externalData":"J1IJpHDalvk"
-},
-{
-"id":2,
-"serviceType":"GENERAL",
-"externalData":"http://hobby.idnes.cz/uprava-zahrady-navsteva-planovani-dtk-/hobby-zahrada.aspx?c=A121212_154632_hobby-zahrada_mce"
-},
-{
-"id":3,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":4,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":5,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":6,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":7,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":8,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":9,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":10,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":11,
-"serviceType":"VIMEO",
-"externalData":"63691010"
-},
-{
-"id":12,
-"serviceType":"SLIDESLIVE",
-"externalData":"38889951"
-}
-]
+	[
+	{
+	"id":1,
+	"serviceType":"YOUTUBE",
+	"externalData":"J1IJpHDalvk",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1",
+	"answers":
+		[
+		{"1":"as"},
+		{"2":"as"},
+		{"3":"as"}		
+		]
+	},
+	{
+	"id":2,
+	"serviceType":"GENERAL",
+	"externalData":"http://cs.wikipedia.org/wiki/L-syst%C3%A9m",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"	,
+	"answers":
+		[
+		{"1":"as"},
+		{"2":"as"},
+		{"3":"as"}		
+		]	
+	},
+	{
+	"id":3,
+	"serviceType":"SLIDESLIVE",
+	"externalData":"38889951",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1",
+	"answers":
+		[
+		{"1":"as"},
+		{"2":"as"},
+		{"3":"as"}		
+		]	
+	},
+	{
+	"id":4,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1",
+	"answers":
+		[
+		{"1":"as"},
+		{"2":"as"},
+		{"3":"as"}		
+		]	
+	},
+	{
+	"id":5,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1",
+	"answers":
+		[
+		{"1":"as"},
+		{"2":"as"},
+		{"3":"as"}		
+		]		
+	},
+	{
+	"id":6,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"
+	},
+	{
+	"id":7,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"	
+	},
+	{
+	"id":8,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"	
+	},
+	{
+	"id":9,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"	
+	},
+	{
+	"id":10,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"	
+	},
+	{
+	"id":11,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"	
+	},
+	{
+	"id":12,
+	"serviceType":"VIMEO",
+	"externalData":"63691010",
+	"question":"If you add 2 to 1, what is the result?",
+	"correctAnswer":"1"	
+	}
+	]
 }

@@ -5,6 +5,8 @@ function createStepString(serviceType,externalData){
 	else if(serviceType == "SLIDESLIVE") return createSLBox(externalData);	
 	else if(serviceType == "GENERAL") return createGeneralBox(externalData);		
 	else if(serviceType == "CUSTOMCODE") return createCustomCodeBox(externalData);			
+
+
 }
 
 //Individual boxes and their strings
@@ -23,17 +25,18 @@ function createVimeoBox(externalData){
 }
 
 function createSLBox(externalData){
-	var htmlString = "<h1>Vimeo box</h1>";
-		htmlString += '<iframe src="http://player.vimeo.com/video/'+externalData+'" class="videoAspectRatio center" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>'+
-					'</iframe>';
+	var htmlString = "<h1>SlidesLive box</h1>";
+		htmlString += '<script type="text/javascript" id="sle81767">'+
+			'slidesLive = createSlidesLiveBox();'+
+			'slidesLive.bgColor="transparent"; '+
+			'slidesLive.embedPresentation('+externalData+',960); '+
+			'</script>';
 	return htmlString;	
 }
 
 function createGeneralBox(externalData){
-	var countedWidth = boxStandartWidth * 0.9;
-	var countedHeight = (countedWidth * 9) / 16;		
 	var htmlString = "<h1>General box</h1>";
-	htmlString += '<iframe src="'+externalData+'" width="'+countedWidth+'" height="'+countedHeight+'" class="generalBox center"></iframe>'
+	htmlString += '<iframe src="'+externalData+'" class="generalBox center"></iframe>'
 	return htmlString;	
 }
 

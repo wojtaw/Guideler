@@ -11,21 +11,21 @@ function createStepString(serviceType,externalData){
 
 //Individual boxes and their strings
 function createYoutubeBox(externalData){
-	var htmlString = "<h1>Youtube box</h1>";
+	var htmlString = "<h3>Youtube box</h3>";
 	htmlString += '<iframe src="http://www.youtube.com/embed/'+externalData+'" class="videoAspectRatio center" frameborder="0" allowfullscreen>'+
 					'</iframe>';
 	return htmlString;
 }
 
 function createVimeoBox(externalData){
-	var htmlString = "<h1>Vimeo box</h1>";
+	var htmlString = "<h3>Vimeo box</h3>";
 		htmlString += '<iframe src="http://player.vimeo.com/video/'+externalData+'" class="videoAspectRatio center" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen>'+
 					'</iframe>';
 	return htmlString;	
 }
 
 function createSLBox(externalData){
-	var htmlString = "<h1>SlidesLive box</h1>";
+	var htmlString = "<h3>SlidesLive box</h3>";
 		htmlString += '<script type="text/javascript" id="sle81767">'+
 			'slidesLive = createSlidesLiveBox();'+
 			'slidesLive.bgColor="transparent"; '+
@@ -35,7 +35,7 @@ function createSLBox(externalData){
 }
 
 function createGeneralBox(externalData){
-	var htmlString = "<h1>General box</h1>";
+	var htmlString = "<h3>General box</h3>";
 	htmlString += '<iframe src="'+externalData+'" class="generalBox center"></iframe>'
 	return htmlString;	
 }
@@ -43,7 +43,7 @@ function createGeneralBox(externalData){
 
 function createCustomCodeBox(externalData){
 	console.log("custom box");
-	var htmlString = "<h1>Custom box</h1>";	
+	var htmlString = "<h3>Custom box</h3>";	
 	var countedWidth = boxStandartWidth;
 	var countedHeight = (boxStandartWidth * 9) / 16;		
 	

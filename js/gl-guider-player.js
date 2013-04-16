@@ -74,11 +74,16 @@ function getGuiderData(guiderID){
 
 function initStage(){
 	console.log("Initing stage");
+	styleStage();
 	initStepBoxes();
 	recalculatePlayer();
 	initListeners();
 	hideLoading();
 	showStep(currentStepNumber);
+}
+
+function styleStage(){
+	$("#gl-guiderName").html(guiderJSON.guiderName);
 }
 
 //Helper function
@@ -150,7 +155,7 @@ function positionStepBoxes() {
 	widthMax = parseInt(($("#gl-step-"+(guiderJSON.steps.length-1)).css("left")), 10) + ($("#gl-step-"+(guiderJSON.steps.length-1)).width());	
 	$("#gl-stepsContent").width(widthMax);
 	//Count height depending on top and bottom bar
-	var countedPlayerHeight = $(window).height() - $("#gl-playerTopBar").height() - $("#gl-playerBottomBar").height();
+	var countedPlayerHeight = $(window).height() - $("#gl-playerTopBar").outerHeight() - $("#gl-playerBottomBar").outerHeight();
 	console.log("Counted height "+countedPlayerHeight);
 	
 	$("#gl-stepsContent").height(countedPlayerHeight+"px");	

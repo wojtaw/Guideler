@@ -44,9 +44,7 @@ h3 {
 
 #gl-playerTopBar {
 	height:60px;
-	padding-left:10px;
-	padding-top:10px;	
-	padding-bottom:10px;
+	padding:10px;
 	margin-bottom:10px;	
 	display:block;
 	width:100%;
@@ -98,6 +96,62 @@ h3 {
 	overflow:hidden;
 	background-color:#FF0;	
 	position:absolute;
+}
+
+.gl-circleButton {
+	border-radius: 50%;
+	width: 90px;
+	height: 60px; 	
+	background-color:#000;
+	background-color: rgba(0, 0, 0, 0.5);		
+	padding-top:30px;	
+	z-index:1000;
+}
+
+.gl-circleButton:hover {
+	cursor:pointer;
+	background-color: rgba(0, 0, 0, 0.8);	
+}
+
+.arrowObject {
+	background-image:url(../images/arrow.png);
+	background-repeat:no-repeat;
+	width:50px;
+	height:32px;
+}
+
+.gl-leftArrow {
+	position:fixed;
+	top:50%;
+	left:1%;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* IE 9 */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */		
+}
+
+.gl-rightArrow {
+	position:fixed;
+	top:50%;
+	right:1%;
+	transform:rotate(270deg);
+	-ms-transform:rotate(270deg); /* IE 9 */
+	-webkit-transform:rotate(270deg); /* Safari and Chrome */		
+}
+
+#gl-question {
+	position:absolute;	
+	right:1%;
+}
+
+#gl-questionWindow {
+	position:relative;
+	float:right;
+	right:30px;
+	display:none;
+	background-color:#993300;
+	width:400px;
+	height:150px;
+	z-index:1001;
 }
 
 .gl-guiderImage {

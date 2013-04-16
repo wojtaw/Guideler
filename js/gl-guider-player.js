@@ -8,6 +8,8 @@ var glPathToJSONAPI = "http://localhost/Guideler/testing/sampleGuiderData.json";
 //var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 var isLoaded = new Array();
+var stepsFinished = new Array();
+
 var boxStandartWidth = ($(window).width() * 0.7);
 var boxStandartSpacing = ($(window).width() * 1.3);
 var currentStepNumber = 1;
@@ -22,8 +24,8 @@ $(window).ready(function() {
 
 function keyboardHandler(e){
 	var e= window.event || e
-	if(e.keyCode == 37) moveLeft();		
-	if(e.keyCode == 39) moveRight();						
+	if(e.keyCode == 37) previousStep();		
+	if(e.keyCode == 39) nextStep();						
 };
 
 function recalculatePlayer(){
@@ -94,6 +96,10 @@ function isStepLoaded(stepNumber){
 function isValidStep(stepNumber){
 	if(stepNumber > guiderJSON.steps.length || stepNumber <= 0)	return false;
 	else return true;
+}
+
+function isStepFinished(stepNumber){
+	return stepsFinished[stepNumber];
 }
 
 function showStep(stepNumber){
@@ -192,6 +198,8 @@ function showCurrentControls(){
 }
 
 function initListeners() {
+	$("#gl-leftArrow").click(previousStep);	
+	$("#gl-rightArrow").click(nextStep);		
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-stepButton-"+i).click(function(e) {
 			var tmpNumber =  parseInt(e.target.id.split('-')[2]);
@@ -200,13 +208,13 @@ function initListeners() {
 	}	
 }
 
-function moveLeft(){
+function previousStep(){
 	currentStepNumber--;
 	checkBoundary();
 	showStep(currentStepNumber);
 }
 
-function moveRight(){
+function nextStep(){
 	currentStepNumber++;
 	checkBoundary();	
 	showStep(currentStepNumber);

@@ -4,26 +4,26 @@
 	"id":1,
 	"serviceType":"YOUTUBE",
 	"externalData":"J1IJpHDalvk",
-	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1",
+	"question":"First question If you add 2 to 1, what is the result?",
+	"correctAnswer":"answer1",
 	"answers":
 		[
-		{"1":"as"},
-		{"2":"as"},
-		{"3":"as"}		
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
 		]
 	},
 	{
 	"id":2,
 	"serviceType":"GENERAL",
 	"externalData":"http://cs.wikipedia.org/wiki/L-syst%C3%A9m",
-	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"	,
+	"question":"Second If you add 2 to 1, what is the result?",
+	"correctAnswer":"answer2",
 	"answers":
 		[
-		{"1":"as"},
-		{"2":"as"},
-		{"3":"as"}		
+		{"answer1":"5"},
+		{"answer2":"6"},
+		{"answer3":"70"}	
 		]	
 	},
 	{
@@ -31,12 +31,12 @@
 	"serviceType":"SLIDESLIVE",
 	"externalData":"38889951",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1",
+	"correctAnswer":"answer1",
 	"answers":
 		[
-		{"1":"as"},
-		{"2":"as"},
-		{"3":"as"}		
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
 		]	
 	},
 	{
@@ -44,12 +44,12 @@
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1",
+	"correctAnswer":"answer1",
 	"answers":
 		[
-		{"1":"as"},
-		{"2":"as"},
-		{"3":"as"}		
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
 		]	
 	},
 	{
@@ -57,12 +57,12 @@
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1",
+	"correctAnswer":"answer1",
 	"answers":
 		[
-		{"1":"as"},
-		{"2":"as"},
-		{"3":"as"}		
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
 		]		
 	},
 	{
@@ -70,49 +70,91 @@
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"
+	"correctAnswer":"answer1",
+	"answers":
+		[
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
+		]		
 	},
 	{
 	"id":7,
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"	
+	"correctAnswer":"answer1",
+	"answers":
+		[
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
+		]			
 	},
 	{
 	"id":8,
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"	
+	"correctAnswer":"answer1",
+	"answers":
+		[
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
+		]			
 	},
 	{
 	"id":9,
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"	
+	"correctAnswer":"answer1",
+	"answers":
+		[
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
+		]			
 	},
 	{
 	"id":10,
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"	
+	"correctAnswer":"answer1",
+	"answers":
+		[
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
+		]			
 	},
 	{
 	"id":11,
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"	
+	"correctAnswer":"answer1",
+	"answers":
+		[
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
+		]			
 	},
 	{
 	"id":12,
 	"serviceType":"VIMEO",
 	"externalData":"63691010",
 	"question":"If you add 2 to 1, what is the result?",
-	"correctAnswer":"1"	
+	"correctAnswer":"answer1",
+	"answers":
+		[
+		{"answer1":"1"},
+		{"answer2":"3"},
+		{"answer3":"50"}		
+		]			
 	}
 	]
 }

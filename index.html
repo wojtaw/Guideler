@@ -35,10 +35,16 @@
 	    <div class="gl-circleButton" id="gl-question">
 	        <div id="gl-questionWindow">            
             <div class="question" id="gl-questionText"></div>
-            <input type="radio" name="gl-answers" value="male" id="gl-answerText1">Answer1
-            <input type="radio" name="gl-answers" value="female" id="gl-answerText2">Answer2
-            <input type="radio" name="gl-answers" value="female" id="gl-answerText3">Answer3     
+            <input type="radio" name="gl-answers" value="answer1" id="gl-answerText1">
+            <label for="gl-answerText1">Answer 1</label>            
+                        
+            <input type="radio" name="gl-answers" value="answer2" id="gl-answerText2">
+            <label for="gl-answerText2">Answer 2</label>            
+            
+            <input type="radio" name="gl-answers" value="answer3" id="gl-answerText3">     
+            <label for="gl-answerText3">Answer 3</label>            
             <button type="submit" id="gl-answerConfirm">Check my answer</button>                                                                                         
+            <div id="gl-flashMessage"></div>
             </div>           
         </div> 
     	<div id="gl-stepsWrapper">

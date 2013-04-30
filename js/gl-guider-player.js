@@ -109,6 +109,7 @@ function showStep(stepNumber){
 
 	//Match current step number in special cases and refresh controls
 	currentStepNumber = stepNumber;
+	refreshQuestionBox();
 	showCurrentControls();
 	
 	//Bring on the requested step
@@ -121,6 +122,14 @@ function showStep(stepNumber){
 	//Start loading next steps
 	loadStep(stepNumber+1);
 	loadStep(stepNumber-1);	
+}
+
+function refreshQuestionBox(){
+	$('#gl-questionText').text(guiderJSON.steps[currentStepNumber-1].question);
+	$('#gl-flashMessage').text(" ");	
+	$("label[for='gl-answerText1']").text(guiderJSON.steps[currentStepNumber-1].answers[0].answer1);
+	$("label[for='gl-answerText2']").text(guiderJSON.steps[currentStepNumber-1].answers[1].answer2);
+	$("label[for='gl-answerText3']").text(guiderJSON.steps[currentStepNumber-1].answers[2].answer3);		
 }
 
 function loadStep(stepNumber){
@@ -201,12 +210,21 @@ function initListeners() {
 	$("#gl-leftArrow").click(previousStep);	
 	$("#gl-rightArrow").click(nextStep);
 	$("#gl-question").click(displayQuestion);	
+	$("#gl-answerConfirm").click(checkAnswer);		
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-stepButton-"+i).click(function(e) {
 			var tmpNumber =  parseInt(e.target.id.split('-')[2]);
 			showStep(tmpNumber+1);
 		});
 	}	
+}
+
+function checkAnswer(){
+	console.log("Answered");	
+	var answer = $('input[name=gl-answers]:checked').val();
+	if(typeof(answer)=='undefined') $('#gl-flashMessage').text("Check at least one answer!");
+	else if(answer == guiderJSON.steps[currentStepNumber-1].correctAnswer) $('#gl-flashMessage').text("Correct, move on! :)");		
+	else $('#gl-flashMessage').text("Incorrect :(");	
 }
 
 function displayQuestion(){

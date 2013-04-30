@@ -199,13 +199,18 @@ function showCurrentControls(){
 
 function initListeners() {
 	$("#gl-leftArrow").click(previousStep);	
-	$("#gl-rightArrow").click(nextStep);		
+	$("#gl-rightArrow").click(nextStep);
+	$("#gl-question").click(displayQuestion);	
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-stepButton-"+i).click(function(e) {
 			var tmpNumber =  parseInt(e.target.id.split('-')[2]);
 			showStep(tmpNumber+1);
 		});
 	}	
+}
+
+function displayQuestion(){
+	$("#gl-questionWindow").css("display","block");
 }
 
 function previousStep(){

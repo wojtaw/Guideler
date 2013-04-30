@@ -125,6 +125,9 @@ function showStep(stepNumber){
 }
 
 function refreshQuestionBox(){
+	//Deselect radios
+	$('input[name=gl-answers]').attr('checked', false);
+	//Fill up proper texts
 	$('#gl-questionText').text(guiderJSON.steps[currentStepNumber-1].question);
 	$('#gl-flashMessage').text(" ");	
 	$("label[for='gl-answerText1']").text(guiderJSON.steps[currentStepNumber-1].answers[0].answer1);
@@ -151,7 +154,7 @@ function initStepBoxes() {
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		var stepBoxString = '<div id="gl-step-'+i+'" class="gl-playerStepWrapper">'+
 			'</div>';
-		var stepButtonString = '<div id="gl-stepButton-'+i+'" class="tmpButton">'+i+'</div>';
+		var stepButtonString = '<div id="gl-stepButton-'+i+'" class="gl-stepButtonGeneral">'+i+'</div>';
 		stepBoxes.push(stepBoxString);
 		stepButtons.push(stepButtonString);
 	}
@@ -196,6 +199,7 @@ function positionStepBoxes() {
 
 function showCurrentControls(){
 	for(var i=0;i<guiderJSON.steps.length;i++){
+		if(isStepFinished(i)) $("#gl-stepButton-"+(i)).css("border-bottom-color","green");			
 		if(currentStepNumber == (i+1)){
 			$("#gl-stepButton-"+(i)).css("color","black");			
 			$("#gl-stepButton-"+(i)).css("background-color","orange");						
@@ -223,8 +227,14 @@ function checkAnswer(){
 	console.log("Answered");	
 	var answer = $('input[name=gl-answers]:checked').val();
 	if(typeof(answer)=='undefined') $('#gl-flashMessage').text("Check at least one answer!");
-	else if(answer == guiderJSON.steps[currentStepNumber-1].correctAnswer) $('#gl-flashMessage').text("Correct, move on! :)");		
-	else $('#gl-flashMessage').text("Incorrect :(");	
+	else if(answer == guiderJSON.steps[currentStepNumber-1].correctAnswer){
+		stepsFinished[currentStepNumber-1] = true;
+		$('#gl-flashMessage').text("Correct, move on! :)");		
+		showCurrentControls();
+	} else {
+		stepsFinished[currentStepNumber-1] = false;
+		$('#gl-flashMessage').text("Incorrect :(");	
+	}
 }
 
 function displayQuestion(){

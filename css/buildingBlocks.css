@@ -29,12 +29,14 @@ h3 {
 	font-weight:normal;	
 }
 
-.tmpButton {
+.gl-stepButtonGeneral {
 	display:block;
 	background-color:#333;
 	color:#FFF;
 	padding:10px;
 	float:left;	
+	border-bottom:3px solid;
+	border-bottom-color: white;
 }
 
 #gl-playerWindow {

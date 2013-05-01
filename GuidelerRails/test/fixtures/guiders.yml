@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  [name: MyString
+guiderA:
+  name: GardeningForDummies
   description: MyText
-  user_id: 
 
-two:
-  [name: MyString
+guiderB:
+  name: EducationInTheFuture
   description: MyText
-  user_id: 

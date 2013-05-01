@@ -16,7 +16,7 @@
     <file path="/20130501190312_create_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437753072" ignored="false" />
     <file path="/routes.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367439525172" ignored="false" />
     <file path="/index.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367439115191" ignored="false" />
-    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367439324893" ignored="false" />
+    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440100616" ignored="false" />
     <file path="/player.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367439336526" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,28 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="36" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.48758864">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="51" selection-start="24" selection-end="24" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="55" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+            <state line="58" column="27" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,19 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guider_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="guider_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="11" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="guiders.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/fixtures/guiders.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+            <state line="11" column="39" selection-start="273" selection-end="273" vertical-scroll-proportion="0.33156028">
               <folding />
             </state>
           </provider>
@@ -150,9 +123,9 @@
         <option value="$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb" />
         <option value="$PROJECT_DIR$/test/fixtures/steps.yml" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/guider_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/guider/player.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/guider_controller.rb" />
       </list>
     </option>
   </component>
@@ -893,13 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/guider.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="62" selection-start="893" selection-end="893" vertical-scroll-proportion="0.4219858">
@@ -977,9 +943,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="11" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+        <state line="58" column="27" selection-start="1814" selection-end="1814" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/guider.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -991,9 +964,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="36" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.48758864">
+        <state line="11" column="39" selection-start="273" selection-end="273" vertical-scroll-proportion="0.33156028">
           <folding />
         </state>
       </provider>

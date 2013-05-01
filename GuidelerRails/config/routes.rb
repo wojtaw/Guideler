@@ -56,4 +56,8 @@ Guideler::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   root :to => 'home#index'
+
+  guider_regexp = /[0-9\-]+/
+
+  match 'g/:guider' => 'guider#player', :as => 'guider', :constraints => { :guider => guider_regexp }
 end

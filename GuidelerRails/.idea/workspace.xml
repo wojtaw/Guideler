@@ -6,13 +6,14 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367424484382" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/config/database.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367422264677" ignored="false" />
-    <file path="/Dummy.txt" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367434987756" ignored="false" />
+    <file path="/Dummy.txt" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437494434" ignored="false" />
     <file path="/20130501172823_create_guider_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367431884377" ignored="false" />
     <file path="/guider.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367435028467" ignored="false" />
     <file path="/guider_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367432063305" ignored="false" />
     <file path="/step.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367435014394" ignored="false" />
     <file path="/guider_steps.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367436335714" ignored="false" />
     <file path="/guiders.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367436447385" ignored="false" />
+    <file path="/20130501190312_create_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437510178" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
       <file leaf-file-name="20130501190312_create_steps.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="222" selection-end="229" vertical-scroll-proportion="0.0">
+            <state line="10" column="38" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -83,16 +84,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="steps.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="steps.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/fixtures/steps.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="82" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
+            <state line="16" column="82" selection-start="358" selection-end="358" vertical-scroll-proportion="0.4822695">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RailsDependency/#Guideler" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RailsDependency/#Guideler" pinned="false" current="false" current-in-tab="false">
         <entry file="uml://RailsDependency/#Guideler">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
@@ -109,7 +110,7 @@
                   <point x="0.0" y="0.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="298.0" y="114.5" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="-162.5" y="86.0" />
               <SelectedNodes />
               <Categories>
                 <Category>Association fields</Category>
@@ -152,6 +153,7 @@
         <option value="$PROJECT_DIR$/app/models/guider.rb" />
         <option value="$PROJECT_DIR$/test/fixtures/guider_steps.yml" />
         <option value="$PROJECT_DIR$/test/fixtures/guiders.yml" />
+        <option value="$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb" />
       </list>
     </option>
   </component>
@@ -361,7 +363,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Rake.db:drop">
+  <component name="RunManager" selected="Rails.Development: Guideler">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="Guideler" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -706,10 +708,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:drop" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:fixtures:load" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.db:create" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.db:create" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:drop" />
+        <item index="3" class="java.lang.String" itemvalue="Rake.db:fixtures:load" />
         <item index="4" class="java.lang.String" itemvalue="Rake.db:rollback" />
       </list>
     </recent_temporary>
@@ -883,37 +885,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="222" selection-end="229" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/guider.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130501190103_create_guiders.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fixtures/guiders.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="59" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/fixtures/steps.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="82" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -941,13 +915,41 @@
               <point x="0.0" y="0.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="298.0" y="114.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-162.5" y="86.0" />
           <SelectedNodes />
           <Categories>
             <Category>Association fields</Category>
             <Category>Migration fields</Category>
             <Category>System DB fields</Category>
           </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130501190103_create_guiders.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/guiders.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="59" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/fixtures/steps.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="82" selection-start="358" selection-end="358" vertical-scroll-proportion="0.4822695">
+          <folding />
         </state>
       </provider>
     </entry>

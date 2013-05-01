@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130501190312) do
   end
 
   create_table "steps", :force => true do |t|
+    t.integer  "guider_id"
     t.integer  "step_order"
     t.text     "link"
     t.text     "question"

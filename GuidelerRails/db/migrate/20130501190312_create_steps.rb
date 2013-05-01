@@ -1,6 +1,7 @@
 class CreateSteps < ActiveRecord::Migration
   def change
     create_table :steps do |t|
+      t.references :guider
       t.integer :step_order
       t.text :link
       t.text :question

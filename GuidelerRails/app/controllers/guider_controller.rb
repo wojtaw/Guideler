@@ -1,15 +1,10 @@
 class GuiderController < ApplicationController
   def player
-    guider = params[:guider] == nil ? nil : Guider.find(params[:guider])
+    guider = Guider.find(params[:guiderID])
 
-  rescue ActiveRecord::RecordNotFound
-    guider_not_found
-  end
+    render :locals => { :guider => guider}
 
-  private
-
-  def guider_not_found
+  rescue ActiveRecord::StatementInvalid
     render :inline => 'Guider not found'
   end
-
 end

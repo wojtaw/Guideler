@@ -59,5 +59,5 @@ Guideler::Application.routes.draw do
 
   guider_regexp = /[0-9\-]+/
 
-  match 'g/:guider' => 'guider#player', :as => 'guider', :constraints => { :guider => guider_regexp }
+  match 'g/:guiderID' => 'guider#player', :as => 'g', :constraints => { :guiderID => guider_regexp }
 end

@@ -13,7 +13,7 @@
     <file path="/step.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367435014394" ignored="false" />
     <file path="/guider_steps.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367436335714" ignored="false" />
     <file path="/guiders.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367436447385" ignored="false" />
-    <file path="/20130501190312_create_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437510178" ignored="false" />
+    <file path="/20130501190312_create_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437753072" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
       <file leaf-file-name="20130501190312_create_steps.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="38" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+            <state line="5" column="14" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -87,7 +87,7 @@
       <file leaf-file-name="steps.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/fixtures/steps.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="82" selection-start="358" selection-end="358" vertical-scroll-proportion="0.4822695">
+            <state line="33" column="42" selection-start="615" selection-end="615" vertical-scroll-proportion="0.2712766">
               <folding />
             </state>
           </provider>
@@ -154,6 +154,7 @@
         <option value="$PROJECT_DIR$/test/fixtures/guider_steps.yml" />
         <option value="$PROJECT_DIR$/test/fixtures/guiders.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb" />
+        <option value="$PROJECT_DIR$/test/fixtures/steps.yml" />
       </list>
     </option>
   </component>
@@ -363,7 +364,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Rails.Development: Guideler">
+  <component name="RunManager" selected="Rake.db:fixtures:load">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="Guideler" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -708,10 +709,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:create" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:drop" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.db:fixtures:load" />
+        <item index="0" class="java.lang.String" itemvalue="Rake.db:fixtures:load" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:create" />
+        <item index="3" class="java.lang.String" itemvalue="Rake.db:drop" />
         <item index="4" class="java.lang.String" itemvalue="Rake.db:rollback" />
       </list>
     </recent_temporary>
@@ -934,7 +935,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0">
+        <state line="5" column="14" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -948,7 +949,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/fixtures/steps.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="82" selection-start="358" selection-end="358" vertical-scroll-proportion="0.4822695">
+        <state line="33" column="42" selection-start="615" selection-end="615" vertical-scroll-proportion="0.2712766">
           <folding />
         </state>
       </provider>

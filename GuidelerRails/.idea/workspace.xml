@@ -16,7 +16,7 @@
     <file path="/20130501190312_create_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437753072" ignored="false" />
     <file path="/routes.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367443688568" ignored="false" />
     <file path="/index.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367439115191" ignored="false" />
-    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367481772357" ignored="false" />
+    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367511178622" ignored="false" />
     <file path="/player.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367443265857" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/controllers/presentation_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/models/folder.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
@@ -99,7 +99,7 @@
       <file leaf-file-name="guider_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="0.31850117">
+            <state line="51" column="12" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.81807375">
               <folding />
             </state>
           </provider>
@@ -954,13 +954,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/step.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="26" selection-start="73" selection-end="80" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="-3.2692308">
@@ -982,9 +975,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/step.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="26" selection-start="73" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="0.31850117">
+        <state line="51" column="12" selection-start="1402" selection-end="1402" vertical-scroll-proportion="0.81807375">
           <folding />
         </state>
       </provider>

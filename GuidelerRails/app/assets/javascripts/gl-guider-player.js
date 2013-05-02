@@ -87,7 +87,7 @@ function initStage(){
 
 function styleStage(){
 	$("#gl-guiderName").html(guiderJSON.guiderName);
-    $("#gl-guiderName").html(guiderJSON.guiderName);
+    $("#gl-guiderDescription").html(guiderJSON.guiderDescription);
 }
 
 //Helper function

@@ -16,7 +16,7 @@
     <file path="/20130501190312_create_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437753072" ignored="false" />
     <file path="/routes.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367443688568" ignored="false" />
     <file path="/index.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367439115191" ignored="false" />
-    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367481455061" ignored="false" />
+    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367481772357" ignored="false" />
     <file path="/player.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367443265857" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/controllers/presentation_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/models/folder.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
@@ -25,7 +25,7 @@
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/config/routes.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/views/presentation/show.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/controllers/embed_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367442855755" ignored="false" />
-    <file path="/guiderJSON.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367479400266" ignored="false" />
+    <file path="/guiderJSON.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367481753145" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <file leaf-file-name="guiderJSON.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/guider/guiderJSON.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="59" selection-start="385" selection-end="385" vertical-scroll-proportion="-5.230769">
+            <state line="13" column="39" selection-start="552" selection-end="552" vertical-scroll-proportion="-8.5">
               <folding />
             </state>
           </provider>
@@ -99,7 +99,7 @@
       <file leaf-file-name="guider_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="97" selection-start="473" selection-end="473" vertical-scroll-proportion="0.29859486">
+            <state line="16" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="0.31850117">
               <folding />
             </state>
           </provider>
@@ -977,14 +977,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/guiderJSON.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="59" selection-start="385" selection-end="385" vertical-scroll-proportion="-5.230769">
+        <state line="13" column="39" selection-start="552" selection-end="552" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="97" selection-start="473" selection-end="473" vertical-scroll-proportion="0.29859486">
+        <state line="16" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="0.31850117">
           <folding />
         </state>
       </provider>

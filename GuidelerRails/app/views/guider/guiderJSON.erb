@@ -1,2 +1,18 @@
-EMPTY JSON
-<%= guider.name %>
+{"guiderID":<%= guider.id %>, "guiderName":"<%= guider.name %>","guiderDescription":"<%= guider.description %>", "steps":[
+<% for step in guider.steps %>
+    {
+        "id":<%= step.step_order %>,
+        "serviceType":"YOUTUBE",
+        "externalData":"J1IJpHDalvk",
+        "question":"<%= step.step_order %>",
+        "correctAnswer":"<%= step.correct_answer %>",
+        "answers":
+        [
+        {"answer1":"<%= step.answer1 %>"},
+        {"answer2":"<%= step.answer2 %>"},
+        {"answer3":"<%= step.answer3 %>"}
+        ]
+    <% if step == guider.steps.last %>}<% else %>},<% end %>
+<% end %>
+]
+}

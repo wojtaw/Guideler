@@ -1,5 +1,5 @@
 {"guiderID":<%= guider.id %>, "guiderName":"<%= guider.name %>","guiderDescription":"<%= guider.description %>", "steps":[
-<% for step in guider.steps %>
+<% guider.steps.each_with_index do |step, index|  %>
     {
         "id":<%= step.step_order %>,
         "serviceType":"<%= serviceType %>",

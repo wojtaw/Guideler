@@ -13,7 +13,7 @@ class GuiderController < ApplicationController
 
   def guiderJSON
     guider = Guider.find(params[:guiderID])
-    render :content_type => 'application/json', :locals => { :guider => guider}
+    render :content_type => 'application/json', :locals => { :guider => guider}, :layout => false
 
   rescue ActiveRecord::StatementInvalid
     render :inline => 'Guider invalid'

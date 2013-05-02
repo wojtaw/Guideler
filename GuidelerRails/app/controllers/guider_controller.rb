@@ -62,17 +62,24 @@ class GuiderController < ApplicationController
         return "YOUTUBE"
       elsif host == "slideslive.com"
         return "SLIDESLIVE"
-      elsif host == "en.wikipedia.org"
-        return "WIKIPEDIA"
+      elsif host == "vimeo.com"
+        return "VIMEO"
       else
-        return "UNKNOWN"
+        return "GENERAL"
       end
   end
 
   #finding either video ID or article ID or whatever data that identifies content that should be loaded
   def parse_external_data(service, parsing_link)
-
-    return "serviceID"
+    if service == "YOUTUBE"
+      return "J1IJpHDalvk"
+    elsif service == "SLIDESLIVE"
+      return "38889951"
+    elsif service == "VIMEO"
+      return "63691010"
+    else
+      return parsing_link
+    end
   end
 
 end

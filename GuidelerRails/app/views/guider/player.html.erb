@@ -1,5 +1,41 @@
-Toto je player guider
+<div id="gl-loading"></div>
+<div id="gl-playerWindow">
+  <div id="gl-playerTopBar">
+    <div class="gl-guiderImage"></div>
+    <h1 id="gl-guiderName">Guider name</h1>
+    <h2>description</h2>
+  </div>
+  <div class="gl-circleButton gl-leftArrow" id="gl-leftArrow"><div class="arrowObject center"></div></div>
+  <div class="gl-circleButton gl-rightArrow" id="gl-rightArrow"><div class="arrowObject center"></div></div>
+  <div id="gl-playerCanvas">
+    <div class="gl-circleButton" id="gl-question">
+      <div id="gl-questionWindow">
+        <div class="question" id="gl-questionText"></div>
+        <input type="radio" name="gl-answers" value="answer1" id="gl-answerText1">
+        <label for="gl-answerText1">Answer 1</label>
 
-<%= guider.name %>
+        <input type="radio" name="gl-answers" value="answer2" id="gl-answerText2">
+        <label for="gl-answerText2">Answer 2</label>
 
-<%= guider.steps %>
+        <input type="radio" name="gl-answers" value="answer3" id="gl-answerText3">
+        <label for="gl-answerText3">Answer 3</label>
+        <button type="submit" id="gl-answerConfirm">Check my answer</button>
+        <div id="gl-flashMessage"></div>
+      </div>
+    </div>
+    <div id="gl-stepsWrapper">
+      <div id="gl-stepsContent" class="clearfix">
+
+      </div>
+    </div>
+  </div>
+
+  <div id="gl-playerBottomBar">
+  </div>
+</div>
+
+<script type="text/javascript">
+    //createStepString("http://www.youtube.com/watch?v=J1IJpHDalvk");
+    //runTests();
+    initPlayer(<%= guider.id %>);
+</script>

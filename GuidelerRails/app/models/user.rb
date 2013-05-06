@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
   has_many :guiders
+  has_and_belongs_to_many :steps
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

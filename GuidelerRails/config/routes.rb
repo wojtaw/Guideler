@@ -1,6 +1,16 @@
 Guideler::Application.routes.draw do
 
-  devise_for :users, :path => "account", :skip => [:registrations, :sessions], :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :sign_up => 'register' }
+  #devise_for :users, :path => "account", :skip => [:registrations, :sessions], :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :sign_up => 'register' }
+
+  devise_for :users, :path => '', :skip => [:sessions]
+
+  as :user do
+    get 'login' => 'devise/sessions#new', :as => :new_user_session
+    post 'login' => 'devise/sessions#create', :as => :user_session
+    delete 'logout' => 'devise/sessions#destroy', :as => :destroy_user_session
+
+    get 'password/reset' => 'devise/password#new', :as => :new_user_password
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

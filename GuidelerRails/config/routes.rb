@@ -2,7 +2,7 @@ Guideler::Application.routes.draw do
 
   #devise_for :users, :path => "account", :skip => [:registrations, :sessions], :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :sign_up => 'register' }
 
-  devise_for :users, :path => '', :skip => [:sessions]
+  devise_for :users, :path => '', :skip => [:sessions], :path_names => { :sign_up => 'signup' }
 
   as :user do
     get 'login' => 'devise/sessions#new', :as => :new_user_session

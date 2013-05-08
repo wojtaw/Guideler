@@ -76,5 +76,6 @@ Guideler::Application.routes.draw do
   match 'edit/:guiderID' => 'guider#editor', :as => 'editor', :constraints => { :guiderID => guider_regexp }
   match 'my_guiders' => 'guider#manage_all', :as => 'manage_all'
   match 'new_guider' => 'guider#new_guider', :as => 'new_guider'
+  match 'delete_guider' => 'guider#delete_guider', :as => 'delete_guider'
   match 'api/get_guider_info/:guiderID' => 'guider#guiderJSON', :as => 'g', :constraints => { :guiderID => guider_regexp }
 end

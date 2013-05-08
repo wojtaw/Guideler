@@ -5,6 +5,8 @@ Manage all your guiders
 <%= link_to('Create new guider', new_guider_path) %>
 
   <% guiders.each do |g| %>
-    <%= g.id %> / <%= g.name %>   <br>
+    <%= g.id %> / <%= g.name %> <%= link_to('Delete', delete_guider_path(:guiderID => g.id)) %>
+
+    <br>
 
   <% end %>

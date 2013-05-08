@@ -25,9 +25,12 @@ class GuiderController < ApplicationController
 
   def manage_all
 
-    guiders = current_user.guiders
-
-    render :locals => { :guiders => guiders }
+    if user_signed_in?
+      guiders = current_user.guiders
+      render :locals => { :guiders => guiders }
+    else
+      render :inline => 'Login please'
+    end
 
 
   end
@@ -40,7 +43,19 @@ class GuiderController < ApplicationController
     guider.save
 
 
-    redirect_to :manage_all
+    redirect_to editor_path(:guiderID => guider.id)
+
+  end
+
+  def delete_guider
+    guider = Guider.find(params[:guiderID])
+
+    if current_user.id == guider.user_id
+      guider.delete
+      redirect_to :manage_all
+    else
+      render :inline => 'Only owner can delete'
+    end
 
 
   end

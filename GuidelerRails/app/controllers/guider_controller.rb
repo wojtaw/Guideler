@@ -23,6 +23,28 @@ class GuiderController < ApplicationController
 
   end
 
+  def manage_all
+
+    guiders = current_user.guiders
+
+    render :locals => { :guiders => guiders }
+
+
+  end
+
+  def new_guider
+
+    guider = Guider.new
+    guider.name = "New Guider (Untitled)"
+    guider.user_id = current_user.id
+    guider.save
+
+
+    redirect_to :manage_all
+
+
+  end
+
   def guiderJSON
     guider = Guider.find(params[:guiderID])
 

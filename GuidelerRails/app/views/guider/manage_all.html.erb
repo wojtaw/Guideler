@@ -1,0 +1,10 @@
+<br>
+<br>
+Manage all your guiders
+<br>
+<%= link_to('Create new guider', new_guider_path) %>
+
+  <% guiders.each do |g| %>
+    <%= g.id %> / <%= g.name %>   <br>
+
+  <% end %>

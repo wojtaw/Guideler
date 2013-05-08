@@ -1,13 +1,20 @@
-<div class="edit-topBar topBarSpace"> <h1 id="gl-guiderName"><%= guider.name %></h1> </div>
+<div class="edit-topBar topBarSpace">
+  <h1 id="gl-guiderName"><%= guider.name %></h1>
+  <div id="edit-saveGuiderButton"></div>
+</div>
 
-<div class="edit-stepBar center"></div>
+<div class="edit-stepBar center">
+  <div id="edit-newStepButton">NEW</div>
+  <div id="edit-stepButtonsBar"></div>
+
+</div>
     <h2 id="gl-guiderDescription"><%= guider.description %></h2>
 
-Odkaz <input type="text" name="stepLink"><br>
-<input type="text" name="question"><br>
-<input type="text" name="answer1"><br>
-<input type="text" name="answer2"><br>
-<input type="text" name="answer3"><br>
+Link<input type="text" name="stepLink" id="edit-stepLink"><br>
+Question<input type="text" name="question" id="edit-question"><br>
+A1 <input type="text" name="answer1" id="edit-answer1"><br>
+A2 <input type="text" name="answer2" id="edit-answer2"><br>
+A3 <input type="text" name="answer3" id="edit-answer3"><br>
 
 <script type="text/javascript">
     initEditor();

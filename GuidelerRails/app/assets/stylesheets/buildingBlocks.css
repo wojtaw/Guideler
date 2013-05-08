@@ -1,15 +1,12 @@
 /* CSS Document */
 body {
-	overflow:hidden;
-	background-image:url(player/paperTextureNo4402_preview.jpeg);
-	background-repeat:repeat;	
 	margin:0px;
 	padding:0px;
-	font-family: 'Open Sans', sans-serif;		
+	font-family: 'Open Sans',sans-serif;
 }
 
 h1 {
-	font-size:20px;
+	font-size:45px;
 	color:#FFFFFF;
 	font-weight:normal;	
 	padding:0px;
@@ -17,7 +14,7 @@ h1 {
 }
 
 h2 {
-	font-size:20px;	
+	font-size:45px;
 	color:#FFFFFF;	
 	font-weight:normal;	
 	padding:0px;
@@ -27,6 +24,12 @@ h2 {
 h3 {
 	font-size:18px;	
 	font-weight:normal;	
+}
+
+.gl-playerBody {
+    overflow:hidden;
+    background-image:url(player/paperTextureNo4402_preview.jpeg);
+    background-repeat:repeat;
 }
 
 .userBar {
@@ -44,6 +47,10 @@ h3 {
     margin-top: 40px;
 }
 
+.homepageTitles {
+    color: #838d96;
+}
+
 .homepageHeader {
     background-image:url("homepage/hp-top.jpg");
     background-repeat: no-repeat;
@@ -51,12 +58,23 @@ h3 {
     width: 100%;
 }
 
-.homepageContent {
+.howItWorks {
+    background-color: #993300;
     width: 960px;
 }
 
-.pageFooter {
 
+.topGuiders {
+    background-color: #f2f3f5;
+}
+
+.topGuidersContent {
+    width: 1200px;
+    height: 200px;
+}
+
+.pageFooter {
+    background-color: #222222;
 
 }
 

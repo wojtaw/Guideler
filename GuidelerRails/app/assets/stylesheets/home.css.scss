@@ -1,3 +1,51 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.homepageTitles {
+  color: #838d96;
+  font-weight: 300;
+}
+
+.homepageHeader {
+  background-image:url("homepage/hp-top.jpg");
+  background-repeat: no-repeat;
+  height: 603px;
+  width: 100%;
+}
+
+.homepageHeaderContent {
+  background-image:url("homepage/hp-gradient-left.png");
+  background-repeat: repeat-y;
+  padding-left: 4%;
+  background-position: left;
+  height: 603px;
+  width: 100%;
+}
+
+.hp-mainTitle {
+  font-weight: 300;
+
+}
+
+.howItWorks {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 960px;
+}
+
+
+.topGuiders {
+  background-color: #f2f3f5;
+  border-top: 1px solid #dddddd;
+}
+
+.topGuidersContent {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 1200px;
+}
+
+.createGuiderButton {
+  background-color: #fcd116;
+  border: 5px solid #000000;
+  padding: 10px;
+  text-decoration: none;
+
+}

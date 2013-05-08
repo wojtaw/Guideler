@@ -1,3 +1,47 @@
 // Place all the styles related to the guider controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.edit-topBar{
+  height: 100px;
+  width: 100%;
+  background-color: #2e2e2e;
+}
+
+.edit-stepBar{
+  height: 80px;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #222222;
+  border-radius:40px;
+}
+
+#edit-newStepButton {
+
+}
+
+#edit-nextStepButton {
+
+
+}
+
+#edit-prevStepButton {
+
+}
+
+#edit-changeTemplateButton {
+
+
+}
+
+.edit-stepGeneralButton {
+
+}
+
+#edit-watchColumn {
+
+}
+
+#edit-thinkColumn {
+
+}

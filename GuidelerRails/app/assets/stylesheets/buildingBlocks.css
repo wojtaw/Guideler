@@ -8,7 +8,7 @@ body {
 h1 {
 	font-size:45px;
 	color:#FFFFFF;
-	font-weight:normal;	
+	font-weight:normal;
 	padding:0px;
 	margin:0px;
 }
@@ -16,7 +16,7 @@ h1 {
 h2 {
 	font-size:45px;
 	color:#FFFFFF;	
-	font-weight:normal;	
+	font-weight:normal;
 	padding:0px;
 	margin:0px;	
 }
@@ -47,35 +47,14 @@ h3 {
     margin-top: 40px;
 }
 
-.homepageTitles {
+.pageFooter {
+    background-color: #222222;
+    padding: 20px;
     color: #838d96;
 }
 
-.homepageHeader {
-    background-image:url("homepage/hp-top.jpg");
-    background-repeat: no-repeat;
-    height: 603px;
-    width: 100%;
-}
-
-.howItWorks {
-    background-color: #993300;
-    width: 960px;
-}
-
-
-.topGuiders {
-    background-color: #f2f3f5;
-}
-
-.topGuidersContent {
-    width: 1200px;
-    height: 200px;
-}
-
-.pageFooter {
-    background-color: #222222;
-
+.pageFooterContent {
+     font-size: 13px;
 }
 
 .gl-stepButtonGeneral {

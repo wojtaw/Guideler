@@ -11,6 +11,18 @@ class GuiderController < ApplicationController
     render :inline => 'Guider not found'
   end
 
+  def editor
+    guider = Guider.find(params[:guiderID])
+
+    if current_user.id == guider.user_id
+      render :locals => { :guider => guider}
+    else
+      render :inline => 'Only owner can edit this guider'
+    end
+
+
+  end
+
   def guiderJSON
     guider = Guider.find(params[:guiderID])
 

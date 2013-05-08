@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367424484382" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/config/database.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367422264677" ignored="false" />
-    <file path="/Dummy.txt" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367821806877" ignored="false" />
+    <file path="/Dummy.txt" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367831852517" ignored="false" />
     <file path="/20130501172823_create_guider_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367431884377" ignored="false" />
     <file path="/guider.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367819436228" ignored="false" />
     <file path="/guider_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367432063305" ignored="false" />
@@ -14,9 +14,9 @@
     <file path="/guider_steps.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367436335714" ignored="false" />
     <file path="/guiders.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367436447385" ignored="false" />
     <file path="/20130501190312_create_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367437753072" ignored="false" />
-    <file path="/routes.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367818061936" ignored="false" />
+    <file path="/routes.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367836217823" ignored="false" />
     <file path="/index.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367439115191" ignored="false" />
-    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367518976027" ignored="false" />
+    <file path="/guider_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367873084285" ignored="false" />
     <file path="/player.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367519246101" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/controllers/presentation_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/models/folder.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
@@ -29,13 +29,17 @@
     <file path="/gl-guider-player.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367519177277" ignored="false" />
     <file path="$PROJECT_DIR$/log/development.log" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367519208460" ignored="false" />
     <file path="/devise.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367787695165" ignored="false" />
-    <file path="/Ruby Console" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367787983513" ignored="false" />
+    <file path="/Ruby Console" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367871112967" ignored="false" />
     <file path="/20130506053950_add_dependency_to_user.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367818890441" ignored="false" />
     <file path="/20130506054348_add_dependency_to_guider.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367819095095" ignored="false" />
     <file path="/user.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367821876388" ignored="false" />
     <file path="/20130506055646_create_progress_connecting_table.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367820642346" ignored="false" />
     <file path="/20130506062710_create_steps_users.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367821692468" ignored="false" />
     <file path="/application.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367824705832" ignored="false" />
+    <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/assets/stylesheets/sl-hacks.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367831860878" ignored="false" />
+    <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/Gemfile" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367831860878" ignored="false" />
+    <file path="/editor.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367836177064" ignored="false" />
+    <file path="/gl-editor.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367873415368" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,86 +56,85 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
+      <file leaf-file-name="buildingBlocks.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="135" selection-start="461" selection-end="461" vertical-scroll-proportion="-9.153846">
+            <state line="120" column="52" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20130506062710_create_steps_users.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20130506062710_create_steps_users.rb">
+      <file leaf-file-name="guider_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="18" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+            <state line="22" column="47" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="gl-editor.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="22" selection-start="187" selection-end="187" vertical-scroll-proportion="0.18959108">
+            <state line="7" column="25" selection-start="184" selection-end="184" vertical-scroll-proportion="0.04927536">
+              <folding>
+                <element signature="n#!!doc;n#initEditor#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gl-guider-player.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="50" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <file leaf-file-name="player.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="43" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+            <state line="4" column="30" selection-start="0" selection-end="1517" vertical-scroll-proportion="-2.6153846">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <file leaf-file-name="editor.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/guider/editor.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="54" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RailsDependency/#Guideler" pinned="false" current="false" current-in-tab="false">
-        <entry file="uml://RailsDependency/#Guideler">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>RailsDependency</ID>
-              <OriginalElement>#Guideler</OriginalElement>
-              <nodes>
-                <node x="54.0" y="-179.0">User</node>
-                <node x="858.0" y="-178.0">Step</node>
-                <node x="552.0" y="208.0">Guider</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="User" target="Guider">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Guider" target="Step">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-                <edge source="Step" target="User">
-                  <point x="0.0" y="0.0" />
-                  <point x="0.0" y="0.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="128.0" y="-29.0" />
-              <SelectedNodes>
-                <node>User</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Association fields</Category>
-                <Category>Migration fields</Category>
-                <Category>System DB fields</Category>
-              </Categories>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="75" column="42" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fonts.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fonts.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generalTricks.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/generalTricks.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,14 +153,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/guider_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js" />
-        <option value="$PROJECT_DIR$/app/views/guider/player.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130506053950_add_dependency_to_user.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20130506054348_add_dependency_to_guider.rb" />
         <option value="$PROJECT_DIR$/app/models/guider.rb" />
@@ -166,6 +164,11 @@
         <option value="$PROJECT_DIR$/app/models/step.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css" />
+        <option value="$PROJECT_DIR$/app/views/guider/editor.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/guider_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-editor.js" />
       </list>
     </option>
   </component>
@@ -179,8 +182,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1014" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -208,8 +211,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -497,6 +498,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -520,27 +525,56 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Guideler" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuidelerRails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="player" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\vojtaciml\Guideler\GuidelerRails\app\assets\images\player" />
       <recent name="C:\vojtaciml\Guideler\GuidelerRails\app\assets\javascripts" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: Guideler">
+  <component name="RunManager" selected="IRB console.Rails console: Guideler">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="Guideler" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -557,30 +591,6 @@
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="db:rollback" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
-      <module name="Guideler" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="development" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:rollback" />
-      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="1" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
@@ -657,6 +667,25 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Rails console: Guideler" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
+      <module name="Guideler" />
+      <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <IRB_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <IRB_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <IRB_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <IRB_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/script/rails" />
+      <IRB_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="console development" />
+      <IRB_RUN_CONFIG NAME="IS_RAILS_CONSOLE" VALUE="true" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -885,18 +914,18 @@
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: Guideler" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: Guideler" />
       <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:rollback" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.db:structure:dump" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.db:drop" />
-      <item index="8" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.db:structure:dump" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.db:drop" />
+      <item index="7" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="8" class="java.lang.String" itemvalue="IRB console.Rails console: Guideler" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-        <item index="1" class="java.lang.String" itemvalue="Rake.db:create" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:drop" />
-        <item index="3" class="java.lang.String" itemvalue="Rake.db:structure:dump" />
-        <item index="4" class="java.lang.String" itemvalue="Rake.db:rollback" />
+        <item index="0" class="java.lang.String" itemvalue="IRB console.Rails console: Guideler" />
+        <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.db:create" />
+        <item index="3" class="java.lang.String" itemvalue="Rake.db:drop" />
+        <item index="4" class="java.lang.String" itemvalue="Rake.db:structure:dump" />
       </list>
     </recent_temporary>
   </component>
@@ -948,23 +977,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1014" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26894343" sideWeight="0.67045456" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27348486" sideWeight="0.64262295" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35737705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1029,41 +1058,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="92" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130501190312_create_steps.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="41" selection-start="1032" selection-end="1032" vertical-scroll-proportion="0.37384897">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/guider.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="56" selection-start="114" selection-end="114" vertical-scroll-proportion="0.0">
@@ -1071,37 +1065,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130506054348_add_dependency_to_guider.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="128" selection-end="128" vertical-scroll-proportion="0.09392265">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130501190103_create_guiders.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="33" selection-start="76" selection-end="91" vertical-scroll-proportion="0.060283687">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="135" selection-start="461" selection-end="461" vertical-scroll-proportion="-9.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="50" selection-start="1298" selection-end="1298" vertical-scroll-proportion="0.22365339">
-          <folding />
-        </state>
+        <state line="2" column="33" selection-start="76" selection-end="91" vertical-scroll-proportion="0.060283687" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/step.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="2" selection-start="55" selection-end="85" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20" selection-start="274" selection-end="274" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
@@ -1112,40 +1090,25 @@
           <ID>RailsDependency</ID>
           <OriginalElement>#Guideler</OriginalElement>
           <nodes>
-            <node x="54.0" y="-179.0">User</node>
-            <node x="858.0" y="-178.0">Step</node>
-            <node x="552.0" y="208.0">Guider</node>
+            <node x="" y="">User</node>
+            <node x="" y="">Step</node>
+            <node x="" y="">Guider</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="User" target="Guider">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Guider" target="Step">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="Step" target="User">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="128.0" y="-29.0" />
-          <SelectedNodes>
-            <node>User</node>
-          </SelectedNodes>
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="367.5" y="-91.0" />
+          <SelectedNodes />
           <Categories>
-            <Category>Association fields</Category>
             <Category>Migration fields</Category>
             <Category>System DB fields</Category>
+            <Category>Association fields</Category>
           </Categories>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130506062710_create_steps_users.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="18" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1157,17 +1120,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="43" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+        <state line="120" column="52" selection-start="1835" selection-end="1835" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/generalTricks.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="187" selection-end="187" vertical-scroll-proportion="0.18959108">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fonts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/guider/editor.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="42" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="30" selection-start="0" selection-end="1517" vertical-scroll-proportion="-2.6153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="47" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="50" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="25" selection-start="184" selection-end="184" vertical-scroll-proportion="0.04927536">
+          <folding>
+            <element signature="n#!!doc;n#initEditor#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -29,6 +29,16 @@ h3 {
 	font-weight:normal;	
 }
 
+.userBar {
+    height: 40px;
+    width: 100%;
+    background-color: darkorange;
+    position: fixed;
+
+}
+
+
+
 .gl-stepButtonGeneral {
 	display:block;
 	background-color:#333;

@@ -60,6 +60,11 @@ class GuiderController < ApplicationController
 
   end
 
+  def api_edit_guider
+    req = ActiveSupport::JSON.decode(request.body)
+    render :inline => 'It works'
+  end
+
   def guiderJSON
     guider = Guider.find(params[:guiderID])
 

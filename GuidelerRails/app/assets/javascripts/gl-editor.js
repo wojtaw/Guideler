@@ -8,9 +8,10 @@
 var editorGuiderJSON = new Object();
 var editSteps = new Array();
 var currentEditStep = 0;
+var guiderEditID = -1;
 
-function initEditor(){
-
+function initEditor(guiderEditID){
+    this.guiderEditID = guiderEditID;
     //Create first emptz step
     editSteps.push(createStep("","","","","","",""));
 
@@ -33,6 +34,7 @@ function addStep(){
 }
 
 function editPrintJson(e){
+    editorGuiderJSON.guider_id = guiderEditID;
     editorGuiderJSON.name = "Testovaci jmeno";
     editorGuiderJSON.description = "Testovaci jmeno";
     editorGuiderJSON.steps = editSteps;

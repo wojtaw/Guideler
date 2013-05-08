@@ -34,10 +34,31 @@ h3 {
     width: 100%;
     background-color: darkorange;
     position: fixed;
-
+    top:0;
+    left:0;
+    display: block;
+    z-index:200;
 }
 
+.topBarSpace {
+    margin-top: 40px;
+}
 
+.homepageHeader {
+    background-image:url("homepage/hp-top.jpg");
+    background-repeat: no-repeat;
+    height: 603px;
+    width: 100%;
+}
+
+.homepageContent {
+    width: 960px;
+}
+
+.pageFooter {
+
+
+}
 
 .gl-stepButtonGeneral {
 	display:block;

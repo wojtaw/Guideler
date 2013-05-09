@@ -19,8 +19,7 @@ function initEditor(guiderEditID){
 
         console.log("looping through steps "+data.steps.length)
         for(var i=0;i < data.steps.length;i++){
-            console.log("step "+i+" / "+ data.steps[i].externalData)
-            var externalLink = data.steps[i].externalData;
+            var externalLink = data.steps[i].originalLink;
             var question = data.steps[i].question;
             var answer1 = data.steps[i].answers[0].answer1;
             var answer2 = data.steps[i].answers[1].answer2;

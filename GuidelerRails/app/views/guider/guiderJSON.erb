@@ -2,6 +2,7 @@
 <% guider.steps.each_with_index do |step, index|  %>
     {
         "id":<%= step.step_order %>,
+        "originalLink":"<%= step.link %>",
         "serviceType":"<%= serviceType[index] %>",
         "externalData":"<%= externalData[index] %>",
         "question":"<%= step.question %>",

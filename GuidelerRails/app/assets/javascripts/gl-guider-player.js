@@ -4,7 +4,6 @@ outputTypes = {
     DEBUG : "debug: "
 }
 
-var glPathToJSONAPI = "/api/get_guider_info/";
 //var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 var isLoaded = new Array();

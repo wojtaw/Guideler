@@ -15,13 +15,15 @@ class GuiderController < ApplicationController
     guider = Guider.find(params[:guiderID])
 
     if user_signed_in?
-      render :inline => 'Login please'
-    end
 
-    if current_user.id == guider.user_id
-      render :locals => { :guider => guider}
+      if current_user.id == guider.user_id
+        render :locals => { :guider => guider}
+      else
+        render :inline => 'Only owner can edit this guider'
+      end
+
     else
-      render :inline => 'Only owner can edit this guider'
+      render :inline => 'Login please'
     end
 
 

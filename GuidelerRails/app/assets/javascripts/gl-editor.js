@@ -27,12 +27,14 @@ function initEditorListeners() {
 }
 
 function addStep(){
+    editSteps.push(createStep("","","","","","",""));
     saveCurrentStep();
     refreshStepBar();
     editStep(editSteps.length - 1);
 }
 
 function saveEditData(){
+    saveCurrentStep()
     prepareEditJSON();
 
     $.ajax({
@@ -88,7 +90,9 @@ function saveCurrentStep() {
     var answer1 = $('#edit-answer1').val();
     var answer2 = $('#edit-answer2').val();
     var answer3 = $('#edit-answer3').val();
-    editSteps[currentEditStep] = createStep(externalLink,questionText, answer1, answer2, answer3);
+    var questionEnabled = true;
+    var correctAnswer = 1;
+    editSteps[currentEditStep] = createStep(externalLink,questionText, answer1, answer2, answer3,correctAnswer,questionEnabled);
 }
 
 function editStep(stepIndex){

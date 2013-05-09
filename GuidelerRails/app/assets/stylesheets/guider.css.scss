@@ -105,6 +105,10 @@
   float: left;
 }
 
+#edit-guiderDescription {
+  display: none;
+}
+
 #edit-switchOff {
   display: block;
   width: 35px;
@@ -120,7 +124,8 @@
 .edit-stepGeneralButton {
   background-image: url("editor/pages.png");
   background-repeat: no-repeat;
-  width: 38px;
+  margin-right: 15px;
+  width: 32px;
   height: 40px;
   float: left;
   cursor: pointer;

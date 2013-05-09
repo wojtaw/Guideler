@@ -11,6 +11,9 @@ var currentEditStep = 0;
 var guiderEditID = -1;
 
 function initEditor(guiderEditID){
+    //Add CSS class via unique ID
+    $('body').attr('id', 'editor-body');
+
     this.guiderEditID = guiderEditID;
     //First load steps of this guider
     $.getJSON((glPathToJSONAPI+guiderEditID), function(data) {

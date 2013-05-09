@@ -45,8 +45,8 @@
     <file path="/buildingBlocks.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368041328938" ignored="false" />
     <file path="/generalTricks.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368037576230" ignored="false" />
     <file path="/home.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368041832463" ignored="false" />
-    <file path="/guider.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368118506546" ignored="false" />
-    <file path="/editor.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368118589243" ignored="false" />
+    <file path="/guider.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368124029756" ignored="false" />
+    <file path="/editor.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368124377725" ignored="false" />
     <file path="/20130509110350_add_question_enabled_to_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368097536408" ignored="false" />
     <file path="/gl-values.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368104024785" ignored="false" />
     <file path="/20130509171648_add_published_to_guiders.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368119847363" ignored="false" />
@@ -70,7 +70,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49199572">
+    <splitter split-orientation="horizontal" split-proportion="0.5057915">
       <split-first>
         <leaf>
           <file leaf-file-name="gl-values.js" pinned="false" current="false" current-in-tab="false">
@@ -130,7 +130,7 @@
           <file leaf-file-name="gl-editor.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="127" column="52" selection-start="4065" selection-end="4065" vertical-scroll-proportion="0.0">
+                <state line="3" column="71" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -157,7 +157,7 @@
           <file leaf-file-name="editor.html.erb" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="2" column="96" selection-start="244" selection-end="244" vertical-scroll-proportion="0.06967213">
+                <state line="25" column="64" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.4817073">
                   <folding />
                 </state>
               </provider>
@@ -179,7 +179,16 @@
           <file leaf-file-name="guider.css.scss" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="57" column="15" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.6113139">
+                <state line="176" column="0" selection-start="3004" selection-end="3017" vertical-scroll-proportion="0.7863129">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="generalTricks.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/generalTricks.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="7" column="0" selection-start="128" selection-end="244" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -212,11 +221,11 @@
         <option value="$PROJECT_DIR$/app/views/guider/guiderJSON.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/guider/manage_all.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js" />
+        <option value="$PROJECT_DIR$/db/migrate/20130509171648_add_published_to_guiders.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-editor.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss" />
         <option value="$PROJECT_DIR$/app/views/guider/editor.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-editor.js" />
-        <option value="$PROJECT_DIR$/db/migrate/20130509171648_add_published_to_guiders.rb" />
       </list>
     </option>
   </component>
@@ -1024,11 +1033,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.6431818" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.6431818" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17075774" sideWeight="0.6522727" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17075774" sideWeight="0.8431818" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34772727" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15681818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1161,30 +1170,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/generalTricks.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="37" selection-end="45" vertical-scroll-proportion="0.019906323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="31" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.2692308">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="228" column="73" selection-start="6978" selection-end="6991" vertical-scroll-proportion="-155.04">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="52" selection-start="4065" selection-end="4065" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1196,16 +1184,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="71" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/generalTricks.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="128" selection-end="244" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="31" selection-start="205" selection-end="205" vertical-scroll-proportion="-3.2692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="15" selection-start="1022" selection-end="1022" vertical-scroll-proportion="0.6113139">
+        <state line="176" column="0" selection-start="3004" selection-end="3017" vertical-scroll-proportion="0.7863129">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="96" selection-start="244" selection-end="244" vertical-scroll-proportion="0.06967213">
+        <state line="25" column="64" selection-start="1372" selection-end="1372" vertical-scroll-proportion="0.4817073">
           <folding />
         </state>
       </provider>

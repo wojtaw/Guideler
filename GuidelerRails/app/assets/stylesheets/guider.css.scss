@@ -1,6 +1,11 @@
 // Place all the styles related to the guider controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#editor-body{
+  background-image: url("editor/default_background.png");
+  background-repeat: repeat;
+}
+
 .edit-topBar{
   height: 80px;
   padding-top: 20px;
@@ -136,14 +141,69 @@
 }
 
 #edit-watchColumn {
-
+  width: 550px;
+  text-align: left;
+  float: left;
+  margin-right: 40px;
 }
 
 #edit-thinkColumn {
-
+  width: 550px;
+  text-align: left;
+  float: left;
 }
 
 #edit-thinkBox {
   background-color: #dddddd;
 
 }
+
+#edit-stepLink {
+  width: 80%;
+  background-image: url("editor/links.png");
+  background-repeat: no-repeat;
+  background-position: 10px 60%;
+  color: #61717c;
+  font-size: 16px;
+  height: 40px;
+  text-align: left;
+  padding-left: 50px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.edit-service{
+  background-image: url("editor/links-icons.png");
+}
+
+#edit-service-
+
+.edit-linkBox {
+  background-color: #122736;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+}
+
+.edit-pageWrapper {
+
+}
+
+.edit-pageContent {
+
+}
+
+.edit-h3{
+  font-size: 18px;
+  font-weight: 300;
+  color: #838d96;
+}
+
+.edit-h2{
+  font-size: 40px;
+  font-weight: 300;
+  color: #000;
+}
+

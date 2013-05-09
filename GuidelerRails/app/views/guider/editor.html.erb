@@ -7,28 +7,52 @@
 <div class="edit-stepBar center">
   <div id="edit-newStepButton">New</div>
   <div id="edit-stepButtonsBar"></div>
-
 </div>
-    <h2 id="gl-guiderDescription"><%= guider.description %></h2>
 
-Link<input type="text" name="stepLink" id="edit-stepLink" size="80"><br>
-Which answer is correct?
-<br>
-<div id="edit-questionSwitch">
-  <div id="edit-switchOn">ON</div>
-  <div id="edit-switchOff">OFF</div>
-</div>
-<br><br>
-<div id="edit-thinkBox">
-    Question<input type="text" name="question" id="edit-question"><br>
-    A1 <input type="text" name="answer1" id="edit-answer1"><br>
-    A2 <input type="text" name="answer2" id="edit-answer2"><br>
-    A3 <input type="text" name="answer3" id="edit-answer3"><br>
+<div class="edit-pageWrapper center">
+  <div class="edit-pageContent clearfix">
+      <div id="edit-watchColumn">
+        <h2 class="edit-h2">Watch</h2>
+        <h3 class="edit-h3">Add link to your study materials - videos, images, albums, web articles, PDFs, google docs in share mode, ...</h3>
+        <div class="edit-linkBox">
+            <input type="text" name="stepLink" class="mainFont" id="edit-stepLink"><br>
+          
+            <div class="edit-service" id="edit-service-google"></div>
+            <div class="edit-service" id="edit-service-youtube"></div>
+            <div class="edit-service" id="edit-service-vimeo"></div>
+            <div class="edit-service" id="edit-service-flickr"></div>
+            <div class="edit-service" id="edit-service-google"></div>
+            <div class="edit-service" id="edit-service-soundcloud"></div>
+            <div class="edit-service" id="edit-service-wordpress"></div>
+            <div class="edit-service" id="edit-service-wikipedia"></div>
+            <div class="edit-service" id="edit-service-slideslive"></div>
+            <div class="edit-service" id="edit-service-slideshare"></div>
 
-    <input type="radio" name="edit-correctAnswer" id="edit-radio-answer1" value="1">A1<br>
-    <input type="radio" name="edit-correctAnswer" id="edit-radio-answer2" value="2">A2<br>
-    <input type="radio" name="edit-correctAnswer" id="edit-radio-answer3" value="3">A3
+        </div>
+      </div>
+      <div id="edit-thinkColumn">
+        <h2 class="edit-h2">Think</h2>
+        <h3 class="edit-h3">Please paste your question and answers, select correct answer. </h3>
+        <br>
+        <div id="edit-questionSwitch">
+          <div id="edit-switchOn">ON</div>
+          <div id="edit-switchOff">OFF</div>
+        </div>
+        <br><br>
+        <div id="edit-thinkBox">
+            Question<input type="text" name="question" id="edit-question"><br>
+            A1 <input type="text" name="answer1" id="edit-answer1"><br>
+            A2 <input type="text" name="answer2" id="edit-answer2"><br>
+            A3 <input type="text" name="answer3" id="edit-answer3"><br>
+
+            <input type="radio" name="edit-correctAnswer" id="edit-radio-answer1" value="1">A1<br>
+            <input type="radio" name="edit-correctAnswer" id="edit-radio-answer2" value="2">A2<br>
+            <input type="radio" name="edit-correctAnswer" id="edit-radio-answer3" value="3">A3
+        </div>
+      </div>
+  </div>
 </div>
+
 
 <script type="text/javascript">
     initEditor(<%= guider.id %>);

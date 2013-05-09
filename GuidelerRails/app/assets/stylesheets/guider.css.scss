@@ -89,6 +89,8 @@
   font-size: 13px;
   font-weight: 300;
   cursor: pointer;
+  margin-left: 120px;
+  margin-top: 20px;
 }
 
 #edit-switchOn {
@@ -154,7 +156,8 @@
 }
 
 #edit-thinkBox {
-  background-color: #dddddd;
+  background-color: #FFFFFF;
+  border: dashed 2px #a1a1a1;
 
 }
 
@@ -184,9 +187,46 @@
   float: left;
 }
 
+
+.edit-linkBox {
+  background-color: #122736;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+}
+
+.edit-pageWrapper {
+
+}
+
+.edit-pageContent {
+
+}
+
+.edit-h3{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 300;
+  color: #838d96;
+}
+
+.edit-h2{
+  font-size: 40px;
+  font-weight: 300;
+  color: #000;
+  float: left;
+}
+
+.edit-service-lightbar {
+  position: relative;
+  top: -45px;
+}
+
+
+//SERVICES
 #edit-service-google{
    background-position: 0px 0px;
-}
+ }
 
 #edit-service-youtube{
   background-position: -48px 0px;
@@ -225,30 +265,44 @@
 }
 
 
-.edit-linkBox {
-  background-color: #122736;
-  padding-top: 40px;
-  padding-bottom: 30px;
 
+#edit-service-google-light{
+  background-position: 0px -60px;
 }
 
-.edit-pageWrapper {
-
+#edit-service-youtube-light{
+  background-position: -48px -60px;
 }
 
-.edit-pageContent {
-
+#edit-service-vimeo-light{
+  background-position: -97px -60px;
 }
 
-.edit-h3{
-  font-size: 18px;
-  font-weight: 300;
-  color: #838d96;
+#edit-service-flickr-light{
+  background-position: -145px -60px;
 }
 
-.edit-h2{
-  font-size: 40px;
-  font-weight: 300;
-  color: #000;
+#edit-service-picasa-light{
+  background-position: -193px -60px;
+}
+
+#edit-service-soundcloud-light{
+  background-position: -242px -60px;
+}
+
+#edit-service-wordpress-light{
+  background-position: -290px -60px;
+}
+
+#edit-service-wikipedia-light{
+  background-position: -342px -60px;
+}
+
+#edit-service-slideslive-light{
+  background-position: -392px -60px;
+}
+
+#edit-service-slideshare-light{
+  background-position: -442px -60px;
 }
 

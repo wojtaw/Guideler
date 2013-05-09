@@ -4,7 +4,6 @@ outputTypes = {
     DEBUG : "debug: "
 }
 
-//var glPathToJSONAPI = "http://wpstudio.cz/guideler/testing/sampleGuiderData.json";
 var guiderJSON = new Object();
 var isLoaded = new Array();
 var stepsFinished = new Array();
@@ -52,9 +51,8 @@ function modifyCSSclass(){
 
 function initPlayer(guiderID){
 	if(typeof(guiderID)=='undefined'){
-		return printOutput("Undegined guider ID", outputTypes.ERROR);
+		return printOutput("Undefined guider ID", outputTypes.ERROR);
 	}
-    glPathToJSONAPI += guiderID;
 	showLoading();
 	getGuiderData(guiderID)
 }
@@ -68,7 +66,7 @@ function hideLoading(){
 }
 
 function getGuiderData(guiderID){	
-	$.getJSON(glPathToJSONAPI, function(data) {
+	$.getJSON((glPathToJSONAPI+guiderID), function(data) {
 		guiderJSON = data;
 		initStage();
 	});		

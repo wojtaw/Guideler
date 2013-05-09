@@ -70,16 +70,16 @@ class GuiderController < ApplicationController
     result = ActiveSupport::JSON.decode(request.body)
     #delete all steps belonging to the guider
 
-    Step.delete_all(guider_id: result['guider_id'])
+    Step.delete_all(guider_id: result['guiderID'])
     #add new updated steps
 
     result["steps"].each do |step_data|
 
       Step.create(
-        :guider_id => result['guider_id'],
+        :guider_id => result['guiderID'],
         :step_order => step_data["step_order"],
         :link => step_data["externalLink"],
-        :question => step_data["questionText"],
+        :question => step_data["question"],
         :question_enabled => step_data["questionEnabled"],
         :correct_answer => step_data["correctAnswer"],
         :answer1 => step_data["answer1"],
@@ -135,6 +135,10 @@ class GuiderController < ApplicationController
   def parse_service(parsing_link)
       url = URI.parse(parsing_link)
       host = url.host
+      if host == nil
+        return "GENERAL"
+      end
+
       if host.start_with?('www.')
         host = host[4..host.length]
       end

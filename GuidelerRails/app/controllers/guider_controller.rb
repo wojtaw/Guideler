@@ -14,6 +14,10 @@ class GuiderController < ApplicationController
   def editor
     guider = Guider.find(params[:guiderID])
 
+    if user_signed_in?
+      render :inline => 'Login please'
+    end
+
     if current_user.id == guider.user_id
       render :locals => { :guider => guider}
     else
@@ -66,14 +70,24 @@ class GuiderController < ApplicationController
 
     Step.delete_all(guider_id: result['guider_id'])
     #add new updated steps
+
     result["steps"].each do |step_data|
-      single_step = Step.new
-      single_step.link = step_data.externalLink
-      single_step.save
+
+      Step.create(
+        :guider_id => result['guider_id'],
+        :step_order => step_data["step_order"],
+        :link => step_data["externalLink"],
+        :question => step_data["questionText"],
+        :question_enabled => step_data["questionEnabled"],
+        :correct_answer => step_data["correctAnswer"],
+        :answer1 => step_data["answer1"],
+        :answer2 => step_data["answer2"],
+        :answer3 => step_data["answer3"],
+      )
     end
 
 
-    render :inline => 'It works'+result['name']
+    render :inline => 'SUCCESS'
   end
 
   def guiderJSON

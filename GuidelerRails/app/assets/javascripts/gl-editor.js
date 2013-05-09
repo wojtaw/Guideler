@@ -27,7 +27,6 @@ function initEditorListeners() {
 }
 
 function addStep(){
-    editSteps.push(createStep("","","","","","",""));
     saveCurrentStep();
     refreshStepBar();
     editStep(editSteps.length - 1);
@@ -108,11 +107,11 @@ function refreshEditTabs() {
 function createStep(externalLink, questionText, answer1, answer2, answer3, correctAnswer, questionEnabled){
     var tmpStep = new Object();
     tmpStep.externalLink = externalLink;
-    tmpStep.questionEnabled = questionEnabled;
     tmpStep.questionText = questionText;
     tmpStep.answer1 = answer1;
     tmpStep.answer2 = answer2;
     tmpStep.answer3 = answer3;
     tmpStep.correctAnswer = correctAnswer;
+    tmpStep.questionEnabled = questionEnabled;
     return tmpStep;
 }

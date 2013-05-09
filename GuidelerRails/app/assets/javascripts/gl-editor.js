@@ -25,7 +25,11 @@ function initEditor(guiderEditID){
             var answer1 = data.steps[i].answers[0].answer1;
             var answer2 = data.steps[i].answers[1].answer2;
             var answer3 = data.steps[i].answers[2].answer3;
-            var questionEnabled = data.steps[i].questionEnabled;
+            console.log("ZAHADNA DATA"+data.steps[i].questionEnabled);
+            if(data.steps[i].questionEnabled == true || data.steps[i].questionEnabled == "TRUE" || data.steps[i].questionEnabled == "true")
+                var questionEnabled = true
+            else
+                var questionEnabled = false
             var correctAnswer = data.steps[i].correctAnswer;
             editSteps[i] = createStep(externalLink,question, answer1, answer2, answer3,correctAnswer,questionEnabled);
         }
@@ -58,8 +62,7 @@ function editorJSONloadingFinished(){
     currentEditStep = editSteps.length - 1;
     initEditorListeners();
 
-    refreshStepBar();
-    refreshEditTabs();
+    redrawEditorGUI();
 
     console.log("Current state");
     console.log(editSteps)
@@ -90,6 +93,11 @@ function saveEditData(){
 }
 
 //--------REDRAWING GUI
+function redrawEditorGUI(){
+    showSwitchState();
+    refreshStepBar();
+    refreshEditTabs();
+}
 function refreshStepBar(){
     console.log("Refreshing");
     console.log(editSteps)
@@ -121,14 +129,25 @@ function refreshEditTabs() {
 }
 
 function questionEnableSwitch(){
-    if(editSteps[currentEditStep].questionEnabled){
-        $("#edit-switchOn").css("background-color","#b4b6b6")
-        $("#edit-switchOff").css("background-color","#346f0d")
+    if(editSteps[currentEditStep].questionEnabled == true)
         editSteps[currentEditStep].questionEnabled = false;
-    } else {
-        $("#edit-switchOff").css("background-color","#b4b6b6")
-        $("#edit-switchOn").css("background-color","#346f0d")
+    else
         editSteps[currentEditStep].questionEnabled = true;
+    showSwitchState();
+}
+
+function showSwitchState(){
+    console.log(editSteps);
+    var enabler = editSteps[currentEditStep].questionEnabled;
+    console.log("enabler value"+enabler)
+    if(enabler == true){
+        console.log("show true");
+        $("#edit-switchOff").css("background-color","#b4b6b6");
+        $("#edit-switchOn").css("background-color","#346f0d");
+    } else if(enabler == false) {
+        console.log("show false");
+        $("#edit-switchOn").css("background-color","#b4b6b6");
+        $("#edit-switchOff").css("background-color","#346f0d");
     }
 }
 

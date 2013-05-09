@@ -127,7 +127,7 @@
 }
 
 .edit-stepGeneralButtonActive {
-  border-bottom: 5px solid #0066FF;
+  border-bottom: 3px solid #0066FF;
 }
 
 .edit-step-empty{
@@ -195,6 +195,7 @@
   resize: none;
   text-indent: 50px;
   padding-top: 8px;
+  margin-bottom: 15px;
 }
 
 
@@ -223,8 +224,29 @@
 
 }
 
-.editRadio{
+.edit-answerField {
+  text-indent: 20px;
+  border: solid 1px #cacdce;
+  width: 100%;
+  height: 40px;
+  float: left;
+}
+
+.edit-radio {
+  -webkit-appearance: none;
   background-image: url("editor/check.png");
+  padding: 9px;
+  display: block;
+  width: 22px;
+  height: 20px;
+  position: relative;
+  top:  -35px;
+  right: 10px;
+  float: right;
+}
+
+.edit-radio:checked {
+  background-position: 0px -38px;
 }
 
 .edit-h3{

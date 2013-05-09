@@ -72,7 +72,21 @@ function initEditorListeners() {
     $("#edit-saveGuiderButton").click(saveEditData);
     $("#edit-questionSwitch").click(questionEnableSwitch);
     $("#edit-stepLink").blur(linkEntered);
+    $('input[name=edit-correctAnswer]').change(colorAnswerField);
+
     refreshStepListeners();
+}
+
+function colorAnswerField(){
+   var tmpValue = $('input[name=edit-correctAnswer]:checked').val();
+   var allFields = $('.edit-answerField');
+   var selectedField = $('#edit-answer'+tmpValue);
+    allFields.css("background-color","#fff");
+    allFields.css("border","solid 1px #cacdce");
+
+    selectedField.css("background-color","#d1f0bd");
+    selectedField.css("border","solid 2px #346f0d");
+
 }
 
 //---------OTHER LOGIC
@@ -103,6 +117,7 @@ function redrawEditorGUI(){
     showSwitchState();
     refreshStepBar();
     refreshEditTabs();
+    colorAnswerField();
 }
 function refreshStepBar(){
     console.log("Refreshing");
@@ -171,7 +186,7 @@ function showSwitchState(){
         $("#edit-thinkBox").css("display","block");
     } else {
         $("#edit-switchOn").css("background-color","#b4b6b6");
-        $("#edit-switchOff").css("background-color","#346f0d");
+        $("#edit-switchOff").css("background-color","#000000");
         $("#edit-thinkBox").css("display","none");
     }
 }

@@ -49,7 +49,8 @@ function prepareEditJSON(){
 }
 
 function saveSuccess(e) {
-    console.log("Server responded: "+e)
+    console.log("Server responded: "+e);
+    $("#edit-saveGuiderButton").html("Saved");
 }
 
 function editorJSONloadingFinished(){
@@ -73,6 +74,7 @@ function initEditorListeners() {
 //---------OTHER LOGIC
 
 function saveEditData(){
+    $("#edit-saveGuiderButton").html("Saving...");
     saveCurrentStep()
     prepareEditJSON();
 
@@ -89,6 +91,7 @@ function saveEditData(){
 
 //--------REDRAWING GUI
 function redrawEditorGUI(){
+    $("#edit-saveGuiderButton").html("Save");
     showSwitchState();
     refreshStepBar();
     refreshEditTabs();
@@ -128,7 +131,8 @@ function refreshEditTabs() {
     $('#edit-answer3').val(editSteps[currentEditStep].answer3);
     //Decheck radios and check proper one
     //$('input[name=edit-correctAnswer]').attr('checked', false);
-    $('#edit-radio-answer'+editSteps[currentEditStep].correctAnswer).attr('checked', true);
+    console.log("Should be checked number /////////"+editSteps[currentEditStep].correctAnswer);
+    $('#edit-radio-answer'+editSteps[currentEditStep].correctAnswer).get(0).checked = true;
 }
 
 function questionEnableSwitch(){

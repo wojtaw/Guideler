@@ -14,12 +14,6 @@ var currentStepNumber = 1;
 var draggableStartPosition = 0;
 
 
-document.onkeydown = keyboardHandler;
-
-$(window).ready(function() {
-	$(window).resize(recalculatePlayer);	
-});
-
 function keyboardHandler(e){
 	var e= window.event || e
 	if(e.keyCode == 37) previousStep();		
@@ -50,6 +44,12 @@ function modifyCSSclass(){
 }
 
 function initPlayer(guiderID){
+    document.onkeydown = keyboardHandler;
+
+    $(window).ready(function() {
+        $(window).resize(recalculatePlayer);
+    });
+
 	if(typeof(guiderID)=='undefined'){
 		return printOutput("Undefined guider ID", outputTypes.ERROR);
 	}

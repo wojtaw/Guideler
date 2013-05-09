@@ -5,27 +5,30 @@
 </div>
 
 <div class="edit-stepBar center">
-  <div id="edit-newStepButton">NEW</div>
+  <div id="edit-newStepButton">New</div>
   <div id="edit-stepButtonsBar"></div>
 
 </div>
     <h2 id="gl-guiderDescription"><%= guider.description %></h2>
 
-Link<input type="text" name="stepLink" id="edit-stepLink"><br>
+Link<input type="text" name="stepLink" id="edit-stepLink" size="80"><br>
 Which answer is correct?
 <br>
 <div id="edit-questionSwitch">
   <div id="edit-switchOn">ON</div>
   <div id="edit-switchOff">OFF</div>
 </div>
-Question<input type="text" name="question" id="edit-question"><br>
-A1 <input type="text" name="answer1" id="edit-answer1"><br>
-A2 <input type="text" name="answer2" id="edit-answer2"><br>
-A3 <input type="text" name="answer3" id="edit-answer3"><br>
+<br><br>
+<div id="edit-thinkBox">
+    Question<input type="text" name="question" id="edit-question"><br>
+    A1 <input type="text" name="answer1" id="edit-answer1"><br>
+    A2 <input type="text" name="answer2" id="edit-answer2"><br>
+    A3 <input type="text" name="answer3" id="edit-answer3"><br>
 
-<input type="radio" name="edit-correctAnswer" id="edit-radio-answer1" value="1">A1<br>
-<input type="radio" name="edit-correctAnswer" id="edit-radio-answer2" value="2">A2<br>
-<input type="radio" name="edit-correctAnswer" id="edit-radio-answer3" value="3">A3
+    <input type="radio" name="edit-correctAnswer" id="edit-radio-answer1" value="1">A1<br>
+    <input type="radio" name="edit-correctAnswer" id="edit-radio-answer2" value="2">A2<br>
+    <input type="radio" name="edit-correctAnswer" id="edit-radio-answer3" value="3">A3
+</div>
 
 <script type="text/javascript">
     initEditor(<%= guider.id %>);

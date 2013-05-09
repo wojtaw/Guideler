@@ -97,11 +97,16 @@ function refreshStepBar(){
     console.log("Refreshing");
     console.log(editSteps)
     var editStepButtons= [];
+    //TODO
+    var stateClass = "edit-step-empty";
     for(var i=0;i < editSteps.length;i++){
-        var stepButtonString = '<div id="edit-stepButton-'+i+'" class="edit-stepGeneralButton">'+i+'</div>';
+        var stepButtonString = '<div id="edit-stepButton-'+i+'" class="edit-stepGeneralButton '+stateClass+'">'+i+'</div>';
         editStepButtons.push(stepButtonString);
+
     }
     $("#edit-stepButtonsBar").html(editStepButtons.join(''));
+
+    $("#edit-stepButton-"+currentEditStep).addClass("edit-stepGeneralButtonActive");
     refreshStepListeners();
 }
 
@@ -138,9 +143,11 @@ function showSwitchState(){
     if(editSteps[currentEditStep].questionEnabled){
         $("#edit-switchOff").css("background-color","#b4b6b6");
         $("#edit-switchOn").css("background-color","#346f0d");
+        $("#edit-thinkBox").css("display","block");
     } else {
         $("#edit-switchOn").css("background-color","#b4b6b6");
         $("#edit-switchOff").css("background-color","#346f0d");
+        $("#edit-thinkBox").css("display","none");
     }
 }
 

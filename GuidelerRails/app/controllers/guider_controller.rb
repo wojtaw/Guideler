@@ -69,6 +69,11 @@ class GuiderController < ApplicationController
   def api_edit_guider
     result = ActiveSupport::JSON.decode(request.body)
     #delete all steps belonging to the guider
+    guider = Guider.find(result['guiderID'])
+
+    guider.name = result['guiderName']
+    guider.description = result['guiderDescription']
+    guider.save
 
     Step.delete_all(guider_id: result['guiderID'])
     #add new updated steps

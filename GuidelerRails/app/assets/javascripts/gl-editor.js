@@ -25,7 +25,6 @@ function initEditor(guiderEditID){
             var answer1 = data.steps[i].answers[0].answer1;
             var answer2 = data.steps[i].answers[1].answer2;
             var answer3 = data.steps[i].answers[2].answer3;
-            console.log("ZAHADNA DATA"+data.steps[i].questionEnabled);
             if(data.steps[i].questionEnabled == true || data.steps[i].questionEnabled == "TRUE" || data.steps[i].questionEnabled == "true")
                 var questionEnabled = true
             else
@@ -43,8 +42,8 @@ function prepareEditJSON(){
         editSteps[i].step_order = (i+1);
     }
     editorGuiderJSON.guiderID = guiderEditID;
-    editorGuiderJSON.guiderName = "Testovaci jmeno";
-    editorGuiderJSON.guiderDescription = "Testovaci jmeno";
+    editorGuiderJSON.guiderName = $("#edit-guiderName").val();
+    editorGuiderJSON.guiderDescription = $("#edit-guiderDescription").val();
     editorGuiderJSON.steps = editSteps;
     console.log("Sending out");
     console.log(JSON.stringify(editorGuiderJSON));
@@ -60,12 +59,9 @@ function editorJSONloadingFinished(){
         editSteps.push(createStep("","","","","","",true));
 
     currentEditStep = editSteps.length - 1;
+
     initEditorListeners();
-
     redrawEditorGUI();
-
-    console.log("Current state");
-    console.log(editSteps)
 }
 
 function initEditorListeners() {
@@ -126,6 +122,9 @@ function refreshEditTabs() {
     $('#edit-answer1').val(editSteps[currentEditStep].answer1);
     $('#edit-answer2').val(editSteps[currentEditStep].answer2);
     $('#edit-answer3').val(editSteps[currentEditStep].answer3);
+    //Decheck radios and check proper one
+    //$('input[name=edit-correctAnswer]').attr('checked', false);
+    $('#edit-radio-answer'+editSteps[currentEditStep].correctAnswer).attr('checked', true);
 }
 
 function questionEnableSwitch(){
@@ -137,15 +136,10 @@ function questionEnableSwitch(){
 }
 
 function showSwitchState(){
-    console.log(editSteps);
-    var enabler = editSteps[currentEditStep].questionEnabled;
-    console.log("enabler value"+enabler)
-    if(enabler == true){
-        console.log("show true");
+    if(editSteps[currentEditStep].questionEnabled){
         $("#edit-switchOff").css("background-color","#b4b6b6");
         $("#edit-switchOn").css("background-color","#346f0d");
-    } else if(enabler == false) {
-        console.log("show false");
+    } else {
         $("#edit-switchOn").css("background-color","#b4b6b6");
         $("#edit-switchOff").css("background-color","#346f0d");
     }
@@ -161,7 +155,10 @@ function createStep(externalLink, question, answer1, answer2, answer3, correctAn
     tmpStep.answer2 = answer2;
     tmpStep.answer3 = answer3;
 
-    tmpStep.correctAnswer = correctAnswer;
+
+    if(typeof(correctAnswer)=='undefined') tmpStep.correctAnswer = 1;
+    else tmpStep.correctAnswer = correctAnswer;
+
     if(typeof(questionEnabled)!='undefined') tmpStep.questionEnabled = questionEnabled;
     return tmpStep;
 }
@@ -170,7 +167,6 @@ function createStep(externalLink, question, answer1, answer2, answer3, correctAn
 function addStep(){
     editSteps.push(createStep("","","","","","",true));
     saveCurrentStep();
-    refreshStepBar();
     editStep(editSteps.length - 1);
 }
 
@@ -180,10 +176,12 @@ function saveCurrentStep() {
     editSteps[currentEditStep].answer1 = $('#edit-answer1').val();
     editSteps[currentEditStep].answer2 = $('#edit-answer2').val();
     editSteps[currentEditStep].answer3 = $('#edit-answer3').val();
-    editSteps[currentEditStep].correctAnswer = 1;
+    var tmpCorrectAnswer = $('input[name=edit-correctAnswer]:checked').val();
+    if(typeof(tmpCorrectAnswer)=='undefined') tmpCorrectAnswer = 1;
+    editSteps[currentEditStep].correctAnswer = tmpCorrectAnswer;
 }
 
 function editStep(stepIndex){
     currentEditStep = stepIndex;
-    refreshEditTabs();
+    redrawEditorGUI();
 }

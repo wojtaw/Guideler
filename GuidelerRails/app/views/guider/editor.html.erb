@@ -1,5 +1,6 @@
 <div class="edit-topBar topBarSpace">
-  <h1 id="gl-guiderName"><%= guider.name %></h1>
+  <input type="text" name="edit-guiderName" id="edit-guiderName" value="<%= guider.name %>">
+  <input type="text" name="edit-guiderDescription" id="edit-guiderDescription" value="<%= guider.description %>">
   <div id="edit-saveGuiderButton"></div>
 </div>
 
@@ -22,9 +23,9 @@ A1 <input type="text" name="answer1" id="edit-answer1"><br>
 A2 <input type="text" name="answer2" id="edit-answer2"><br>
 A3 <input type="text" name="answer3" id="edit-answer3"><br>
 
-<input type="radio" name="edit-correctAnswer1" value="1">Male<br>
-<input type="radio" name="edit-correctAnswer2" value="2">Female
-<input type="radio" name="edit-correctAnswer3" value="3">Female
+<input type="radio" name="edit-correctAnswer" id="edit-radio-answer1" value="1">A1<br>
+<input type="radio" name="edit-correctAnswer" id="edit-radio-answer2" value="2">A2<br>
+<input type="radio" name="edit-correctAnswer" id="edit-radio-answer3" value="3">A3
 
 <script type="text/javascript">
     initEditor(<%= guider.id %>);

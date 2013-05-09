@@ -127,6 +127,8 @@ function refreshStepListeners(){
 }
 
 function refreshEditTabs() {
+    console.log("PARSIIIIIIIIIIIIIIING "+parseURLHost(editSteps[currentEditStep].externalLink));
+
     $('#edit-stepLink').val(editSteps[currentEditStep].externalLink);
     $('#edit-question').val(editSteps[currentEditStep].question);
     $('#edit-answer1').val(editSteps[currentEditStep].answer1);
@@ -197,4 +199,26 @@ function saveCurrentStep() {
 function editStep(stepIndex){
     currentEditStep = stepIndex;
     redrawEditorGUI();
+}
+
+function validateAndFixURL(checkUrl){
+    if(checkUrl.indexOf("http://") == 0) return checkUrl
+    else if(checkUrl.indexOf("https://") == 0) return checkUrl
+    else {
+        if(checkUrl.indexOf("www") == 0){
+            return ("http://"+checkUrl);
+        }
+    }
+}
+
+function parseURLHost(urlToParse){
+    urlToParse = validateAndFixURL(urlToParse);
+
+    console.log("Parsiing -" + urlToParse);
+    var a =  document.createElement('a');
+    a.href = urlToParse;
+    var result = String(a.hostname);
+    result = result.toLowerCase();
+    if(result.indexOf("www.") === 0) result = result.substring(4,result.length);
+    return result;
 }

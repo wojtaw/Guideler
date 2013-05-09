@@ -33,6 +33,23 @@ function initEditor(guiderEditID){
     });
 }
 
+//////////////INIT functions
+function prepareEditJSON(){
+    for(var i=0;i<editSteps.length;i++){
+        editSteps[i].step_order = (i+1);
+    }
+    editorGuiderJSON.guiderID = guiderEditID;
+    editorGuiderJSON.guiderName = "Testovaci jmeno";
+    editorGuiderJSON.guiderDescription = "Testovaci jmeno";
+    editorGuiderJSON.steps = editSteps;
+    console.log("Sending out");
+    console.log(JSON.stringify(editorGuiderJSON));
+}
+
+function saveSuccess(e) {
+    console.log("Server responded: "+e)
+}
+
 function editorJSONloadingFinished(){
     //Create first step if guider is empty
     if(editSteps.length == 0)
@@ -55,25 +72,7 @@ function initEditorListeners() {
     refreshStepListeners();
 }
 
-function questionEnableSwitch(){
-    if(editSteps[currentEditStep].questionEnabled){
-        $("#edit-switchOn").css("background-color","#b4b6b6")
-        $("#edit-switchOff").css("background-color","#346f0d")
-        editSteps[currentEditStep].questionEnabled = false;
-    } else {
-        $("#edit-switchOff").css("background-color","#b4b6b6")
-        $("#edit-switchOn").css("background-color","#346f0d")
-        editSteps[currentEditStep].questionEnabled = true;
-    }
-
-}
-
-function addStep(){
-    editSteps.push(createStep("","","","","","",true));
-    saveCurrentStep();
-    refreshStepBar();
-    editStep(editSteps.length - 1);
-}
+//---------OTHER LOGIC
 
 function saveEditData(){
     saveCurrentStep()
@@ -90,22 +89,7 @@ function saveEditData(){
     });
 }
 
-function prepareEditJSON(){
-    for(var i=0;i<editSteps.length;i++){
-        editSteps[i].step_order = (i+1);
-    }
-    editorGuiderJSON.guiderID = guiderEditID;
-    editorGuiderJSON.guiderName = "Testovaci jmeno";
-    editorGuiderJSON.guiderDescription = "Testovaci jmeno";
-    editorGuiderJSON.steps = editSteps;
-    console.log("Sending out");
-    console.log(JSON.stringify(editorGuiderJSON));
-}
-
-function saveSuccess(e) {
-    console.log("Server responded: "+e)
-}
-
+//--------REDRAWING GUI
 function refreshStepBar(){
     console.log("Refreshing");
     console.log(editSteps)
@@ -128,21 +112,6 @@ function refreshStepListeners(){
      }
 }
 
-function saveCurrentStep() {
-    var externalLink = $('#edit-stepLink').val();
-    var question = $('#edit-question').val();
-    var answer1 = $('#edit-answer1').val();
-    var answer2 = $('#edit-answer2').val();
-    var answer3 = $('#edit-answer3').val();
-    var correctAnswer = 1;
-    editSteps[currentEditStep] = createStep(externalLink,question, answer1, answer2, answer3,correctAnswer);
-}
-
-function editStep(stepIndex){
-    currentEditStep = stepIndex;
-    refreshEditTabs();
-}
-
 function refreshEditTabs() {
     $('#edit-stepLink').val(editSteps[currentEditStep].externalLink);
     $('#edit-question').val(editSteps[currentEditStep].question);
@@ -151,20 +120,19 @@ function refreshEditTabs() {
     $('#edit-answer3').val(editSteps[currentEditStep].answer3);
 }
 
-function saveStep(){
-//    var tmpStep = editSteps[currentEditStep];
-//    tmpStep.externalLink = externalLink;
-//    tmpStep.question = question;
-//    tmpStep.answers = new Object();
-//    tmpStep.answer1 = answer1;
-//    tmpStep.answer2 = answer2;
-//    tmpStep.answer3 = answer3;
-//
-//    tmpStep.correctAnswer = correctAnswer;
-//    if(typeof(questionEnabled)!='undefined') tmpStep.questionEnabled = questionEnabled;
-//    return tmpStep;
+function questionEnableSwitch(){
+    if(editSteps[currentEditStep].questionEnabled){
+        $("#edit-switchOn").css("background-color","#b4b6b6")
+        $("#edit-switchOff").css("background-color","#346f0d")
+        editSteps[currentEditStep].questionEnabled = false;
+    } else {
+        $("#edit-switchOff").css("background-color","#b4b6b6")
+        $("#edit-switchOn").css("background-color","#346f0d")
+        editSteps[currentEditStep].questionEnabled = true;
+    }
 }
 
+/////////WORKING WITH STEPS
 function createStep(externalLink, question, answer1, answer2, answer3, correctAnswer, questionEnabled){
     var tmpStep = new Object();
     tmpStep.externalLink = externalLink;
@@ -177,4 +145,26 @@ function createStep(externalLink, question, answer1, answer2, answer3, correctAn
     tmpStep.correctAnswer = correctAnswer;
     if(typeof(questionEnabled)!='undefined') tmpStep.questionEnabled = questionEnabled;
     return tmpStep;
+}
+
+
+function addStep(){
+    editSteps.push(createStep("","","","","","",true));
+    saveCurrentStep();
+    refreshStepBar();
+    editStep(editSteps.length - 1);
+}
+
+function saveCurrentStep() {
+    editSteps[currentEditStep].externalLink = $('#edit-stepLink').val();
+    editSteps[currentEditStep].question = $('#edit-question').val();
+    editSteps[currentEditStep].answer1 = $('#edit-answer1').val();
+    editSteps[currentEditStep].answer2 = $('#edit-answer2').val();
+    editSteps[currentEditStep].answer3 = $('#edit-answer3').val();
+    editSteps[currentEditStep].correctAnswer = 1;
+}
+
+function editStep(stepIndex){
+    currentEditStep = stepIndex;
+    refreshEditTabs();
 }

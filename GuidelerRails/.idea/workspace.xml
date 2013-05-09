@@ -27,7 +27,7 @@
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/controllers/embed_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367442855755" ignored="false" />
     <file path="/guiderJSON.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368105270857" ignored="false" />
     <file path="/gl-guider-player.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368104054314" ignored="false" />
-    <file path="$PROJECT_DIR$/log/development.log" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368109829845" ignored="false" />
+    <file path="$PROJECT_DIR$/log/development.log" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368110445679" ignored="false" />
     <file path="/devise.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367787695165" ignored="false" />
     <file path="/Ruby Console" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367871112967" ignored="false" />
     <file path="/20130506053950_add_dependency_to_user.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367818890441" ignored="false" />
@@ -39,7 +39,7 @@
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/assets/stylesheets/sl-hacks.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367831860878" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/Gemfile" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367831860878" ignored="false" />
     <file path="/editor.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367836177064" ignored="false" />
-    <file path="/gl-editor.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368109883433" ignored="false" />
+    <file path="/gl-editor.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368110392541" ignored="false" />
     <file path="/manage_all.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368035561171" ignored="false" />
     <file path="/a.dummy" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368031098307" ignored="false" />
     <file path="/buildingBlocks.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368041328938" ignored="false" />
@@ -138,7 +138,7 @@
           <file leaf-file-name="gl-editor.js" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="153" column="23" selection-start="4890" selection-end="4890" vertical-scroll-proportion="0.51320755">
+                <state line="132" column="1" selection-start="4299" selection-end="4299" vertical-scroll-proportion="0.91949683">
                   <folding />
                 </state>
               </provider>
@@ -1184,7 +1184,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="23" selection-start="4890" selection-end="4890" vertical-scroll-proportion="0.51320755">
+        <state line="132" column="1" selection-start="4299" selection-end="4299" vertical-scroll-proportion="0.91949683">
           <folding />
         </state>
       </provider>

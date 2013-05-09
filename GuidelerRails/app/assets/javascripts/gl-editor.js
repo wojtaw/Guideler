@@ -17,11 +17,18 @@ function initEditor(guiderEditID){
         editorGuiderJSON.guiderName = data.guiderName;
         editorGuiderJSON.guiderName = data.guiderName;
 
+        console.log("looping through steps "+data.steps.length)
         for(var i=0;i < data.steps.length;i++){
-            data.steps
-            editStepButtons.push(stepButtonString);
+
+            var externalLink = data.steps[i].externalData;
+            var question = data.steps[i].question;
+            var answer1 = data.steps[i].answers[0].answer1;
+            var answer2 = data.steps[i].answers[1].answer2;
+            var answer3 = data.steps[i].answers[2].answer3;
+            var questionEnabled = data.steps[i].questionEnabled;
+            var correctAnswer = data.steps[i].correctAnswer;
+            editSteps[i] = createStep(externalLink,question, answer1, answer2, answer3,correctAnswer,questionEnabled);
         }
-            editSteps.push(createStep("","","","","","",""));
         editorJSONloadingFinished();
     });
 }

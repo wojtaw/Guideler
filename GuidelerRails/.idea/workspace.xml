@@ -6,7 +6,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367424484382" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/config/database.yml" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367422264677" ignored="false" />
-    <file path="/Dummy.txt" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367831852517" ignored="false" />
+    <file path="/Dummy.txt" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368097017554" ignored="false" />
     <file path="/20130501172823_create_guider_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367431884377" ignored="false" />
     <file path="/guider.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367819436228" ignored="false" />
     <file path="/guider_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367432063305" ignored="false" />
@@ -75,7 +75,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="28" selection-start="616" selection-end="616" vertical-scroll-proportion="-6.5384617">
+            <state line="10" column="28" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -84,7 +84,7 @@
       <file leaf-file-name="guider.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="14" selection-start="625" selection-end="625" vertical-scroll-proportion="-21.6">
+            <state line="39" column="14" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,7 +93,7 @@
       <file leaf-file-name="gl-editor.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="19" selection-start="287" selection-end="297" vertical-scroll-proportion="-4.36">
+            <state line="12" column="19" selection-start="287" selection-end="297" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,7 +102,7 @@
       <file leaf-file-name="gl-guider-player.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="4" selection-start="219" selection-end="219" vertical-scroll-proportion="-5.44">
+            <state line="8" column="4" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,7 +111,7 @@
       <file leaf-file-name="guider_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="41" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.7949337">
+            <state line="64" column="25" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.031481482">
               <folding />
             </state>
           </provider>
@@ -138,7 +138,7 @@
       <file leaf-file-name="editor.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="31" selection-start="698" selection-end="698" vertical-scroll-proportion="-12.423077">
+            <state line="19" column="31" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -557,13 +557,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -906,15 +906,15 @@
       <method />
     </configuration>
     <list size="9">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: Guideler" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: Guideler" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:structure:dump" />
-      <item index="6" class="java.lang.String" itemvalue="Rake.db:drop" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.db:create" />
-      <item index="8" class="java.lang.String" itemvalue="IRB console.Rails console: Guideler" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.db:structure:dump" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.db:drop" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.db:create" />
+      <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: Guideler" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="7" class="java.lang.String" itemvalue="Rails.Production: Guideler" />
+      <item index="8" class="java.lang.String" itemvalue="Rails.Development: Guideler" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -975,22 +975,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1014" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2764141" sideWeight="0.6715909" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2796158" sideWeight="0.6431818" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35681817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35681817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32993197" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1057,44 +1057,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/fonts.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="0" selection-end="1517" vertical-scroll-proportion="-2.6153846">
-          <folding />
-        </state>
+        <state line="4" column="30" selection-start="0" selection-end="1517" vertical-scroll-proportion="-2.6153846" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/manage_all.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="274" selection-end="274" vertical-scroll-proportion="-5.230769">
-          <folding />
-        </state>
+        <state line="8" column="8" selection-start="274" selection-end="274" vertical-scroll-proportion="-5.230769" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="9" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="47" column="9" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="6" selection-start="593" selection-end="642" vertical-scroll-proportion="0.307971">
-          <folding />
-        </state>
+        <state line="15" column="6" selection-start="593" selection-end="642" vertical-scroll-proportion="0.307971" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/generalTricks.css">
@@ -1106,9 +1094,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/guiderJSON.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css">
@@ -1120,28 +1106,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="28" selection-start="616" selection-end="616" vertical-scroll-proportion="-6.5384617">
+        <state line="10" column="28" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="14" selection-start="625" selection-end="625" vertical-scroll-proportion="-21.6">
+        <state line="39" column="14" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="19" selection-start="287" selection-end="297" vertical-scroll-proportion="-4.36">
+        <state line="12" column="19" selection-start="287" selection-end="297" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="219" selection-end="219" vertical-scroll-proportion="-5.44">
+        <state line="8" column="4" selection-start="219" selection-end="219" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1155,14 +1141,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="31" selection-start="698" selection-end="698" vertical-scroll-proportion="-12.423077">
+        <state line="19" column="31" selection-start="698" selection-end="698" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="41" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.7949337">
+        <state line="64" column="25" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.031481482">
           <folding />
         </state>
       </provider>

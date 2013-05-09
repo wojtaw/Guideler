@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #editor-body{
-  background-image: url("editor/default_background.png");
+  background-image: url("editor/default_background.jpeg");
   background-repeat: repeat;
 }
 
@@ -174,11 +174,56 @@
   margin-right: auto;
 }
 
+
 .edit-service{
-  background-image: url("editor/links-icons.png");
+  background-image: url("editor/links-icons-dark.png");
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  float: left;
 }
 
-#edit-service-
+#edit-service-google{
+   background-position: 0px 0px;
+}
+
+#edit-service-youtube{
+  background-position: -48px 0px;
+}
+
+#edit-service-vimeo{
+  background-position: -97px 0px;
+}
+
+#edit-service-flickr{
+  background-position: -145px 0px;
+}
+
+#edit-service-picasa{
+  background-position: -193px 0px;
+}
+
+#edit-service-soundcloud{
+  background-position: -242px 0px;
+}
+
+#edit-service-wordpress{
+  background-position: -290px 0px;
+}
+
+#edit-service-wikipedia{
+  background-position: -342px 0px;
+}
+
+#edit-service-slideslive{
+  background-position: -392px 0px;
+}
+
+#edit-service-slideshare{
+  background-position: -442px 0px;
+}
+
 
 .edit-linkBox {
   background-color: #122736;

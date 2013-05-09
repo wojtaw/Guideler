@@ -79,4 +79,7 @@ Guideler::Application.routes.draw do
   match 'delete_guider' => 'guider#delete_guider', :as => 'delete_guider'
   match 'api/get_guider_info/:guiderID' => 'guider#guiderJSON', :as => 'api_get_info', :constraints => { :guiderID => guider_regexp }
   match 'api/edit_guider' => 'guider#api_edit_guider', :as => 'api_edit_guider', :constraints => { :guiderID => guider_regexp }
+
+  #Error pages
+  match 'error/:errorMessage' => 'error#show_general_error', :as => 'show_general_error'
 end

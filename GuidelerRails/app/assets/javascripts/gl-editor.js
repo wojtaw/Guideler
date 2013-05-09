@@ -48,7 +48,21 @@ function editorJSONloadingFinished(){
 function initEditorListeners() {
     $("#edit-newStepButton").click(addStep);
     $("#edit-saveGuiderButton").click(saveEditData);
+    $("#edit-questionSwitch").click(questionEnableSwitch);
     refreshStepListeners();
+}
+
+function questionEnableSwitch(){
+    if(editSteps[currentEditStep].questionEnabled){
+        $("#edit-switchOn").css("background-color","#b4b6b6")
+        $("#edit-switchOff").css("background-color","#346f0d")
+        editSteps[currentEditStep].questionEnabled = false;
+    } else {
+        $("#edit-switchOff").css("background-color","#b4b6b6")
+        $("#edit-switchOn").css("background-color","#346f0d")
+        editSteps[currentEditStep].questionEnabled = true;
+    }
+
 }
 
 function addStep(){

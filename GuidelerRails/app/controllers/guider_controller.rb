@@ -61,8 +61,19 @@ class GuiderController < ApplicationController
   end
 
   def api_edit_guider
-    req = ActiveSupport::JSON.decode(request.body)
-    render :inline => 'It works'
+    result = ActiveSupport::JSON.decode(request.body)
+    #delete all steps belonging to the guider
+
+    Step.delete_all(guider_id: result['guider_id'])
+    #add new updated steps
+    result["steps"].each do |step_data|
+      single_step = Step.new
+      single_step.link = step_data.externalLink
+      single_step.save
+    end
+
+
+    render :inline => 'It works'+result['name']
   end
 
   def guiderJSON

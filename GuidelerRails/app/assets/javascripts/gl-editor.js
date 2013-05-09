@@ -22,7 +22,7 @@ function initEditor(guiderEditID){
 
 function initEditorListeners() {
     $("#edit-newStepButton").click(addStep);
-    $("#edit-saveGuiderButton").click(editPrintJson);
+    $("#edit-saveGuiderButton").click(saveEditData);
     refreshStepListeners();
 }
 
@@ -33,12 +33,33 @@ function addStep(){
     editStep(editSteps.length - 1);
 }
 
-function editPrintJson(e){
+function saveEditData(){
+    prepareEditJSON();
+
+    $.ajax({
+        url: '/api/edit_guider',
+        type: 'POST',
+        data: JSON.stringify(editorGuiderJSON),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: true,
+        success: saveSuccess()
+    });
+}
+
+function prepareEditJSON(){
+    for(var i=0;i<editSteps.length;i++){
+        editSteps[i].step_order = (i+1);
+    }
     editorGuiderJSON.guider_id = guiderEditID;
     editorGuiderJSON.name = "Testovaci jmeno";
     editorGuiderJSON.description = "Testovaci jmeno";
     editorGuiderJSON.steps = editSteps;
     console.log("Result:"+JSON.stringify(editorGuiderJSON));
+}
+
+function saveSuccess(e) {
+    console.log("Server responded: "+e)
 }
 
 function refreshStepBar(){

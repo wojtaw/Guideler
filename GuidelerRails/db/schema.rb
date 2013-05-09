@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130506062710) do
+ActiveRecord::Schema.define(:version => 20130509110350) do
 
   create_table "guiders", :force => true do |t|
     t.string   "name"
@@ -30,8 +30,9 @@ ActiveRecord::Schema.define(:version => 20130506062710) do
     t.string   "answer2"
     t.string   "answer3"
     t.integer  "correct_answer"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.boolean  "question_enabled", :default => false
   end
 
   create_table "steps_users", :id => false, :force => true do |t|

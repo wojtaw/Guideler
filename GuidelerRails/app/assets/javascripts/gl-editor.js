@@ -36,13 +36,16 @@ function initEditor(guiderEditID){
 function editorJSONloadingFinished(){
     //Create first step if guider is empty
     if(editSteps.length == 0)
-        editSteps.push(createStep("","","","","","",""));
+        editSteps.push(createStep("","","","","","",true));
 
     currentEditStep = editSteps.length - 1;
     initEditorListeners();
 
     refreshStepBar();
-    refreshEditTabs()
+    refreshEditTabs();
+
+    console.log("Current state");
+    console.log(editSteps)
 }
 
 function initEditorListeners() {
@@ -66,7 +69,7 @@ function questionEnableSwitch(){
 }
 
 function addStep(){
-    editSteps.push(createStep("","","","","","",""));
+    editSteps.push(createStep("","","","","","",true));
     saveCurrentStep();
     refreshStepBar();
     editStep(editSteps.length - 1);
@@ -131,9 +134,8 @@ function saveCurrentStep() {
     var answer1 = $('#edit-answer1').val();
     var answer2 = $('#edit-answer2').val();
     var answer3 = $('#edit-answer3').val();
-    var questionEnabled = true;
     var correctAnswer = 1;
-    editSteps[currentEditStep] = createStep(externalLink,question, answer1, answer2, answer3,correctAnswer,questionEnabled);
+    editSteps[currentEditStep] = createStep(externalLink,question, answer1, answer2, answer3,correctAnswer);
 }
 
 function editStep(stepIndex){
@@ -149,6 +151,20 @@ function refreshEditTabs() {
     $('#edit-answer3').val(editSteps[currentEditStep].answer3);
 }
 
+function saveStep(){
+//    var tmpStep = editSteps[currentEditStep];
+//    tmpStep.externalLink = externalLink;
+//    tmpStep.question = question;
+//    tmpStep.answers = new Object();
+//    tmpStep.answer1 = answer1;
+//    tmpStep.answer2 = answer2;
+//    tmpStep.answer3 = answer3;
+//
+//    tmpStep.correctAnswer = correctAnswer;
+//    if(typeof(questionEnabled)!='undefined') tmpStep.questionEnabled = questionEnabled;
+//    return tmpStep;
+}
+
 function createStep(externalLink, question, answer1, answer2, answer3, correctAnswer, questionEnabled){
     var tmpStep = new Object();
     tmpStep.externalLink = externalLink;
@@ -157,7 +173,8 @@ function createStep(externalLink, question, answer1, answer2, answer3, correctAn
     tmpStep.answer1 = answer1;
     tmpStep.answer2 = answer2;
     tmpStep.answer3 = answer3;
+
     tmpStep.correctAnswer = correctAnswer;
-    tmpStep.questionEnabled = questionEnabled;
+    if(typeof(questionEnabled)!='undefined') tmpStep.questionEnabled = questionEnabled;
     return tmpStep;
 }

@@ -45,8 +45,8 @@
     <file path="/buildingBlocks.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368041328938" ignored="false" />
     <file path="/generalTricks.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368037576230" ignored="false" />
     <file path="/home.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368041832463" ignored="false" />
-    <file path="/guider.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368117250067" ignored="false" />
-    <file path="/editor.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368116684704" ignored="false" />
+    <file path="/guider.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368118226565" ignored="false" />
+    <file path="/editor.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368117990360" ignored="false" />
     <file path="/20130509110350_add_question_enabled_to_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368097536408" ignored="false" />
     <file path="/gl-values.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368104024785" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -135,10 +135,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="gl-editor.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="gl-editor.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="99" column="10" selection-start="3066" selection-end="3066" vertical-scroll-proportion="0.6439024">
+                <state line="99" column="10" selection-start="3066" selection-end="3066" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -153,10 +153,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="editor.html.erb" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="editor.html.erb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="34" selection-start="362" selection-end="362" vertical-scroll-proportion="-4.576923">
+                <state line="3" column="38" selection-start="283" selection-end="283" vertical-scroll-proportion="0.06423174">
                   <folding />
                 </state>
               </provider>
@@ -178,7 +178,7 @@
           <file leaf-file-name="guider.css.scss" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="28" column="0" selection-start="638" selection-end="656" vertical-scroll-proportion="-0.41334894">
+                <state line="59" column="29" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.39445114">
                   <folding />
                 </state>
               </provider>
@@ -213,8 +213,8 @@
         <option value="$PROJECT_DIR$/app/views/guider/guiderJSON.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/guider/manage_all.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/guider/editor.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/gl-editor.js" />
+        <option value="$PROJECT_DIR$/app/views/guider/editor.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss" />
       </list>
     </option>
@@ -1181,9 +1181,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="34" selection-start="362" selection-end="362" vertical-scroll-proportion="-4.576923">
+        <state line="99" column="10" selection-start="3066" selection-end="3066" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1195,16 +1195,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
+    <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="10" selection-start="3066" selection-end="3066" vertical-scroll-proportion="0.6439024">
+        <state line="3" column="38" selection-start="283" selection-end="283" vertical-scroll-proportion="0.06423174">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="638" selection-end="656" vertical-scroll-proportion="-0.41334894">
+        <state line="59" column="29" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.39445114">
           <folding />
         </state>
       </provider>

@@ -41,6 +41,36 @@
 
 }
 
+#edit-questionSwitch {
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#edit-switchOn {
+  display: block;
+  width: 30px;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  background-color: #346f0d;
+  padding-left: 10px;
+  padding-top: 2px;
+  height: 21px;
+  float: left;
+}
+
+#edit-switchOff {
+  display: block;
+  width: 35px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  background-color: #b4b6b6;
+  padding-left: 5px;
+  padding-top: 2px;
+  height: 21px;
+  float: left;
+}
+
 .edit-stepGeneralButton {
   background-color: #993300;
   width: 20px;

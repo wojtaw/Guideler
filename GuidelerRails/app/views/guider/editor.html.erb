@@ -11,10 +11,20 @@
     <h2 id="gl-guiderDescription"><%= guider.description %></h2>
 
 Link<input type="text" name="stepLink" id="edit-stepLink"><br>
+Which answer is correct?
+<br>
+<div id="edit-questionSwitch">
+  <div id="edit-switchOn">ON</div>
+  <div id="edit-switchOff">OFF</div>
+</div>
 Question<input type="text" name="question" id="edit-question"><br>
 A1 <input type="text" name="answer1" id="edit-answer1"><br>
 A2 <input type="text" name="answer2" id="edit-answer2"><br>
 A3 <input type="text" name="answer3" id="edit-answer3"><br>
+
+<input type="radio" name="edit-correctAnswer1" value="1">Male<br>
+<input type="radio" name="edit-correctAnswer2" value="2">Female
+<input type="radio" name="edit-correctAnswer3" value="3">Female
 
 <script type="text/javascript">
     initEditor(<%= guider.id %>);

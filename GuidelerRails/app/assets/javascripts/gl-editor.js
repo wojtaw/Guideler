@@ -19,7 +19,7 @@ function initEditor(guiderEditID){
 
         console.log("looping through steps "+data.steps.length)
         for(var i=0;i < data.steps.length;i++){
-
+            console.log("step "+i+" / "+ data.steps[i].externalData)
             var externalLink = data.steps[i].externalData;
             var question = data.steps[i].question;
             var answer1 = data.steps[i].answers[0].answer1;
@@ -34,12 +34,15 @@ function initEditor(guiderEditID){
 }
 
 function editorJSONloadingFinished(){
-    //Create first emptz step
-    editSteps.push(createStep("","","","","","",""));
+    //Create first step if guider is empty
+    if(editSteps.length == 0)
+        editSteps.push(createStep("","","","","","",""));
 
+    currentEditStep = editSteps.length - 1;
     initEditorListeners();
 
     refreshStepBar();
+    refreshEditTabs()
 }
 
 function initEditorListeners() {

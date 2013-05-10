@@ -33,7 +33,7 @@ class GuiderController < ApplicationController
 
     if user_signed_in?
       guiders = current_user.guiders
-      render :locals => { :guiders => guiders }
+      render :locals => { :guiders => guiders }, :layout => "profile"
     else
       redirect_to show_general_error_path(:error_code => 101)
     end

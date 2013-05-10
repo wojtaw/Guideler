@@ -56,8 +56,9 @@
     <file path="/show_general_error.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368163570638" ignored="false" />
     <file path="/error.js.coffee" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368139782901" ignored="false" />
     <file path="/error.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368139913124" ignored="false" />
-    <file path="/profile.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368165439274" ignored="false" />
-    <file path="/profile.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368165358777" ignored="false" />
+    <file path="/profile.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368165697063" ignored="false" />
+    <file path="/profile.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368165507913" ignored="false" />
+    <file path="/display_profile.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368165769967" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,16 +92,16 @@
       <file leaf-file-name="display_profile.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/guider/display_profile.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guider_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="guider_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="50" selection-start="886" selection-end="886" vertical-scroll-proportion="-3.12">
+            <state line="33" column="52" selection-start="741" selection-end="741" vertical-scroll-proportion="0.3962963">
               <folding />
             </state>
           </provider>
@@ -109,16 +110,16 @@
       <file leaf-file-name="profile.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/profile.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="25" selection-start="510" selection-end="510" vertical-scroll-proportion="-8.5">
+            <state line="29" column="19" selection-start="939" selection-end="939" vertical-scroll-proportion="-15.038462">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="profile.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/profile.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.6017699">
+            <state line="28" column="26" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -183,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/guider/editor.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/gl-editor.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/home.css.scss" />
@@ -195,10 +195,11 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/error.css.scss" />
         <option value="$PROJECT_DIR$/app/controllers/error_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/guider_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css" />
         <option value="$PROJECT_DIR$/app/views/layouts/profile.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/profile.css" />
+        <option value="$PROJECT_DIR$/app/views/guider/display_profile.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/guider_controller.rb" />
       </list>
     </option>
   </component>
@@ -1151,13 +1152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/guider/display_profile.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/error_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="58" selection-start="808" selection-end="826" vertical-scroll-proportion="0.0">
@@ -1193,23 +1187,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="50" selection-start="886" selection-end="886" vertical-scroll-proportion="-3.12">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/profile.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="510" selection-end="510" vertical-scroll-proportion="-8.5">
+        <state line="29" column="19" selection-start="939" selection-end="939" vertical-scroll-proportion="-15.038462">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/profile.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="18" selection-start="307" selection-end="307" vertical-scroll-proportion="0.6017699">
+        <state line="28" column="26" selection-start="435" selection-end="435" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/guider/display_profile.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/guider_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="52" selection-start="741" selection-end="741" vertical-scroll-proportion="0.3962963">
           <folding />
         </state>
       </provider>

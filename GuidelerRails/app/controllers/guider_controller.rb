@@ -26,7 +26,11 @@ class GuiderController < ApplicationController
       redirect_to show_general_error_path(:error_code => 101)
     end
 
+  rescue ActiveRecord::StatementInvalid
+    redirect_to show_general_error_path(:error_code => 103)
 
+  rescue ActiveRecord::RecordNotFound
+    redirect_to show_general_error_path(:error_code => 104)
   end
 
   def manage_all

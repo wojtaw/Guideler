@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   height: 603px;
   width: 100%;
+  overflow: hidden;
 }
 
 .homepageHeaderContent {
@@ -15,6 +16,7 @@
   background-repeat: repeat-y;
   padding-left: 4%;
   background-position: left;
+  padding-top: 4%;
   height: 603px;
   width: 100%;
 }
@@ -40,4 +42,20 @@
   padding-top: 50px;
   padding-bottom: 50px;
   width: 1200px;
+}
+
+
+.gl-homepage-menu {
+  display: block;
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+  color: #dadee0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.gl-homepage-menu:hover {
+  color: #dadee0;
+  text-decoration: underline;
 }

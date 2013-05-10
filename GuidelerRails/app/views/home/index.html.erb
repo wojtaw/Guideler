@@ -13,10 +13,12 @@
     </div>
 
     <% if user_signed_in? %>
-        <%= link_to("Me", display_profile_path) %> &nbsp; &#124; &nbsp;
+        <%= link_to("Me", display_profile_path, :class => "gl-homepage-menu") %>
     <% else %>
-        <%= link_to("Login", new_user_session_path) %>
+        <%= link_to("Login", new_user_session_path, :class => "gl-homepage-menu") %>
     <% end %>
+
+    <br><br><br><br><br>
 
   <h1 class="hp-mainTitle">Textbook is super boring,<br>endless stream with no checkpoints.<br><br>Not with GuideLER!</h1>
 

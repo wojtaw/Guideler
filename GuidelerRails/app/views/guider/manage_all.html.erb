@@ -1,13 +1,12 @@
 <h1 class="profile-h1">My Guiders</h1>
 <br>
-
     <div class="clearfix">
   <% guiders.each do |g| %>
     <div class="profile-guiderBox">
       <div class="profile-guiderImage"></div>
         <%= g.id %> / <%= g.name %><br>
-        <%= link_to('Watch', g_path(:guiderID => g.id)) %>
-            <%= link_to('Edit', editor_path(:guiderID => g.id)) %>
+        <%= link_to('Watch', g_path(:guiderID => g.id),:target => "_blank") %>
+            <%= link_to('Edit', editor_path(:guiderID => g.id),:target => "_blank") %>
             <%= link_to('Delete', delete_guider_path(:guiderID => g.id)) %>
     </div>
   <% end %>

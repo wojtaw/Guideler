@@ -159,11 +159,15 @@ function refreshEditTabs() {
 }
 
 function lightServiceIcon(sourceLink){
+    $('#edit-serviceBar').animate({opacity: 1}, 300);
     var tmpResult = parseURLHost(sourceLink);
     console.log("Matching resullllllllllllt"+tmpResult);
     var servicesArray = new Array("google","youtube","vimeo","flickr","picasa","soundcloud","wordpress","wikipedia","slideslive","slideshare");
     for(var i=0;i<servicesArray.length;i++){
-        if(servicesArray[i] == tmpResult) $('#edit-service-'+servicesArray[i]+'-light').css({opacity: 0, visibility: "visible"}).animate({opacity: 1.0}, 800);
+        if(servicesArray[i] == tmpResult){
+            $('#edit-serviceBar').animate({opacity: 0.2}, 500);
+            $('#edit-service-'+servicesArray[i]+'-light').css({opacity: 0, visibility: "visible"}).animate({opacity: 1.0}, 800);
+        }
         else $('#edit-service-'+servicesArray[i]+'-light').css("visibility","hidden");
     }
 

@@ -12,6 +12,17 @@
     min-width: 250px;
     float: left;
     height: 100%;
+    color: #dadee0;
+}
+
+#profile-leftColumn a{
+    color: #dadee0;
+    text-decoration: none;
+}
+
+#profile-leftColumn a:hover{
+    color: #dadee0;
+    text-decoration: underline;
 }
 
 #profile-topBar {
@@ -39,5 +50,39 @@
     background-color: #0e0e0e;
     padding: 10px;
     min-height: 80px;
+    margin-bottom: 40px;
     height: 8%;
+}
+
+#profile-content {
+    float: left;
+    width: 75%;
+    padding: 3%;
+}
+
+.profile-guiderBox {
+    width: 325px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    float: left;
+
+}
+
+.profile-h1 {
+    font-weight: 300;
+    font-size: 45px;
+    color: #3b4c58;
+}
+
+.profile-h2 {
+    font-weight: 300;
+    font-size: 30px;
+    color: #3b4c58;
+}
+
+.profile-guiderImage {
+    background-color: #000;
+    width: 325px;
+    height: 200px;
+
 }

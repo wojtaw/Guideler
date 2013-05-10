@@ -1,14 +1,14 @@
+<h1 class="profile-h1">My Guiders</h1>
 <br>
-<br>
-Manage all your guiders
-<br>
-<%= link_to('Create new guider', new_guider_path) %>
 
+    <div class="clearfix">
   <% guiders.each do |g| %>
-    <%= g.id %> / <%= g.name %> <%= link_to('EDIT', editor_path(:guiderID => g.id)) %>
-    | <%= link_to('Delete', delete_guider_path(:guiderID => g.id)) %>
-    | <%= link_to('Watch', g_path(:guiderID => g.id)) %>
-
-    <br>
-
+    <div class="profile-guiderBox">
+      <div class="profile-guiderImage"></div>
+        <%= g.id %> / <%= g.name %><br>
+        <%= link_to('Watch', g_path(:guiderID => g.id)) %>
+            <%= link_to('Edit', editor_path(:guiderID => g.id)) %>
+            <%= link_to('Delete', delete_guider_path(:guiderID => g.id)) %>
+    </div>
   <% end %>
+    </div>

@@ -27,12 +27,12 @@
     </div>
   </div>
 
-
+  <div class="center">
     <% if user_signed_in? %>
-        User <%= current_user.email %> is logged
-        <%= link_to("My Guiders", manage_all_path) %> &nbsp; &#124; &nbsp;
-        <%= link_to("Create Guider", new_guider_path) %> &nbsp; &#124; &nbsp;
-        <%= link_to("Logout", destroy_user_session_path, :method => :delete) %> &nbsp; &#124; &nbsp;
+        <%= current_user.email %> <br>
+        <%= link_to("Me", display_profile_path) %> <br>
+        <%= link_to("My Guiders", manage_all_path) %> <br>
+
 
 
 
@@ -40,12 +40,16 @@
         <%= link_to("Login", new_user_session_path) %>
     <% end %>
 
+    </div>
+
 </div>
 <div id="profile-topBar">
   <%= link_to("HOME", root_path) %>
+  <%= link_to("Logout", destroy_user_session_path, :method => :delete) %> <br>
 </div>
-
+<div id="profile-content">
 <%= yield %>
+</div>
 
 </body>
 </html>

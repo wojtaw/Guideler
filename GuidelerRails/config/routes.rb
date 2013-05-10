@@ -81,5 +81,5 @@ Guideler::Application.routes.draw do
   match 'api/edit_guider' => 'guider#api_edit_guider', :as => 'api_edit_guider', :constraints => { :guiderID => guider_regexp }
 
   #Error pages
-  match 'error/:errorMessage' => 'error#show_general_error', :as => 'show_general_error'
+  match 'error/:error_code' => 'error#show_general_error', :as => 'show_general_error'
 end

@@ -2,5 +2,9 @@
     initError();
 </script>
 <div class="gl-errorBody">
-  <div class="gl-gradientError">aasf</div>
+  <div class="gl-gradientError">
+    <div class="gl-error-title">Oops!</div>
+    <div class="gl-error-message"><%= error_message %></div>
+    <div class="gl-error-message">&larr; <%= link_to("Homepage", root_path) %></div>
+  </div>
 </div>

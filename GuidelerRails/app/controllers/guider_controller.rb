@@ -19,7 +19,7 @@ class GuiderController < ApplicationController
       if current_user.id == guider.user_id
         render :locals => { :guider => guider}
       else
-        render :inline => 'Only owner can edit this guider'
+        redirect_to show_general_error_path(:error_code => 100)
       end
 
     else

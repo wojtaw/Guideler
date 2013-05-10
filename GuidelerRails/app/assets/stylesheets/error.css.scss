@@ -3,7 +3,30 @@
   display: block;
   width: 100%;
   height: 100%;
+  color: #b9c3c8;
+  font-weight: 300;
+}
 
+#error-html{
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+.gl-error-title {
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+
+.gl-error-message {
+  font-size: 30px;
+}
+
+.gl-error-message a {
+  font-size: 30px;
+  color: #b9c3c8;
 }
 
 .gl-gradientError {
@@ -12,6 +35,16 @@
   background-repeat: repeat-y;
   padding-left: 4%;
   background-position: left;
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-bottom: 100px;
+  height: 100%;
+  width: 100%;
+}
+
+.gradientOnly {
+  background-image:url("homepage/hp-gradient-left.png");
+  background-repeat: repeat-y;
   height: 100%;
   width: 100%;
 }

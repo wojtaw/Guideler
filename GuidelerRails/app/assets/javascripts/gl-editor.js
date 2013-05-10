@@ -284,9 +284,11 @@ function parseURLHost(urlToParse){
     else if(result == "vimeo.com") return "vimeo";
     else if(result == "soundcloud.com") return "soundcloud";
     else if(result == "flickr.com") return "flickr";
-    else if(result == "wikipedia.com") return "wikipedia";
+    else if(result == "wikipedia.org") return "wikipedia";
+    else if(result == "en.wikipedia.org") return "wikipedia";
     else if(result == "slideslive.com") return "slideslive";
     else if(result == "slideshare.com") return "slideshare";
+    else if(result == "slideshare.net") return "slideshare";
     else if(result == "google.com") return "google";
     else return "unknown"
 }

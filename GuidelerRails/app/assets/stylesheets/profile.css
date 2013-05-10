@@ -1,4 +1,30 @@
-.profile-leftColumn {
-    background-color: #993300;
+#profile-html{
+    height: 100%;
+}
 
+#profile-body{
+    height: 100%;
+}
+
+#profile-leftColumn {
+    background-color: #454545;
+    width: 17%;
+    min-width: 250px;
+    float: left;
+    height: 100%;
+}
+
+#profile-topBar {
+    background-color: #2e2e2e;
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    height: 8%;
+}
+
+#profile-createBar {
+    background-color: #0e0e0e;
+    padding: 10px;
+    min-height: 80px;
+    height: 8%;
 }

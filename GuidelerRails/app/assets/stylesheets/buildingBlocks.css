@@ -194,6 +194,7 @@ h3 {
 }
 
 .gl-buttonOutside {
+    cursor: pointer;
     border: 1px solid #5f6365;
     padding: 6px 6px 2px 6px;
     float: left;
@@ -208,7 +209,15 @@ h3 {
 .gl-buttonMain {
     background-color: #fcd116;
     border: 2px solid #000000;
+    color: #0e0e0e;
     text-decoration: none;
     padding: 9px 20px 9px 20px;
     float: left;
 }
+
+.gl-buttonMain:hover {
+    color: #0e0e0e;
+    text-decoration: none;
+}
+
+

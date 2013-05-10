@@ -1,3 +1,37 @@
-<div class="profile-leftColumn">
+<!DOCTYPE html>
+<html id="profile-html">
+<head>
+  <title>Guideler</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300&subset=latin,latin-ext" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "http://slideslive.com/bundles/embedPresentation_1_1.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body id="profile-body">
+
+<div id="profile-leftColumn">
+  <div id="profile-createBar">
+    <div class="center">
+    <div class="clearfix">
+        <div class="gl-buttonOutside">
+          <div class="clearfix">
+            <div class="gl-buttonInner">
+              <div class="clearfix">
+                <%= link_to("CREATE GUIDER", new_guider_path, :class => "gl-buttonMain") %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div id="profile-topBar">
   aasfas
 </div>
+
+<%= yield %>
+
+</body>
+</html>

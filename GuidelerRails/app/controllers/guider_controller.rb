@@ -5,10 +5,10 @@ class GuiderController < ApplicationController
     render :locals => { :guider => guider}
 
   rescue ActiveRecord::StatementInvalid
-    render :inline => 'Guider invalid'
+    redirect_to show_general_error_path(:error_code => 103)
 
   rescue ActiveRecord::RecordNotFound
-    render :inline => 'Guider not found'
+    redirect_to show_general_error_path(:error_code => 104)
   end
 
   def editor
@@ -23,7 +23,7 @@ class GuiderController < ApplicationController
       end
 
     else
-      render :inline => 'Login please'
+      redirect_to show_general_error_path(:error_code => 101)
     end
 
 
@@ -35,7 +35,7 @@ class GuiderController < ApplicationController
       guiders = current_user.guiders
       render :locals => { :guiders => guiders }
     else
-      render :inline => 'Login please'
+      redirect_to show_general_error_path(:error_code => 101)
     end
 
 
@@ -60,7 +60,7 @@ class GuiderController < ApplicationController
       guider.delete
       redirect_to :manage_all
     else
-      render :inline => 'Only owner can delete'
+      redirect_to show_general_error_path(:error_code => 102)
     end
 
 
@@ -129,10 +129,11 @@ class GuiderController < ApplicationController
     render :content_type => 'application/json', :locals => { :guider => guider, :serviceType => service_type, :externalData => external_data}, :layout => false
 
   rescue ActiveRecord::StatementInvalid
-    render :inline => 'Guider invalid'
+    redirect_to show_general_error_path(:error_code => 103)
+
 
   rescue ActiveRecord::RecordNotFound
-    render :inline => 'Guider not found'
+    redirect_to show_general_error_path(:error_code => 104)
   end
 
   private

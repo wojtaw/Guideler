@@ -50,7 +50,7 @@
     <file path="/20130509110350_add_question_enabled_to_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368097536408" ignored="false" />
     <file path="/gl-values.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368104024785" ignored="false" />
     <file path="/20130509171648_add_published_to_guiders.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368119847363" ignored="false" />
-    <file path="/gl-services.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368281174056" ignored="false" />
+    <file path="/gl-services.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368281860986" ignored="false" />
     <file path="/error_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368163847443" ignored="false" />
     <file path="/error.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368163553239" ignored="false" />
     <file path="/show_general_error.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368163570638" ignored="false" />
@@ -102,10 +102,10 @@
       <file leaf-file-name="gl-services.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="23" selection-start="2388" selection-end="2391" vertical-scroll-proportion="0.3560606">
+            <state line="37" column="78" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.31608135">
               <folding>
-                <marker date="1368281430815" expanded="true" signature="3814:3832" placeholder="..." />
-                <marker date="1368281430815" expanded="true" signature="4002:4160" placeholder="..." />
+                <marker date="1368282005587" expanded="true" signature="3495:3513" placeholder="..." />
+                <marker date="1368282005587" expanded="true" signature="3683:3841" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1170,10 +1170,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="23" selection-start="2388" selection-end="2391" vertical-scroll-proportion="0.3560606">
+        <state line="37" column="78" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.31608135">
           <folding>
-            <marker date="1368281430815" expanded="true" signature="3814:3832" placeholder="..." />
-            <marker date="1368281430815" expanded="true" signature="4002:4160" placeholder="..." />
+            <marker date="1368282005587" expanded="true" signature="3495:3513" placeholder="..." />
+            <marker date="1368282005587" expanded="true" signature="3683:3841" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -22,7 +22,7 @@ function createYoutubeBox(externalData){
 }
 
 function createSoundCloudBox(externalData){
-    var generatedID = Math.round(Math.random()*10000);
+    var generatedID = generateUniqueID();
     var htmlString = "<h3>Soundcloud box</h3><div id='soundcloud-"+generatedID+"'></div> ";
     $.getJSON('http://soundcloud.com/oembed?',
         {format: 'json', url: externalData, iframe: true},
@@ -34,24 +34,18 @@ function createSoundCloudBox(externalData){
 }
 
 function createSlideshareBox(externalData){
-    var generatedID = 50+Math.round(Math.random()*150);
-    //Protection against duplicates
-    while(generatedRandomIDs.indexOf(generatedID) != -1){
-        generatedID = 50+Math.round(Math.random()*150);
-    }
-    generatedRandomIDs.push(generatedID);
-
-    var htmlString = "<h3>Slideshare</h3><iframe id=slideshare-'"+generatedID+"' src=\"\" width=\"427\" height=\"356\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> ";
+    var generatedID = generateUniqueID();
+    var htmlString = "<h3>Slideshare</h3><iframe id=slideshare-"+generatedID+" src=\"\" width=\"427\" height=\"356\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> ";
 
     $.ajax({
         type: 'GET',
-        url: "http://www.slideshare.net/api/oembed/2?url=http://www.slideshare.net/nminspiration/nmi13-jiri-materna&maxwidth="+generatedID,
+        url: "http://www.slideshare.net/api/oembed/2?url=http://www.slideshare.net/nminspiration/nmi13-jiri-materna",
         async: false,
-        jsonpCallback: 'slideshareJsonCallback',
+        jsonpCallback: 'jsonCallback',
         contentType: "application/json",
         dataType: 'jsonp',
-        success: function(json) {
-            console.dir(json);
+        success: function(data) {
+            $('#slideshare-'+generatedID).attr('src','http://www.slideshare.net/slideshow/embed_code/'+data['slideshow_id']);
         },
         error: function(e) {
             console.log(e.message);
@@ -60,19 +54,18 @@ function createSlideshareBox(externalData){
     return htmlString;
 }
 
-function slideshareJsonCallback(data){
-    var belongsToId = data['width'];
-    var tmpIndex = generatedRandomIDs.indexOf(belongsToId);
-    generatedRandomIDs.splice(tmpIndex, 1);
-    console.log("callback was called, structure for id "+belongsToId+" of data:");
-    console.log(data['slideshow_id']);
-    $('#slideshare-'+belongsToId).attr('src','http://www.slideshare.net/slideshow/embed_code/'+data['slideshow_id']);
-
+function generateUniqueID(){
+    var generatedID = Math.round(Math.random()*10000);
+    while(generatedRandomIDs.indexOf(generatedID) != -1){
+        generatedID = Math.round(Math.random()*10000);
+    }
+    generatedRandomIDs.push(generatedID);
+    return generatedID;
 }
 
 function createFlickrBox(externalData){
     var generatedID = Math.round(Math.random()*10000);
-    var htmlString = "<h3>Flickr</h3><iframe id=flickr-'"+generatedID+"' src=\"\" width=\"427\" height=\"356\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> ";
+    var htmlString = "<h3>Flickr</h3><iframe id=flickr-"+generatedID+" src=\"\" width=\"427\" height=\"356\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> ";
     $.getJSON('http://www.flickr.com/services/oembed/?callback=?',
         {format: 'json', url: externalData},
         function(data) {

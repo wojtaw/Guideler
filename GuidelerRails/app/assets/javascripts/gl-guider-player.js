@@ -229,16 +229,17 @@ function initListeners() {
 }
 
 function checkAnswer(){
-	console.log("Answered");	
-	var answer = $('input[name=gl-answers]:checked').val();
+	console.log("Answered");
+    console.log("Correct answer is"+guiderJSON.steps[currentStepNumber-1].correctAnswer);
+	var answer = parseInt($('input[name=gl-answers]:checked').val());
+    var correctAnswer = parseInt(guiderJSON.steps[currentStepNumber-1].correctAnswer);
 	if(typeof(answer)=='undefined') $('#gl-flashMessage').text("Check at least one answer!");
-	else if(answer == guiderJSON.steps[currentStepNumber-1].correctAnswer){
+	else if(answer == correctAnswer){
 		stepsFinished[currentStepNumber-1] = true;
 		$('#gl-flashMessage').text("Correct, move on! :)");		
 		showCurrentControls();
 	} else {
 		stepsFinished[currentStepNumber-1] = false;
-		$('#gl-flashMessage').text("Incorrect :(");	
 	}
 }
 

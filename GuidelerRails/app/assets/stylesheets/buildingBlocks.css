@@ -101,6 +101,7 @@ h3 {
 
 #gl-question {
     background-image: url("player/think.png");
+    background-repeat: no-repeat;
     width: 60px;
     height: 50px;
     margin-left: 20px;
@@ -111,7 +112,7 @@ h3 {
 }
 
 #gl-question:hover {
-
+    background-position: 0px -61px;
 }
 
 #gl-stepsButtonWrapper{

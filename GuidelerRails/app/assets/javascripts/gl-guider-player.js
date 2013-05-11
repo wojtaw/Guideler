@@ -164,7 +164,7 @@ function initStepBoxes() {
 		stepButtons.push(stepButtonString);
 	}
 	$("#gl-stepsContent").append(stepBoxes.join(''));
-	$("#gl-playerBottomBar").append(stepButtons.join(''));		
+	$("#gl-stepsButtonWrapper").append(stepButtons.join(''));
 	
 }
 

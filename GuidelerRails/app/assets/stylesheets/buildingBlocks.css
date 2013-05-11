@@ -99,6 +99,26 @@ h3 {
 	background-color: rgba(0, 0, 0, 0.5);	
 }
 
+#gl-question {
+    background-image: url("player/think.png");
+    width: 60px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-top: 20px;
+    float: left;
+    cursor: pointer;
+}
+
+#gl-question:hover {
+
+}
+
+#gl-stepsButtonWrapper{
+    background-color: #993300;
+    float: left;
+}
+
 #gl-playerCanvas {
 	display:block;
 	width:inherit;
@@ -177,11 +197,6 @@ h3 {
 	transform:rotate(270deg);
 	-ms-transform:rotate(270deg); /* IE 9 */
 	-webkit-transform:rotate(270deg); /* Safari and Chrome */		
-}
-
-#gl-question {
-	position:absolute;	
-	right:1%;
 }
 
 #gl-questionWindow {

@@ -116,6 +116,7 @@ function showStep(stepNumber){
 	currentStepNumber = stepNumber;
 	refreshQuestionBox();
 	showCurrentControls();
+
 	
 	//Bring on the requested step
 	$('#gl-stepsContent').animate({
@@ -130,6 +131,13 @@ function showStep(stepNumber){
 }
 
 function refreshQuestionBox(){
+    if(guiderJSON.steps[currentStepNumber-1].questionEnabled == "true"){
+        $('#gl-question').css("visibility","visible");
+
+    } else {
+        $('#gl-question').css("visibility","hidden");
+        hideQuestion();
+    }
 	//Deselect radios
 	$('input[name=gl-answers]').attr('checked', false);
 	//Fill up proper texts
@@ -235,13 +243,28 @@ function checkAnswer(){
     console.log("Correct answer is"+guiderJSON.steps[currentStepNumber-1].correctAnswer);
 	var answer = parseInt($('input[name=gl-answers]:checked').val());
     var correctAnswer = parseInt(guiderJSON.steps[currentStepNumber-1].correctAnswer);
-	if(typeof(answer)=='undefined') $('#gl-flashMessage').text("Check at least one answer!");
-	else if(answer == correctAnswer){
+	if(typeof(answer)=='undefined'){
+        $('#gl-flashMessage').text("Check at least one answer!");
+        return false;
+    }
+
+    var allFields = $("label[for='gl-answers']");
+    var selectedField = $("label[for='gl-answerText"+answer.toString()+"']");
+    allFields.css("background-color","#fff");
+    allFields.css("border","solid 1px #cacdce");
+
+    if(answer == correctAnswer){
 		stepsFinished[currentStepNumber-1] = true;
-		$('#gl-flashMessage').text("Correct, move on! :)");		
+		$('#gl-flashMessage').text("Correct, move on! :)");
+        selectedField.css("background-color","#d1f0bd");
+        selectedField.css("border","solid 2px #346f0d");
+
+
 		showCurrentControls();
 	} else {
 		stepsFinished[currentStepNumber-1] = false;
+        selectedField.css("background-color","#ff7d7d");
+        selectedField.css("border","solid 2px #346f0d");
         $('#gl-flashMessage').text("Incorrect :(");
     }
 }

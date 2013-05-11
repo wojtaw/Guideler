@@ -126,7 +126,7 @@ function refreshStepBar(){
     //TODO
     var stateClass = "edit-step-empty";
     for(var i=0;i < editSteps.length;i++){
-        var stepButtonString = '<div id="edit-stepButton-'+i+'" class="edit-stepGeneralButton '+stateClass+'"></div>';
+        var stepButtonString = '<div id="edit-stepButton-'+i+'" class="edit-stepGeneralButton '+stateClass+'"></div><div id="edit-stepDelete-'+i+'" class="edit-stepDeleteButton"></div>';
         editStepButtons.push(stepButtonString);
 
     }
@@ -138,11 +138,16 @@ function refreshStepBar(){
 
 function refreshStepListeners(){
      for(var i=0;i<editSteps.length;i++){
-     $("#edit-stepButton-"+i).click(function(e) {
-         saveCurrentStep();
-     var tmpNumber =  parseInt(e.target.id.split('-')[2]);
-         editStep(tmpNumber);
-     });
+         $("#edit-stepDelete-"+i).click(function(e) {
+             var tmpNumber =  parseInt(e.target.id.split('-')[2]);
+             deleteStep(tmpNumber);
+         });
+
+         $("#edit-stepButton-"+i).click(function(e) {
+             saveCurrentStep();
+         var tmpNumber =  parseInt(e.target.id.split('-')[2]);
+             editStep(tmpNumber);
+         });
      }
 }
 
@@ -240,6 +245,18 @@ function saveCurrentStep() {
 function editStep(stepIndex){
     currentEditStep = stepIndex;
     redrawEditorGUI();
+}
+
+function deleteStep(stepIndex){
+    if(currentEditStep == stepIndex){
+
+    }else{
+        refreshGUI();
+    }
+}
+
+function refreshGUI(){
+
 }
 
 function validateAndFixURL(checkUrl){

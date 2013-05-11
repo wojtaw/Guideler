@@ -25,16 +25,15 @@
 }
 
 #edit-newStepButton {
-  background-image: url("editor/pages.png");
-  background-position: 0px -56px;
+  background-image: url("editor/new-page.png");
+  background-position: 0px 0px;
   background-repeat: no-repeat;
-  width: 50px;
+  width: 40px;
   height: 32px;
   float: left;
   color: #9ea4a6;
   cursor: pointer;
   text-align: left;
-  padding-left: 50px;
   padding-top: 8px;
 }
 
@@ -43,6 +42,17 @@
   background-position: 0px 0px;
   background-repeat: no-repeat;
   color: #FFFFFF;
+}
+
+.edit-barSplitter {
+  float: left;
+  width: 2px;
+  background-color: #919191;
+  position: relative;
+  top: -22px;
+  height: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 #edit-nextStepButton {
@@ -60,6 +70,7 @@
 }
 
 #edit-guiderName {
+  margin-left: 50px;
   font-size: 40px;
   font-weight: 300;
   width: 70%;
@@ -125,7 +136,7 @@
 .edit-stepGeneralButton {
   background-image: url("editor/pages.png");
   background-repeat: no-repeat;
-  margin-right: 15px;
+  margin-left: 15px;
   width: 32px;
   height: 40px;
   float: left;
@@ -134,6 +145,18 @@
 
 .edit-stepGeneralButtonActive {
   border-bottom: 3px solid #0066FF;
+}
+
+.edit-stepDeleteButton {
+  background-color: #122736;
+  background-image: url("editor/close.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  display: block;
+  width: 15px;
+  height: 15px;
+  float: left;
+  cursor: pointer;
 }
 
 .edit-step-empty{
@@ -177,7 +200,7 @@
 #edit-noteBox{
   background-color: #FFFFFF;
   border: dashed 1px #a1a1a1;
-  padding: 40px;
+  padding: 25px;
 }
 
 #edit-stepLink {
@@ -197,7 +220,7 @@
 }
 
 #edit-stepDescription {
-  width: 80%;
+  width: 90%;
   height: 70px;
   border: solid 1px #cacdce;
   color: #61717c;

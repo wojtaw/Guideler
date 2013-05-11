@@ -248,15 +248,17 @@ function editStep(stepIndex){
 }
 
 function deleteStep(stepIndex){
-    if(currentEditStep == stepIndex){
+    var confirmResult = confirm("Do you really want to delete step number "+(stepIndex+1)+"?");
 
-    }else{
-        refreshGUI();
-    }
-}
+    if(!confirmResult) return;
+    //if there is only one step left, it is not possible
+    if(editSteps.length <= 1) return;
 
-function refreshGUI(){
+    editSteps.splice(stepIndex, 1);
 
+    if(currentEditStep == stepIndex) currentEditStep = editSteps.length-1;
+
+    redrawEditorGUI();
 }
 
 function validateAndFixURL(checkUrl){

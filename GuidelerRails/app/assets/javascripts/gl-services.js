@@ -3,6 +3,7 @@ function createStepString(serviceType,externalData){
 	if(serviceType == "YOUTUBE") return createYoutubeBox(externalData);
 	else if(serviceType == "VIMEO") return createVimeoBox(externalData);
 	else if(serviceType == "SOUNDCLOUD") return createSoundCloudBox(externalData);
+    else if(serviceType == "SLIDESHARE") return createSlideshareBox(externalData);
     else if(serviceType == "SLIDESLIVE") return createSLBox(externalData);
 	else if(serviceType == "GENERAL") return createGeneralBox(externalData);		
 	else if(serviceType == "CUSTOMCODE") return createCustomCodeBox(externalData);			
@@ -18,13 +19,25 @@ function createYoutubeBox(externalData){
 	return htmlString;
 }
 
-function createSoundCloudBox(){
-    console.log("Getting the html");
-    var htmlString = "<h3>Soundcloud box</h3>";
-    $.getJSON('http://soundcloud.com/oembed?callback=?',
-        {format: 'js', url: 'http://snd.sc/yp6VMo', iframe: true},
+function createSoundCloudBox(externalData){
+    var generatedID = Math.round(Math.random()*10000);
+    var htmlString = "<h3>Soundcloud box</h3><div id='soundcloud-"+generatedID+"'></div> ";
+    $.getJSON('http://soundcloud.com/oembed?',
+        {format: 'json', url: externalData, iframe: true},
         function(data) {
-            htmlString += data['html'];
+            $('#soundcloud-'+generatedID).html(data['html']);
+        }
+    )
+    return htmlString;
+}
+
+function createSlideshareBox(externalData){
+    var generatedID = Math.round(Math.random()*10000);
+    var htmlString = "<h3>Soundcloud box</h3><div id='soundcloud-"+generatedID+"'></div> ";
+    $.getJSON('http://www.slideshare.net/api/oembed/2?',
+        {format: 'json', url: externalData},
+        function(data) {
+            $('#soundcloud-'+generatedID).html(data['html']);
         }
     )
     return htmlString;

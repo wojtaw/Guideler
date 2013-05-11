@@ -173,6 +173,7 @@ h3 {
     background-color:#ffffff;
     border: 8px solid rgba(0, 0, 0, 0.3);
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .gl-stepDescription {
@@ -347,6 +348,10 @@ h3 {
 .gl-playerAnswersWrapper {
     width: 500px;
     float: left;
+}
+
+.gl-slidesliveBox {
+    z-index: 5000;
 }
 
 

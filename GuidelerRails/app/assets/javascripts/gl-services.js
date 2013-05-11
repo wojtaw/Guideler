@@ -1,7 +1,7 @@
 // Decode the link, identifz service and create appropriate window
 var generatedRandomIDs = new Array();
 function createStepString(serviceType,externalData){
-    var stepString = "<div class='gl-stepContentWrapper'>";
+    var stepString = "<div class='center'><div class='gl-stepContentWrapper clearfix'>";
     var tmpString = "";
     console.log("huraa zpitineeee"+serviceType);
 	if(serviceType == "YOUTUBE") stepString += createYoutubeBox(externalData);
@@ -12,7 +12,7 @@ function createStepString(serviceType,externalData){
     else if(serviceType == "SLIDESLIVE") stepString += (createSLBox(externalData));
 	else if(serviceType == "GENERAL") stepString += (createGeneralBox(externalData));
     else if(serviceType == "CUSTOMCODE") stepString += (createCustomCodeBox(externalData));
-    stepString += "</div>";
+    stepString += "</div></div>";
     return stepString;
 
 
@@ -27,7 +27,7 @@ function createYoutubeBox(externalData){
 
 function createSoundCloudBox(externalData){
     var generatedID = generateUniqueID();
-    var htmlString = "<h3>Soundcloud box</h3><div id='soundcloud-"+generatedID+"'></div> ";
+    var htmlString = "<div id='soundcloud-"+generatedID+"'></div> ";
     $.getJSON('http://soundcloud.com/oembed?',
         {format: 'json', url: externalData, iframe: true},
         function(data) {
@@ -39,7 +39,7 @@ function createSoundCloudBox(externalData){
 
 function createSlideshareBox(externalData){
     var generatedID = generateUniqueID();
-    var htmlString = "<h3>Slideshare</h3><div class='gl-dynamic-slideAspectRatio center'><iframe id=slideshare-"+generatedID+" src=\"\" width=\"100%\" height=\"100%\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>";
+    var htmlString = "<div class='gl-dynamic-slideAspectRatio center'><iframe id=slideshare-"+generatedID+" src=\"\" width=\"100%\" height=\"100%\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>";
 
     $.ajax({
         type: 'GET',
@@ -88,24 +88,21 @@ function createVimeoBox(externalData){
 }
 
 function createSLBox(externalData){
-	var htmlString = "<h3>SlidesLive box</h3>";
-		htmlString += '<script type="text/javascript" id="sle81767">'+
+	var htmlString = '<div class="gl-slidesliveBox"><script type="text/javascript" id="sle81767">'+
 			'slidesLive = createSlidesLiveBox();'+
 			'slidesLive.bgColor="transparent"; '+
 			'slidesLive.embedPresentation('+externalData+',960); '+
-			'</script>';
+			'</script></div>';
 	return htmlString;	
 }
 
 function createGeneralBox(externalData){
-	var htmlString = "<h3>General box</h3>";
-	htmlString += '<iframe src="'+externalData+'" class="generalBox center"></iframe>'
+    var htmlString = '<iframe src="'+externalData+'" class="generalBox center"></iframe>'
 	return htmlString;	
 }
 
 
 function createCustomCodeBox(externalData){
-	console.log("custom box");
 	var htmlString = "<h3>Custom box</h3>";	
 	var countedWidth = boxStandartWidth;
 	var countedHeight = (boxStandartWidth * 9) / 16;		

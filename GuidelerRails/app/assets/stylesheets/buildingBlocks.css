@@ -8,6 +8,7 @@ body {
 #player-body{
     background-image: url("editor/default_background.jpeg");
     background-repeat: repeat;
+    overflow: hidden;
 }
 
 h1 {
@@ -109,6 +110,7 @@ h3 {
     margin-top: 20px;
     float: left;
     cursor: pointer;
+    position: relative;
 }
 
 #gl-question:hover {
@@ -167,13 +169,23 @@ h3 {
 	position:relative;
 }
 
+.gl-stepContentWrapper {
+    background-color:#ffffff;
+    border: 8px solid rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.gl-stepDescription {
+    height: 30px;
+    overflow: hidden;
+    font-weight: 300;
+    font-size: 18px;
+}
+
 .gl-playerStepWrapper {
 	display:block;
 	width:600px;
 	overflow:hidden;
-	background-color:#ffffff;
-    border: 8px solid rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
 	position:absolute;
 }
 
@@ -220,7 +232,7 @@ h3 {
 #gl-questionWindow {
 	position:fixed;
     top: 80px;
-	display:block;
+	display:none;
     padding-left: 5%;
     background-color: rgba(0, 0, 0, 0.7);
     width:95%;
@@ -234,6 +246,14 @@ h3 {
     font-weight: 300;
     font-size: 18px;
     margin-bottom: 50px;
+}
+
+#gl-flashMessage {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 300;
+    display: block;
+    float: left;
 }
 
 .gl-thinkTitle {
@@ -297,6 +317,7 @@ h3 {
     -moz-appearance:none;
     -webkit-appearance: none;
     background-image: url("editor/check.png");
+    background-repeat: no-repeat;
     padding: 9px;
     display: block;
     width: 22px;
@@ -324,8 +345,8 @@ h3 {
 }
 
 .gl-playerAnswersWrapper {
-    background-color: #0066FF;
     width: 500px;
+    float: left;
 }
 
 

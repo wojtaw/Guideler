@@ -16,14 +16,14 @@ var draggableStartPosition = 0;
 
 function keyboardHandler(e){
 	var e= window.event || e
-	if(e.keyCode == 37) previousStep();		
-	if(e.keyCode == 39) nextStep();						
+	if(e.keyCode == 37) previousStep();
+	if(e.keyCode == 39) nextStep();
 };
 
 function recalculatePlayer(){
 	console.log("recalculating player");
 	boxStandartWidth = ($(window).width() * 0.7);
-	boxStandartSpacing = ($(window).width() * 1.3);	
+	boxStandartSpacing = ($(window).width() * 1.3);
 	modifyCSSclass();
 	positionStepBoxes();
 }
@@ -34,17 +34,17 @@ function modifyCSSclass(){
 
     var slideHeight = 600;
     var slideWidth = 1000;
-	
+
 	var generalBoxWidth = Math.round(boxStandartWidth * 0.9);
 	var generalBoxHeight = Math.round((generalBoxWidth * 9) / 16);
-	
+
 	var cssHtmlString = '.gl-dynamic-videoAspectRatio{ width:'+videoWidth+'px; height:'+videoHeight+'px;}'+
 			'.generalBox{ width:'+generalBoxWidth+'px; height:'+generalBoxHeight+'px;}'+
             '.gl-dynamic-slideAspectRatio{ width:'+slideWidth+'px; height:'+slideHeight+'px;}';
-	
+
 	$('#gl-dynamic-classes').html(cssHtmlString);
-	
-//	$('<style type="text/css"> .videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';} </style>').appendTo("head");	
+
+//	$('<style type="text/css"> .videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';} </style>').appendTo("head");
 }
 
 function initPlayer(guiderID){
@@ -64,23 +64,24 @@ function initPlayer(guiderID){
 }
 
 function showLoading(){
-    $('#gl-loading').css("display", "block");			
+    $('#gl-loading').css("display", "block");
 }
 
 function hideLoading(){
-    $('#gl-loading').css("display", "none");				
+    $('#gl-loading').css("display", "none");
 }
 
-function getGuiderData(guiderID){	
+function getGuiderData(guiderID){
 	$.getJSON((glPathToJSONAPI+guiderID), function(data) {
 		guiderJSON = data;
 		initStage();
-	});		
+	});
 }
 
 function initStage(){
 	console.log("Initing stage");
 	styleStage();
+    animateBrain();
 	initStepBoxes();
 	recalculatePlayer();
 	initListeners();
@@ -108,7 +109,7 @@ function isStepFinished(stepNumber){
 }
 
 function showStep(stepNumber){
-	if(!isValidStep(stepNumber))	return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR); 
+	if(!isValidStep(stepNumber))	return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR);
 	//Check if step is loaded, otherwise load it
 	if(!isStepLoaded(stepNumber)) loadStep(stepNumber);
 
@@ -116,18 +117,19 @@ function showStep(stepNumber){
 	currentStepNumber = stepNumber;
 	refreshQuestionBox();
 	showCurrentControls();
+    clearAnswers();
 
-	
+
 	//Bring on the requested step
 	$('#gl-stepsContent').animate({
 	left: - calculateStepCenterPosition(stepNumber-1),
 	}, 2000, 'easeOutBack', function() {
 	// Animation complete.
-	});		
+	});
 
 	//Start loading next steps
 	loadStep(stepNumber+1);
-	loadStep(stepNumber-1);	
+	loadStep(stepNumber-1);
 }
 
 function refreshQuestionBox(){
@@ -142,17 +144,18 @@ function refreshQuestionBox(){
 	$('input[name=gl-answers]').attr('checked', false);
 	//Fill up proper texts
 	$('#gl-questionText').text(guiderJSON.steps[currentStepNumber-1].question);
-	$('#gl-flashMessage').text(" ");	
-	$("label[for='gl-answerText1']").text(guiderJSON.steps[currentStepNumber-1].answers[0].answer1);
-	$("label[for='gl-answerText2']").text(guiderJSON.steps[currentStepNumber-1].answers[1].answer2);
-	$("label[for='gl-answerText3']").text(guiderJSON.steps[currentStepNumber-1].answers[2].answer3);		
+	$('#gl-flashMessage').text(" ");
+	$("label[for='gl-answerText1']").text("A] "+guiderJSON.steps[currentStepNumber-1].answers[0].answer1);
+	$("label[for='gl-answerText2']").text("B] "+guiderJSON.steps[currentStepNumber-1].answers[1].answer2);
+	$("label[for='gl-answerText3']").text("C] "+guiderJSON.steps[currentStepNumber-1].answers[2].answer3);
 }
 
 function loadStep(stepNumber){
 	if(!isValidStep(stepNumber)) return;
 	if(isLoaded[stepNumber-1]) return;
-	printOutput("Loading step number"+stepNumber, outputTypes.LOG);	
-	$("#gl-step-"+(stepNumber-1)).html(createStepString(guiderJSON.steps[stepNumber-1].serviceType,guiderJSON.steps[stepNumber-1].externalData));
+	printOutput("Loading step number"+stepNumber, outputTypes.LOG);
+    var stepDescription = "<div class='gl-stepDescription center'>"+guiderJSON.steps[stepNumber-1].description+"</div> "
+	$("#gl-step-"+(stepNumber-1)).html(stepDescription+createStepString(guiderJSON.steps[stepNumber-1].serviceType,guiderJSON.steps[stepNumber-1].externalData));
 	isLoaded[stepNumber-1] = true;
 }
 
@@ -163,7 +166,7 @@ function calculateStepCenterPosition(stepNumber){
 
 function initStepBoxes() {
 	var stepBoxes= [];
-	var stepButtons= [];	
+	var stepButtons= [];
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		var stepBoxString = '<div id="gl-step-'+i+'" class="gl-playerStepWrapper">'+
 			'</div>';
@@ -173,23 +176,23 @@ function initStepBoxes() {
 	}
 	$("#gl-stepsContent").append(stepBoxes.join(''));
 	$("#gl-stepsButtonWrapper").append(stepButtons.join(''));
-	
+
 }
 
-function positionStepBoxes() {	
+function positionStepBoxes() {
 	//Count size of one box
-	$(".gl-playerStepWrapper").css("width",boxStandartWidth);	
-		
+	$(".gl-playerStepWrapper").css("width",boxStandartWidth);
+
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		$("#gl-step-"+i).css("left",i*boxStandartSpacing);									
+		$("#gl-step-"+i).css("left",i*boxStandartSpacing);
 	}
-	widthMax = parseInt(($("#gl-step-"+(guiderJSON.steps.length-1)).css("left")), 10) + ($("#gl-step-"+(guiderJSON.steps.length-1)).width());	
+	widthMax = parseInt(($("#gl-step-"+(guiderJSON.steps.length-1)).css("left")), 10) + ($("#gl-step-"+(guiderJSON.steps.length-1)).width());
 	$("#gl-stepsContent").width(widthMax);
 	//Count height depending on top and bottom bar
 	var countedPlayerHeight = $(window).height() - $("#gl-playerTopBar").outerHeight() - $("#gl-playerBottomBar").outerHeight();
 	console.log("Counted height "+countedPlayerHeight);
-	
-	$("#gl-stepsContent").height(countedPlayerHeight+"px");	
+
+	$("#gl-stepsContent").height(countedPlayerHeight+"px");
 	$("#gl-stepsContent").draggable({
 		axis: 'x',
 		start: function() {
@@ -200,42 +203,42 @@ function positionStepBoxes() {
 			if(draggableStartPosition > currentPosition){
 				$('#gl-stepsContent').animate({
 				left:'-=200px',
-				}, 500, 'easeOutBack');		
+				}, 500, 'easeOutBack');
 			}else{
 				$('#gl-stepsContent').animate({
 				left:'+=200px',
-				}, 500, 'easeOutBack');					
+				}, 500, 'easeOutBack');
 			}
         }
-	});	
+	});
 }
 
 function showCurrentControls(){
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		if(isStepFinished(i)) $("#gl-stepButton-"+(i)).css("border-bottom-color","green");			
+		if(isStepFinished(i)) $("#gl-stepButton-"+(i)).css("border-bottom-color","green");
 		if(currentStepNumber == (i+1)){
-			$("#gl-stepButton-"+(i)).css("color","black");			
-			$("#gl-stepButton-"+(i)).css("background-color","orange");						
+			$("#gl-stepButton-"+(i)).css("color","black");
+			$("#gl-stepButton-"+(i)).css("background-color","orange");
 		}else{
-			$("#gl-stepButton-"+(i)).css("color","white");						
-			$("#gl-stepButton-"+(i)).css("background-color","#333");									
+			$("#gl-stepButton-"+(i)).css("color","white");
+			$("#gl-stepButton-"+(i)).css("background-color","#333");
 		}
 	}
 }
 
 function initListeners() {
-	$("#gl-leftArrow").click(previousStep);	
+	$("#gl-leftArrow").click(previousStep);
 	$("#gl-rightArrow").click(nextStep);
 	$("#gl-question").click(displayQuestion);
     $("#gl-questionWindowClose").click(hideQuestion);
     $('input[name=gl-answers]').change(checkAnswer);
-	$("#gl-answerConfirm").click(checkAnswer);		
+	$("#gl-answerConfirm").click(checkAnswer);
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-stepButton-"+i).click(function(e) {
 			var tmpNumber =  parseInt(e.target.id.split('-')[2]);
 			showStep(tmpNumber+1);
 		});
-	}	
+	}
 }
 
 function checkAnswer(){
@@ -248,25 +251,45 @@ function checkAnswer(){
         return false;
     }
 
-    var allFields = $("label[for='gl-answers']");
+    var allFields = $("label[for*='gl-answerText']");
     var selectedField = $("label[for='gl-answerText"+answer.toString()+"']");
+    var selectedRadio = $('input[name=gl-answers]:checked');
+    var flashMessage = $("#gl-flashMessage");
     allFields.css("background-color","#fff");
     allFields.css("border","solid 1px #cacdce");
 
     if(answer == correctAnswer){
 		stepsFinished[currentStepNumber-1] = true;
-		$('#gl-flashMessage').text("Correct, move on! :)");
         selectedField.css("background-color","#d1f0bd");
         selectedField.css("border","solid 2px #346f0d");
+        flashMessage.css("color","#459410");
+        flashMessage.text("Correct, move on! :)");
 
 
 		showCurrentControls();
 	} else {
 		stepsFinished[currentStepNumber-1] = false;
-        selectedField.css("background-color","#ff7d7d");
-        selectedField.css("border","solid 2px #346f0d");
-        $('#gl-flashMessage').text("Incorrect :(");
+        selectedField.css("background-color","#ffb1b1");
+        selectedField.css("border","solid 2px #b00000");
+        flashMessage.css("color","#e00909");
+        flashMessage.text("Incorrect :(");
+        selectedRadio.css("background-image","url('/assets/player/incorrect.png')")
+        selectedRadio.css("background-position","0px 0px")
     }
+}
+
+function animateBrain(e){
+    $('#gl-question').animate({top:'+7px',opacity:'0.5'},2000,"swing",animateBrainBack);
+}
+
+function animateBrainBack(e){
+    $('#gl-question').animate({top:'-7px',opacity:'1'},2000,"swing",animateBrain);
+}
+
+function clearAnswers(){
+    $("label[for*='gl-answerText']").removeAttr( 'style' );
+    $('input[name=gl-answers]').removeAttr( 'style' );
+    $("#gl-flashMessage").removeAttr( 'style' );
 }
 
 function displayQuestion(){
@@ -285,7 +308,7 @@ function previousStep(){
 
 function nextStep(){
 	currentStepNumber++;
-	checkBoundary();	
+	checkBoundary();
 	showStep(currentStepNumber);
 }
 

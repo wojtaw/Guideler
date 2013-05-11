@@ -97,6 +97,7 @@ class GuiderController < ApplicationController
       Step.create(
         :guider_id => result['guiderID'],
         :step_order => step_data["step_order"],
+        :description => step_data["description"],
         :link => step_data["externalLink"],
         :question => step_data["question"],
         :question_enabled => step_data["questionEnabled"],

@@ -23,6 +23,7 @@ function initEditor(guiderEditID){
         console.log("looping through steps "+data.steps.length)
         for(var i=0;i < data.steps.length;i++){
             var externalLink = data.steps[i].originalLink;
+            var description = data.steps[i].description;
             var question = data.steps[i].question;
             var answer1 = data.steps[i].answers[0].answer1;
             var answer2 = data.steps[i].answers[1].answer2;
@@ -32,7 +33,7 @@ function initEditor(guiderEditID){
             else
                 var questionEnabled = false
             var correctAnswer = data.steps[i].correctAnswer;
-            editSteps[i] = createStep(externalLink,question, answer1, answer2, answer3,correctAnswer,questionEnabled);
+            editSteps[i] = createStep(externalLink,question, answer1, answer2, answer3,correctAnswer,questionEnabled,description);
         }
         editorJSONloadingFinished();
     });
@@ -59,7 +60,7 @@ function saveSuccess(e) {
 function editorJSONloadingFinished(){
     //Create first step if guider is empty
     if(editSteps.length == 0)
-        editSteps.push(createStep("","","","","","",true));
+        editSteps.push(createStep("","","","","","",true,""));
 
     currentEditStep = editSteps.length - 1;
 
@@ -195,7 +196,7 @@ function showSwitchState(){
 }
 
 /////////WORKING WITH STEPS
-function createStep(externalLink, question, answer1, answer2, answer3, correctAnswer, questionEnabled){
+function createStep(externalLink, question, answer1, answer2, answer3, correctAnswer, questionEnabled, description){
     var tmpStep = new Object();
     tmpStep.externalLink = externalLink;
     tmpStep.question = question;
@@ -203,6 +204,7 @@ function createStep(externalLink, question, answer1, answer2, answer3, correctAn
     tmpStep.answer1 = answer1;
     tmpStep.answer2 = answer2;
     tmpStep.answer3 = answer3;
+    tmpStep.description = description;
 
 
     if(typeof(correctAnswer)=='undefined') tmpStep.correctAnswer = 1;
@@ -214,7 +216,7 @@ function createStep(externalLink, question, answer1, answer2, answer3, correctAn
 
 
 function addStep(){
-    editSteps.push(createStep("","","","","",1,true));
+    editSteps.push(createStep("","","","","",1,true,""));
     saveCurrentStep();
     editStep(editSteps.length - 1);
 }
@@ -226,6 +228,7 @@ function saveCurrentStep() {
     else
         editSteps[currentEditStep].externalLink = linkResult;
     editSteps[currentEditStep].question = $('#edit-question').val();
+    editSteps[currentEditStep].description = $('#edit-stepDescription').val();
     editSteps[currentEditStep].answer1 = $('#edit-answer1').val();
     editSteps[currentEditStep].answer2 = $('#edit-answer2').val();
     editSteps[currentEditStep].answer3 = $('#edit-answer3').val();

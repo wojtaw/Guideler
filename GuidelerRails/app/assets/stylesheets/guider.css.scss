@@ -172,7 +172,12 @@
   border: dashed 1px #a1a1a1;
   padding: 40px;
   margin-top: 23px;
+}
 
+#edit-noteBox{
+  background-color: #FFFFFF;
+  border: dashed 1px #a1a1a1;
+  padding: 40px;
 }
 
 #edit-stepLink {
@@ -189,6 +194,20 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+#edit-stepDescription {
+  width: 80%;
+  height: 70px;
+  border: solid 1px #cacdce;
+  color: #61717c;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  resize: none;
 }
 
 #edit-question {

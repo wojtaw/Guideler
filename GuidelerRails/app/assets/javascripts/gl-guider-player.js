@@ -11,6 +11,7 @@ var stepsFinished = new Array();
 var boxStandartWidth = ($(window).width() * 0.7);
 var boxStandartSpacing = ($(window).width() * 1.3);
 var currentStepNumber = 1;
+var stepDoneTimer;
 var draggableStartPosition = 0;
 
 
@@ -111,6 +112,13 @@ function isStepFinished(stepNumber){
 
 function showStep(stepNumber){
 	if(!isValidStep(stepNumber))	return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR);
+
+    window.clearInterval(stepDoneTimer);
+    if(guiderJSON.steps[currentStepNumber-1].questionEnabled == "false"){
+        console.log("spoustim timeout "+guiderJSON.steps[currentStepNumber-1].questionEnabled);
+        stepDoneTimer = setTimeout(markStepAsFinished,8000);
+    }
+
 	//Check if step is loaded, otherwise load it
 	if(!isStepLoaded(stepNumber)) loadStep(stepNumber);
 
@@ -131,6 +139,12 @@ function showStep(stepNumber){
 	//Start loading next steps
 	loadStep(stepNumber+1);
 	loadStep(stepNumber-1);
+}
+
+function markStepAsFinished(){
+    console.log("finished");
+    stepsFinished[currentStepNumber-1] = true;
+    showCurrentControls();
 }
 
 function refreshQuestionBox(){
@@ -217,7 +231,6 @@ function positionStepBoxes() {
 
 function showCurrentControls(){
 	for(var i=0;i<guiderJSON.steps.length;i++){
-		if(isStepFinished(i)) $("#gl-stepButton-"+(i)).css("border-bottom-color","green");
 		if(currentStepNumber == (i+1)){
 			$("#gl-stepButton-"+(i)).css("color","black");
 			$("#gl-stepButton-"+(i)).css("background-color","orange");
@@ -225,6 +238,7 @@ function showCurrentControls(){
 			$("#gl-stepButton-"+(i)).css("color","white");
 			$("#gl-stepButton-"+(i)).css("background-color","#333");
 		}
+        if(isStepFinished(i)) $("#gl-stepButton-"+(i)).css("background-color","green");
 	}
 }
 

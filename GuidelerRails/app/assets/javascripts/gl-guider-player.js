@@ -29,14 +29,14 @@ function recalculatePlayer(){
 }
 
 function modifyCSSclass(){
-	var videoWidth = boxStandartWidth * 0.85;
-	var videoHeight = (9*videoWidth) / 16;		
+	var videoWidth = Math.round(boxStandartWidth * 0.85);
+	var videoHeight = Math.round((9*videoWidth) / 16);
 	
-	var generalBoxWidth = boxStandartWidth * 0.9;
-	var generalBoxHeight = (generalBoxWidth * 9) / 16;			
+	var generalBoxWidth = Math.round(boxStandartWidth * 0.9);
+	var generalBoxHeight = Math.round((generalBoxWidth * 9) / 16);
 	
-	var cssHtmlString = '.videoAspectRatio{ width:'+videoWidth+'; height:'+videoHeight+';}'+
-			'.generalBox{ width:'+generalBoxWidth+'; height:'+generalBoxHeight+';}';
+	var cssHtmlString = '.videoAspectRatio{ width:'+videoWidth+'px; height:'+videoHeight+'px;}'+
+			'.generalBox{ width:'+generalBoxWidth+'px; height:'+generalBoxHeight+'px;}';
 	
 	$('#gl-dynamic-classes').html(cssHtmlString);
 	

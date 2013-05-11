@@ -169,6 +169,8 @@ class GuiderController < ApplicationController
         return "SLIDESLIVE"
       elsif host == "vimeo.com"
         return "VIMEO"
+      elsif host == "soundcloud.com"
+        return "SOUNDCLOUD"
       else
         return "GENERAL"
       end
@@ -177,11 +179,21 @@ class GuiderController < ApplicationController
   #finding either video ID or article ID or whatever data that identifies content that should be loaded
   def parse_external_data(service, parsing_link)
     if service == "YOUTUBE"
-      return "J1IJpHDalvk"
+      if parsing_link[/youtu\.be\/([^\?]*)/]
+        return $1
+      else
+        # Regex from # http://stackoverflow.com/questions/3452546/javascript-regex-how-to-get-youtube-video-id-from-url/4811367#4811367
+        parsing_link[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
+        return $5
+      end
     elsif service == "SLIDESLIVE"
       return "38889951"
     elsif service == "VIMEO"
-      return "63691010"
+      parsing_link[/https?:\/\/(?:[\w]+\.)*vimeo\.com(?:[\/\w]*\/videos?)?\/([0-9]+)[^\s]*/]
+      return $1
+    elsif service == "SOUNDCLOUD"
+      return parsing_link;
+
     else
       return parsing_link
     end

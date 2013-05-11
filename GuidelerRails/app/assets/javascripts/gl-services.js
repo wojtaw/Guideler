@@ -2,7 +2,8 @@
 function createStepString(serviceType,externalData){
 	if(serviceType == "YOUTUBE") return createYoutubeBox(externalData);
 	else if(serviceType == "VIMEO") return createVimeoBox(externalData);
-	else if(serviceType == "SLIDESLIVE") return createSLBox(externalData);	
+	else if(serviceType == "SOUNDCLOUD") return createSoundCloudBox(externalData);
+    else if(serviceType == "SLIDESLIVE") return createSLBox(externalData);
 	else if(serviceType == "GENERAL") return createGeneralBox(externalData);		
 	else if(serviceType == "CUSTOMCODE") return createCustomCodeBox(externalData);			
 
@@ -15,6 +16,18 @@ function createYoutubeBox(externalData){
 	htmlString += '<iframe src="http://www.youtube.com/embed/'+externalData+'" class="videoAspectRatio center" frameborder="0" allowfullscreen>'+
 					'</iframe>';
 	return htmlString;
+}
+
+function createSoundCloudBox(){
+    console.log("Getting the html");
+    var htmlString = "<h3>Soundcloud box</h3>";
+    $.getJSON('http://soundcloud.com/oembed?callback=?',
+        {format: 'js', url: 'http://snd.sc/yp6VMo', iframe: true},
+        function(data) {
+            htmlString += data['html'];
+        }
+    )
+    return htmlString;
 }
 
 function createVimeoBox(externalData){

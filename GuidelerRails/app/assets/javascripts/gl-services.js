@@ -35,7 +35,7 @@ function createSoundCloudBox(externalData){
 
 function createSlideshareBox(externalData){
     var generatedID = generateUniqueID();
-    var htmlString = "<h3>Slideshare</h3><iframe id=slideshare-"+generatedID+" src=\"\" width=\"427\" height=\"356\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen> </iframe> ";
+    var htmlString = "<h3>Slideshare</h3><div class='gl-dynamic-slideAspectRatio center'><iframe id=slideshare-"+generatedID+" src=\"\" width=\"100%\" height=\"100%\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div>";
 
     $.ajax({
         type: 'GET',

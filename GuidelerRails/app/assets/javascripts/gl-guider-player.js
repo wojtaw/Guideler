@@ -31,12 +31,16 @@ function recalculatePlayer(){
 function modifyCSSclass(){
 	var videoWidth = Math.round(boxStandartWidth * 0.85);
 	var videoHeight = Math.round((9*videoWidth) / 16);
+
+    var slideHeight = 600;
+    var slideWidth = 1000;
 	
 	var generalBoxWidth = Math.round(boxStandartWidth * 0.9);
 	var generalBoxHeight = Math.round((generalBoxWidth * 9) / 16);
 	
 	var cssHtmlString = '.gl-dynamic-videoAspectRatio{ width:'+videoWidth+'px; height:'+videoHeight+'px;}'+
-			'.generalBox{ width:'+generalBoxWidth+'px; height:'+generalBoxHeight+'px;}';
+			'.generalBox{ width:'+generalBoxWidth+'px; height:'+generalBoxHeight+'px;}'+
+            '.gl-dynamic-slideAspectRatio{ width:'+slideWidth+'px; height:'+slideHeight+'px;}';
 	
 	$('#gl-dynamic-classes').html(cssHtmlString);
 	
@@ -44,6 +48,8 @@ function modifyCSSclass(){
 }
 
 function initPlayer(guiderID){
+    $('body').attr('id', 'player-body');
+
     document.onkeydown = keyboardHandler;
 
     $(window).ready(function() {

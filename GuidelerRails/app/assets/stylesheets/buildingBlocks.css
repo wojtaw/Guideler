@@ -115,6 +115,23 @@ h3 {
     background-position: 0px -61px;
 }
 
+#gl-questionWindowClose{
+    display: block;
+    background-image: url("player/close-big.png");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    margin-right: 20px;
+    margin-top:  20px;;
+    float: right;
+    width: 24px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#gl-questionWindowClose:hover{
+    background-position: 0px -43px;
+}
+
 #gl-stepsButtonWrapper{
     background-color: #993300;
     float: left;
@@ -201,14 +218,14 @@ h3 {
 }
 
 #gl-questionWindow {
-	position:relative;
-	float:right;
-	right:30px;
-	display:none;
-	background-color:#993300;
-	width:400px;
-	height:150px;
+	position:fixed;
+    top: 80px;
+	display:block;
+    background-color: rgba(0, 0, 0, 0.7);
+    width:100%;
+	height:400px;
 	z-index:1001;
+    color: #ffffff;
 }
 
 .gl-guiderImage {
@@ -257,6 +274,42 @@ h3 {
     font-size: 40px;
     font-weight: 300;
     color: #FFFFFF;
+}
+
+.player-radio {
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance: none;
+    background-image: url("editor/check.png");
+    padding: 9px;
+    display: block;
+    width: 22px;
+    height: 20px;
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 15px;
+}
+
+.player-radio:checked {
+    background-position: 0px -38px;
+}
+
+.player-answerField {
+    background-color: #FFFFFF;
+    border: solid 1px #cacdce;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    width: 400px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #838d96;
+}
+
+.gl-playerAnswersWrapper {
+    background-color: #0066FF;
+    width: 500px;
 }
 
 

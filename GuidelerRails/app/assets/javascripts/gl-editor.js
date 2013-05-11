@@ -86,7 +86,6 @@ function colorAnswerField(){
 
     selectedField.css("background-color","#d1f0bd");
     selectedField.css("border","solid 2px #346f0d");
-
 }
 
 //---------OTHER LOGIC

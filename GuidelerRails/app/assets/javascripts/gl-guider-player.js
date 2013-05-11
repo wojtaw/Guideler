@@ -218,7 +218,9 @@ function showCurrentControls(){
 function initListeners() {
 	$("#gl-leftArrow").click(previousStep);	
 	$("#gl-rightArrow").click(nextStep);
-	$("#gl-question").click(displayQuestion);	
+	$("#gl-question").click(displayQuestion);
+    $("#gl-questionWindowClose").click(hideQuestion);
+    $('input[name=gl-answers]').change(checkAnswer);
 	$("#gl-answerConfirm").click(checkAnswer);		
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		$("#gl-stepButton-"+i).click(function(e) {
@@ -240,11 +242,16 @@ function checkAnswer(){
 		showCurrentControls();
 	} else {
 		stepsFinished[currentStepNumber-1] = false;
-	}
+        $('#gl-flashMessage').text("Incorrect :(");
+    }
 }
 
 function displayQuestion(){
 	$("#gl-questionWindow").css("display","block");
+}
+
+function hideQuestion(){
+    $("#gl-questionWindow").css("display","none");
 }
 
 function previousStep(){

@@ -173,6 +173,8 @@ class GuiderController < ApplicationController
         return "SOUNDCLOUD"
       elsif host == "slideshare.net"
         return "SLIDESHARE"
+      elsif host == "flickr.com"
+        return "FLICKR"
       else
         return "GENERAL"
       end
@@ -196,6 +198,8 @@ class GuiderController < ApplicationController
     elsif service == "SOUNDCLOUD"
       return parsing_link;
     elsif service == "SLIDESHARE"
+      return parsing_link;
+    elsif service == "FLICKR"
       return parsing_link;
     else
       return parsing_link

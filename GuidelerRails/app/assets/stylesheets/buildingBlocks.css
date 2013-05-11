@@ -64,10 +64,13 @@ h3 {
 }
 
 .gl-stepButtonGeneral {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
 	display:block;
 	background-color:#333;
 	color:#FFF;
-	padding:10px;
+	margin:10px;
 	float:left;	
 	border-bottom:3px solid;
 	border-bottom-color: white;
@@ -351,7 +354,7 @@ h3 {
 }
 
 .gl-slidesliveBox {
-    z-index: 5000;
+    z-index: 2000 !important;
 }
 
 

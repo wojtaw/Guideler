@@ -40,6 +40,7 @@ function modifyCSSclass(){
 
 	var cssHtmlString = '.gl-dynamic-videoAspectRatio{ width:'+videoWidth+'px; height:'+videoHeight+'px;}'+
 			'.generalBox{ width:'+generalBoxWidth+'px; height:'+generalBoxHeight+'px;}'+
+            '.gl-dynamic-soundcloudEmbed{ width:'+(boxStandartWidth-16)+'px;}'+
             '.gl-dynamic-slideAspectRatio{ width:'+slideWidth+'px; height:'+slideHeight+'px;}';
 
 	$('#gl-dynamic-classes').html(cssHtmlString);
@@ -170,7 +171,7 @@ function initStepBoxes() {
 	for(var i=0;i<guiderJSON.steps.length;i++){
 		var stepBoxString = '<div id="gl-step-'+i+'" class="gl-playerStepWrapper">'+
 			'</div>';
-		var stepButtonString = '<div id="gl-stepButton-'+i+'" class="gl-stepButtonGeneral">'+i+'</div>';
+		var stepButtonString = '<div id="gl-stepButton-'+i+'" class="gl-stepButtonGeneral"></div>';
 		stepBoxes.push(stepBoxString);
 		stepButtons.push(stepButtonString);
 	}
@@ -193,24 +194,25 @@ function positionStepBoxes() {
 	console.log("Counted height "+countedPlayerHeight);
 
 	$("#gl-stepsContent").height(countedPlayerHeight+"px");
-	$("#gl-stepsContent").draggable({
-		axis: 'x',
-		start: function() {
-			draggableStartPosition = $("#gl-stepsContent").position().left;
-		},
-		stop: function(){
-			var currentPosition = $("#gl-stepsContent").position().left;
-			if(draggableStartPosition > currentPosition){
-				$('#gl-stepsContent').animate({
-				left:'-=200px',
-				}, 500, 'easeOutBack');
-			}else{
-				$('#gl-stepsContent').animate({
-				left:'+=200px',
-				}, 500, 'easeOutBack');
-			}
-        }
-	});
+//	$("#gl-stepsContent").draggable({
+//        zIndex: 200,
+//		axis: 'x',
+//		start: function() {
+//			draggableStartPosition = $("#gl-stepsContent").position().left;
+//		},
+//		stop: function(){
+//			var currentPosition = $("#gl-stepsContent").position().left;
+//			if(draggableStartPosition > currentPosition){
+//				$('#gl-stepsContent').animate({
+//				left:'-=200px',
+//				}, 500, 'easeOutBack');
+//			}else{
+//				$('#gl-stepsContent').animate({
+//				left:'+=200px',
+//				}, 500, 'easeOutBack');
+//			}
+//        }
+//	});
 }
 
 function showCurrentControls(){

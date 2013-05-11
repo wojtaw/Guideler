@@ -27,7 +27,7 @@ function createYoutubeBox(externalData){
 
 function createSoundCloudBox(externalData){
     var generatedID = generateUniqueID();
-    var htmlString = "<div id='soundcloud-"+generatedID+"'></div> ";
+    var htmlString = "<div class='gl-dynamic-soundcloudEmbed' id='soundcloud-"+generatedID+"'></div> ";
     $.getJSON('http://soundcloud.com/oembed?',
         {format: 'json', url: externalData, iframe: true},
         function(data) {

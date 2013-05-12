@@ -10,6 +10,7 @@ var stepsFinished = new Array();
 
 var boxStandartWidth = ($(window).width() * 0.7);
 var boxStandartSpacing = ($(window).width() * 1.3);
+var viewportHeight = 100;
 var currentStepNumber = 1;
 var stepDoneTimer;
 var draggableStartPosition = 0;
@@ -25,13 +26,19 @@ function recalculatePlayer(){
 	console.log("recalculating player");
 	boxStandartWidth = ($(window).width() * 0.7);
 	boxStandartSpacing = ($(window).width() * 1.3);
+
+    viewportHeight = 0.95*($(window).height() - $("#gl-stepsContent").offset().top - $("#gl-playerBottomBar").height() - (0.05*$(window).height()));
+
 	modifyCSSclass();
 	positionStepBoxes();
 }
 
 function modifyCSSclass(){
-	var videoWidth = Math.round(boxStandartWidth * 0.85);
-	var videoHeight = Math.round((9*videoWidth) / 16);
+//	var videoWidth = Math.round(boxStandartWidth * 0.85);
+//	var videoHeight = Math.round((9*videoWidth) / 16);
+
+    var videoWidth = Math.round(boxStandartWidth * 0.85);
+    var videoHeight = Math.round((9*videoWidth) / 16);
 
     var slideHeight = 600;
     var slideWidth = 1000;

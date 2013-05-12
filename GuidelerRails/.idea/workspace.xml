@@ -26,8 +26,8 @@
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/views/presentation/show.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367440709430" ignored="false" />
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/controllers/embed_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367442855755" ignored="false" />
     <file path="/guiderJSON.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368298718812" ignored="false" />
-    <file path="/gl-guider-player.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368352734017" ignored="false" />
-    <file path="$PROJECT_DIR$/log/development.log" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368353135019" ignored="false" />
+    <file path="/gl-guider-player.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368354540117" ignored="false" />
+    <file path="$PROJECT_DIR$/log/development.log" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368354586132" ignored="false" />
     <file path="/devise.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367787695165" ignored="false" />
     <file path="/Ruby Console" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367871112967" ignored="false" />
     <file path="/20130506053950_add_dependency_to_user.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367818890441" ignored="false" />
@@ -91,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gl-guider-player.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="gl-guider-player.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="319" column="49" selection-start="10242" selection-end="10242" vertical-scroll-proportion="0.0">
+            <state line="36" column="0" selection-start="901" selection-end="1009" vertical-scroll-proportion="0.71662766">
               <folding />
             </state>
           </provider>
@@ -103,7 +103,7 @@
       <file leaf-file-name="player.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="17" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
+            <state line="33" column="15" selection-start="1501" selection-end="1516" vertical-scroll-proportion="-18.115385">
               <folding />
             </state>
           </provider>
@@ -118,10 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buildingBlocks.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="buildingBlocks.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="22" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.37394452">
+            <state line="85" column="27" selection-start="1326" selection-end="1326" vertical-scroll-proportion="-11.72">
               <folding />
             </state>
           </provider>
@@ -200,8 +200,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/gl-editor.js" />
         <option value="$PROJECT_DIR$/app/views/guider/editor.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js" />
       </list>
     </option>
   </component>
@@ -1148,13 +1148,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="17" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="14" selection-start="513" selection-end="530" vertical-scroll-proportion="0.0">
@@ -1169,16 +1162,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="319" column="49" selection-start="10242" selection-end="10242" vertical-scroll-proportion="0.0">
+        <state line="85" column="27" selection-start="1326" selection-end="1326" vertical-scroll-proportion="-11.72">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css">
+    <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="22" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.37394452">
+        <state line="33" column="15" selection-start="1501" selection-end="1516" vertical-scroll-proportion="-18.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="901" selection-end="1009" vertical-scroll-proportion="0.71662766">
           <folding />
         </state>
       </provider>

@@ -27,7 +27,7 @@
     <file path="$PROJECT_DIR$/../../SlidesLive/sl_web_ruby/app/controllers/embed_controller.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367442855755" ignored="false" />
     <file path="/guiderJSON.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368298718812" ignored="false" />
     <file path="/gl-guider-player.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368361750026" ignored="false" />
-    <file path="$PROJECT_DIR$/log/development.log" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368362631295" ignored="false" />
+    <file path="$PROJECT_DIR$/log/development.log" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368362702061" ignored="false" />
     <file path="/devise.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367787695165" ignored="false" />
     <file path="/Ruby Console" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367871112967" ignored="false" />
     <file path="/20130506053950_add_dependency_to_user.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1367818890441" ignored="false" />
@@ -45,8 +45,8 @@
     <file path="/buildingBlocks.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368362044047" ignored="false" />
     <file path="/generalTricks.css" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368171593565" ignored="false" />
     <file path="/home.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368173388888" ignored="false" />
-    <file path="/guider.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368362419604" ignored="false" />
-    <file path="/editor.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368309302420" ignored="false" />
+    <file path="/guider.css.scss" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368363672316" ignored="false" />
+    <file path="/editor.html.erb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368363643360" ignored="false" />
     <file path="/20130509110350_add_question_enabled_to_steps.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368097536408" ignored="false" />
     <file path="/gl-values.js" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368104024785" ignored="false" />
     <file path="/20130509171648_add_published_to_guiders.rb" changelist="5bc11118-2b26-435c-b4cf-fb3f9cc58a5d" time="1368119847363" ignored="false" />
@@ -100,19 +100,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editor.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="editor.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="31" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.794686">
+            <state line="7" column="18" selection-start="339" selection-end="339" vertical-scroll-proportion="-4.576923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="guider.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="guider.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="12" selection-start="185" selection-end="189" vertical-scroll-proportion="-1.04">
+            <state line="155" column="24" selection-start="2700" selection-end="2700" vertical-scroll-proportion="0.35343787">
               <folding />
             </state>
           </provider>
@@ -155,8 +155,8 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js" />
         <option value="$PROJECT_DIR$/app/views/guider/player.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss" />
         <option value="$PROJECT_DIR$/app/views/guider/editor.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss" />
       </list>
     </option>
   </component>
@@ -1069,30 +1069,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="305" column="30" selection-start="11883" selection-end="11885" vertical-scroll-proportion="-22.28">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="77" selection-start="4351" selection-end="4351" vertical-scroll-proportion="-4.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/player.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="36" selection-start="1672" selection-end="1672" vertical-scroll-proportion="-11.90196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12" selection-start="185" selection-end="189" vertical-scroll-proportion="-1.04">
           <folding />
         </state>
       </provider>
@@ -1132,6 +1111,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-editor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="305" column="30" selection-start="11883" selection-end="11885" vertical-scroll-proportion="-22.28">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/buildingBlocks.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="14" selection-start="463" selection-end="467" vertical-scroll-proportion="-23.12">
@@ -1139,9 +1125,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/gl-guider-player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="77" selection-start="4351" selection-end="4351" vertical-scroll-proportion="-4.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/guider/editor.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="31" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.794686">
+        <state line="7" column="18" selection-start="339" selection-end="339" vertical-scroll-proportion="-4.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/guider.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="24" selection-start="2700" selection-end="2700" vertical-scroll-proportion="0.35343787">
           <folding />
         </state>
       </provider>

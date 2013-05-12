@@ -118,20 +118,17 @@ function isStepFinished(stepNumber){
 
 function showStep(stepNumber){
 	if(!isValidStep(stepNumber))	return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR);
+    currentStepNumber = stepNumber;
 
-    console.log(guiderJSON.steps)
-    console.log("Hodnota objektu "+guiderJSON.steps[currentStepNumber-1].questionEnabled+" -  "+guiderJSON.steps[currentStepNumber-1].originalLink+"///////////////////////////////////");
     window.clearInterval(stepDoneTimer);
     if(guiderJSON.steps[currentStepNumber-1].questionEnabled == "false"){
-        console.log("spoustim timeout "+guiderJSON.steps[currentStepNumber-1].questionEnabled);
-        stepDoneTimer = setTimeout(markStepAsFinished,5000);
+        stepDoneTimer = setTimeout(markStepAsFinished,30000);
     }
 
 	//Check if step is loaded, otherwise load it
 	if(!isStepLoaded(stepNumber)) loadStep(stepNumber);
 
 	//Match current step number in special cases and refresh controls
-	currentStepNumber = stepNumber;
 	refreshQuestionBox();
 	showCurrentControls();
     clearAnswers();

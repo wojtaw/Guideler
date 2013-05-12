@@ -309,10 +309,20 @@ function clearAnswers(){
 }
 
 function displayQuestion(){
-	$("#gl-questionWindow").css("display","block");
+    var questionWindow = $("#gl-questionWindow");
+    questionWindow.css("top","-500px");
+    questionWindow.css("display","block");
+    questionWindow.css("opacity","0");
+    questionWindow.animate({top:'80px',opacity:'1'},1000,"swing");
 }
 
 function hideQuestion(){
+    var questionWindow = $("#gl-questionWindow");
+    questionWindow.css("opacity","1");
+    questionWindow.animate({top:'-500px',opacity:'0'},1000,"swing", hideQuestionBlock);
+}
+
+function hideQuestionBlock(e){
     $("#gl-questionWindow").css("display","none");
 }
 

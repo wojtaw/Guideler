@@ -147,9 +147,31 @@ function showStep(stepNumber){
 }
 
 function markStepAsFinished(){
-
     stepsFinished[currentStepNumber-1] = true;
+    increaseProgress();
     showCurrentControls();
+}
+
+function increaseProgress(){
+    var successCount = 0;
+    var totalSteps = guiderJSON.steps.length;
+    var progressBar = $('#gl-progressBar');
+    for(var i=0;i<totalSteps;i++){
+        console.log(stepsFinished[i]);
+        if(stepsFinished[i] == true) successCount++;
+    }
+    var currentPercantage = parseInt(progressBar.html());
+    var newPercentage = Math.round(100 * (successCount / totalSteps));
+
+    var tmpInterval = setInterval(function(){
+        currentPercantage++;
+        if(currentPercantage >= newPercentage) window.clearInterval(tmpInterval);
+        progressBar.html(currentPercantage+"%");
+    },100)
+
+    console.log("Current percentage "+currentPercantage);
+
+
 }
 
 function refreshQuestionBox(){
@@ -278,6 +300,7 @@ function checkAnswer(){
 
     if(answer == correctAnswer){
 		stepsFinished[currentStepNumber-1] = true;
+        increaseProgress();
         selectedField.css("background-color","#d1f0bd");
         selectedField.css("border","solid 2px #346f0d");
         flashMessage.css("color","#459410");

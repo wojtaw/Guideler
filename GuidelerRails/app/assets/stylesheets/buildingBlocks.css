@@ -112,7 +112,7 @@ h3 {
     width: 60px;
     height: 50px;
     margin-left: 30px;
-    margin-right: 50px;
+    margin-right: 20px;
     margin-top: 20px;
     float: left;
     cursor: pointer;
@@ -148,9 +148,21 @@ h3 {
 #gl-progressBar{
     float: left;
     color: #FFFFFF;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 300;
+    margin-top: 10px;
+    margin-right: 30px;
+    margin-left: 30px;
+}
 
+.player-barSplitter {
+    float: left;
+    width: 2px;
+    background-color: #919191;
+    position: relative;
+    height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #gl-playerCanvas {

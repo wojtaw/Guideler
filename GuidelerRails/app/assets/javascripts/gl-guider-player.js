@@ -23,11 +23,10 @@ function keyboardHandler(e){
 };
 
 function recalculatePlayer(){
-	console.log("recalculating player");
 	boxStandartWidth = ($(window).width() * 0.7);
 	boxStandartSpacing = ($(window).width() * 1.3);
 
-    viewportHeight = 0.95*($(window).height() - $("#gl-stepsContent").offset().top - $("#gl-playerBottomBar").height() - (0.05*$(window).height()));
+    viewportHeight = ($(window).height() - $("#gl-stepsContent").offset().top - $("#gl-playerBottomBar").height() - (0.05*$(window).height())-70);
 
 	modifyCSSclass();
 	positionStepBoxes();
@@ -37,17 +36,18 @@ function modifyCSSclass(){
 //	var videoWidth = Math.round(boxStandartWidth * 0.85);
 //	var videoHeight = Math.round((9*videoWidth) / 16);
 
-    var videoWidth = Math.round(boxStandartWidth * 0.85);
-    var videoHeight = Math.round((9*videoWidth) / 16);
+    var videoHeight = Math.round(viewportHeight);
+    var videoWidth = Math.round((16*videoHeight) / 9);
 
-    var slideHeight = 600;
-    var slideWidth = 1000;
 
-	var generalBoxWidth = Math.round(boxStandartWidth * 0.9);
-	var generalBoxHeight = Math.round((generalBoxWidth * 9) / 16);
+    var slideHeight = Math.round(viewportHeight);
+    var slideWidth = Math.round((427*slideHeight) / 340);
+
+	var generalBoxWidth = Math.round(boxStandartWidth - 30);
+	var generalBoxHeight = Math.round(viewportHeight);
 
 	var cssHtmlString = '.gl-dynamic-videoAspectRatio{ width:'+videoWidth+'px; height:'+videoHeight+'px;}'+
-			'.generalBox{ width:'+generalBoxWidth+'px; height:'+generalBoxHeight+'px;}'+
+			'.gl-dynamic-generalBox{ width:'+generalBoxWidth+'px; height:'+generalBoxHeight+'px;}'+
             '.gl-dynamic-soundcloudEmbed{ width:'+(boxStandartWidth-16)+'px;}'+
             '.gl-dynamic-slideAspectRatio{ width:'+slideWidth+'px; height:'+slideHeight+'px;}';
 
@@ -88,7 +88,6 @@ function getGuiderData(guiderID){
 }
 
 function initStage(){
-	console.log("Initing stage");
 	styleStage();
     animateBrain();
 	initStepBoxes();
@@ -120,10 +119,12 @@ function isStepFinished(stepNumber){
 function showStep(stepNumber){
 	if(!isValidStep(stepNumber))	return printOutput("Step number "+stepNumber+"is out of range", outputTypes.ERROR);
 
+    console.log(guiderJSON.steps)
+    console.log("Hodnota objektu "+guiderJSON.steps[currentStepNumber-1].questionEnabled+" -  "+guiderJSON.steps[currentStepNumber-1].originalLink+"///////////////////////////////////");
     window.clearInterval(stepDoneTimer);
     if(guiderJSON.steps[currentStepNumber-1].questionEnabled == "false"){
         console.log("spoustim timeout "+guiderJSON.steps[currentStepNumber-1].questionEnabled);
-        stepDoneTimer = setTimeout(markStepAsFinished,8000);
+        stepDoneTimer = setTimeout(markStepAsFinished,5000);
     }
 
 	//Check if step is loaded, otherwise load it
@@ -149,7 +150,7 @@ function showStep(stepNumber){
 }
 
 function markStepAsFinished(){
-    console.log("finished");
+
     stepsFinished[currentStepNumber-1] = true;
     showCurrentControls();
 }
@@ -212,7 +213,6 @@ function positionStepBoxes() {
 	$("#gl-stepsContent").width(widthMax);
 	//Count height depending on top and bottom bar
 	var countedPlayerHeight = $(window).height() - $("#gl-playerTopBar").outerHeight() - $("#gl-playerBottomBar").outerHeight();
-	console.log("Counted height "+countedPlayerHeight);
 
 	$("#gl-stepsContent").height(countedPlayerHeight+"px");
 //	$("#gl-stepsContent").draggable({
@@ -265,8 +265,6 @@ function initListeners() {
 }
 
 function checkAnswer(){
-	console.log("Answered");
-    console.log("Correct answer is"+guiderJSON.steps[currentStepNumber-1].correctAnswer);
 	var answer = parseInt($('input[name=gl-answers]:checked').val());
     var correctAnswer = parseInt(guiderJSON.steps[currentStepNumber-1].correctAnswer);
 	if(typeof(answer)=='undefined'){

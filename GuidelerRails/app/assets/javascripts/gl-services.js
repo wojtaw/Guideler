@@ -3,7 +3,6 @@ var generatedRandomIDs = new Array();
 function createStepString(serviceType,externalData){
     var stepString = "<div class='center'><div class='gl-stepContentWrapper clearfix'>";
     var tmpString = "";
-    console.log("huraa zpitineeee"+serviceType);
 	if(serviceType == "YOUTUBE") stepString += createYoutubeBox(externalData);
 	else if(serviceType == "VIMEO") stepString += (createVimeoBox(externalData));
 	else if(serviceType == "SOUNDCLOUD") stepString += (createSoundCloudBox(externalData));
@@ -88,16 +87,21 @@ function createVimeoBox(externalData){
 }
 
 function createSLBox(externalData){
+    var defaultWidth = 960;
+    if(viewportHeight > 300){
+        defaultWidth = Math.round((5*viewportHeight) / 3);
+    }
+
 	var htmlString = '<div class="gl-slidesliveBox"><script type="text/javascript" id="sle81767">'+
 			'slidesLive = createSlidesLiveBox();'+
 			'slidesLive.bgColor="transparent"; '+
-			'slidesLive.embedPresentation('+externalData+',960); '+
+			'slidesLive.embedPresentation('+externalData+','+defaultWidth+'); '+
 			'</script></div>';
 	return htmlString;	
 }
 
 function createGeneralBox(externalData){
-    var htmlString = '<iframe src="'+externalData+'" class="generalBox center"></iframe>'
+    var htmlString = '<iframe src="'+externalData+'" class="gl-dynamic-generalBox center"></iframe>';
 	return htmlString;	
 }
 

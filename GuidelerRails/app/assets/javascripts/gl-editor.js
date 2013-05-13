@@ -9,10 +9,12 @@ var editorGuiderJSON = new Object();
 var editSteps = new Array();
 var currentEditStep = 0;
 var guiderEditID = -1;
+var isEditorSaved = true;
 
 function initEditor(guiderEditID){
     //Add CSS class via unique ID
     $('body').attr('id', 'editor-body');
+    window.onbeforeunload = tabCloseConfirmationDialog;
 
     this.guiderEditID = guiderEditID;
     //First load steps of this guider
@@ -39,6 +41,11 @@ function initEditor(guiderEditID){
     });
 }
 
+function tabCloseConfirmationDialog(){
+    if (!isEditorSaved)
+        return "Do you really want to exit without saving?";
+}
+
 //////////////INIT functions
 function prepareEditJSON(){
     for(var i=0;i<editSteps.length;i++){
@@ -55,6 +62,7 @@ function prepareEditJSON(){
 function saveSuccess(e) {
     console.log("Server responded: "+e);
     $("#edit-saveGuiderButton").html("Saved");
+    isEditorSaved = true;
 }
 
 function editorJSONloadingFinished(){
@@ -66,6 +74,7 @@ function editorJSONloadingFinished(){
 
     initEditorListeners();
     redrawEditorGUI();
+    isEditorSaved = true;
 }
 
 function initEditorListeners() {
@@ -114,6 +123,7 @@ function saveEditData(){
 //--------REDRAWING GUI
 function redrawEditorGUI(){
     $("#edit-saveGuiderButton").html("Save");
+    isEditorSaved = false;
     showSwitchState();
     refreshStepBar();
     refreshEditTabs();

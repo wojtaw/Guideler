@@ -42,7 +42,7 @@ function createSlideshareBox(externalData){
 
     $.ajax({
         type: 'GET',
-        url: "http://www.slideshare.net/api/oembed/2?url=http://www.slideshare.net/nminspiration/nmi13-jiri-materna",
+        url: externalData,
         async: false,
         jsonpCallback: 'jsonCallback',
         contentType: "application/json",

@@ -42,7 +42,7 @@ function createSlideshareBox(externalData){
 
     $.ajax({
         type: 'GET',
-        url: externalData,
+        url: "http://www.slideshare.net/api/oembed/2?url="+externalData,
         async: false,
         jsonpCallback: 'jsonCallback',
         contentType: "application/json",

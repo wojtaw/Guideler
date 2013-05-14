@@ -1,11 +1,21 @@
+#development: &default
+#  adapter: postgresql
+#  encoding: unicode
+#  host: localhost
+#  database: guideler
+#  pool: 5
+#  username: postgres
+#  password: postgres
+#
 development: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  database: guideler
   pool: 5
-  username: postgres
-  password: postgres
+  database: d65l707t4k4p8q
+  username: swafpsomnsfmmr
+  password: GnSV5R33NianvEEO9Xu7qPAQ_T
+  host: ec2-54-247-64-184.eu-west-1.compute.amazonaws.com
+  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

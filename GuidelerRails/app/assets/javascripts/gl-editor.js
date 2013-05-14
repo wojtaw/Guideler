@@ -22,7 +22,7 @@ function initEditor(guiderEditID){
         editorGuiderJSON.guiderName = data.guiderName;
         editorGuiderJSON.guiderName = data.guiderName;
 
-        console.log("looping through steps "+data.steps.length)
+        //console.log("looping through steps "+data.steps.length)
         for(var i=0;i < data.steps.length;i++){
             var externalLink = data.steps[i].originalLink;
             var description = data.steps[i].description;
@@ -55,12 +55,12 @@ function prepareEditJSON(){
     editorGuiderJSON.guiderName = $("#edit-guiderName").val();
     editorGuiderJSON.guiderDescription = $("#edit-guiderDescription").val();
     editorGuiderJSON.steps = editSteps;
-    console.log("Sending out");
-    console.log(JSON.stringify(editorGuiderJSON));
+    //console.log("Sending out");
+    //console.log(JSON.stringify(editorGuiderJSON));
 }
 
 function saveSuccess(e) {
-    console.log("Server responded: "+e);
+    //console.log("Server responded: "+e);
     $("#edit-saveGuiderButton").html("Saved");
     isEditorSaved = true;
 }
@@ -130,8 +130,8 @@ function redrawEditorGUI(){
     colorAnswerField();
 }
 function refreshStepBar(){
-    console.log("Refreshing");
-    console.log(editSteps)
+    //console.log("Refreshing");
+    //console.log(editSteps)
     var editStepButtons= [];
     //TODO
     var stateClass = "edit-step-empty";
@@ -176,7 +176,7 @@ function refreshEditTabs() {
 function lightServiceIcon(sourceLink){
     $('#edit-serviceBar').animate({opacity: 1}, 300);
     var tmpResult = parseURLHost(sourceLink);
-    console.log("Matching resullllllllllllt"+tmpResult);
+    //console.log("Matching resullllllllllllt"+tmpResult);
     var servicesArray = new Array("google","youtube","vimeo","flickr","picasa","soundcloud","wordpress","wikipedia","slideslive","slideshare");
     for(var i=0;i<servicesArray.length;i++){
         if(servicesArray[i] == tmpResult){
@@ -280,7 +280,7 @@ function validateAndFixURL(checkUrl){
 }
 
 function isBrokenURL(brokenURL){
-    console.log("BROKEN DOMAIN");
+    //console.log("BROKEN DOMAIN");
     var containsEnding = false;
     var tldArray = new Array(".aero",".biz",".cat",".com",".coop",".edu",".gov",".info",".int",".jobs",".mil",".mobi",".museum",
         ".name",".net",".org",".travel",".ac",".ad",".ae",".af",".ag",".ai",".al",".am",".an",".ao",".aq",".ar",".as",".at",".au",".aw",
@@ -304,7 +304,7 @@ function isBrokenURL(brokenURL){
 function parseURLHost(urlToParse){
     urlToParse = validateAndFixURL(urlToParse);
     if(urlToParse == "false") return "FALSE";
-    console.log("Parsiing -" + urlToParse);
+    //console.log("Parsiing -" + urlToParse);
     var a =  document.createElement('a');
     a.href = urlToParse;
     var result = String(a.hostname);

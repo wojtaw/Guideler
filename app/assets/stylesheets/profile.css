@@ -86,3 +86,11 @@
     height: 200px;
 
 }
+
+#profile-profileImage {
+    width: 159px;
+    height: 159px;
+    display: block;
+    background-image: url("profile/me.png");
+    background-repeat: no-repeat;
+}

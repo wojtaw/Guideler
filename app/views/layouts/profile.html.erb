@@ -29,6 +29,8 @@
 
   <div class="center">
     <% if user_signed_in? %>
+        <div class="center"><div id="profile-profileImage"></div></div>
+
         <%= current_user.email %> <br>
         <%= link_to("Me", display_profile_path) %> <br>
         <%= link_to("My Guiders", manage_all_path) %> <br>

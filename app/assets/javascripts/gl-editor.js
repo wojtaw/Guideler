@@ -84,8 +84,19 @@ function initEditorListeners() {
     $("#edit-stepLink").blur(linkEntered);
     $('input[name=edit-correctAnswer]').change(colorAnswerField);
 
+
+    $(document).bind('keydown', function(e) {
+        if(e.ctrlKey && (e.which == 83)) {
+            e.preventDefault();
+            saveEditData();
+            return false;
+        }
+    });
+
     refreshStepListeners();
 }
+
+
 
 function colorAnswerField(){
    var tmpValue = $('input[name=edit-correctAnswer]:checked').val();
@@ -169,6 +180,7 @@ function refreshEditTabs() {
     $('#edit-answer1').val(editSteps[currentEditStep].answer1);
     $('#edit-answer2').val(editSteps[currentEditStep].answer2);
     $('#edit-answer3').val(editSteps[currentEditStep].answer3);
+    $('#edit-answer3').val(editSteps[currentEditStep].description);
     //Decheck radios and check proper one
     $('#edit-radio-answer'+editSteps[currentEditStep].correctAnswer).get(0).checked = true;
 }

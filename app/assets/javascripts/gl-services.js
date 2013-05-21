@@ -9,6 +9,7 @@ function createStepString(serviceType,externalData){
     else if(serviceType == "SLIDESHARE") stepString += (createSlideshareBox(externalData));
     else if(serviceType == "FLICKR") stepString += (createFlickrBox(externalData));
     else if(serviceType == "SLIDESLIVE") stepString += (createSLBox(externalData));
+    else if(serviceType == "INSTAGRAM") stepString += (createInstagramBox(externalData));
 	else if(serviceType == "GENERAL") stepString += (createGeneralBox(externalData));
     else if(serviceType == "CUSTOMCODE") stepString += (createCustomCodeBox(externalData));
     stepString += "</div></div>";
@@ -49,6 +50,27 @@ function createSlideshareBox(externalData){
         dataType: 'jsonp',
         success: function(data) {
             $('#slideshare-'+generatedID).attr('src','http://www.slideshare.net/slideshow/embed_code/'+data['slideshow_id']);
+        },
+        error: function(e) {
+            console.log(e.message);
+        }
+    });
+    return htmlString;
+}
+
+function createInstagramBox(externalData){
+    var generatedID = generateUniqueID();
+    var htmlString = "<div class='gl-dynamic-generalBox gl-instagramImage' id='gl-instagram-"+generatedID+"'></div>";
+
+    $.ajax({
+        type: 'GET',
+        url: "http://api.instagram.com/oembed?url="+externalData,
+        async: false,
+        jsonpCallback: 'jsonCallback',
+        contentType: "application/json",
+        dataType: 'jsonp',
+        success: function(data) {
+            $('#gl-instagram-'+generatedID).css('background-image',"url('"+data['url']+"')");
         },
         error: function(e) {
             console.log(e.message);

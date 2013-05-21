@@ -380,4 +380,11 @@ h3 {
     z-index: 2000 !important;
 }
 
+.gl-instagramImage{
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 

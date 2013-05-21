@@ -30,6 +30,7 @@ function recalculatePlayer(){
 
 	modifyCSSclass();
 	positionStepBoxes();
+    showStep(currentStepNumber)
 }
 
 function modifyCSSclass(){

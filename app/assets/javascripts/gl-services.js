@@ -31,7 +31,7 @@ function createSoundCloudBox(externalData){
     var generatedID = generateUniqueID();
     var htmlString = "<div class='gl-dynamic-soundcloudEmbed' id='soundcloud-"+generatedID+"'></div> ";
     $.getJSON('http://soundcloud.com/oembed?',
-        {format: 'json', url: externalData, iframe: true},
+        {format: 'jsonp', url: externalData, iframe: true},
         function(data) {
             $('#soundcloud-'+generatedID).html(data['html']);
         }
@@ -93,11 +93,9 @@ function createScribdBox(externalData){
         contentType: "application/json",
         dataType: 'jsonp',
         success: function(data) {
-            console.log("success"+data['provider_name']);
-            $('#scribd-'+generatedID).html(data['provider_name']);
+            $('#scribd-'+generatedID).html(data['html']);
         },
         error: function(e) {
-            console.log("error");
             console.log(e.message);
         }
     });

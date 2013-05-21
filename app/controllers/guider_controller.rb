@@ -192,7 +192,8 @@ class GuiderController < ApplicationController
         return $5
       end
     elsif service == "SLIDESLIVE"
-      return "38889951"
+      parsing_link[/([0-9]{5,10}\z)/]
+      return $1
     elsif service == "VIMEO"
       parsing_link[/https?:\/\/(?:[\w]+\.)*vimeo\.com(?:[\/\w]*\/videos?)?\/([0-9]+)[^\s]*/]
       return $1

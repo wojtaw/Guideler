@@ -180,7 +180,7 @@ function refreshEditTabs() {
     $('#edit-answer1').val(editSteps[currentEditStep].answer1);
     $('#edit-answer2').val(editSteps[currentEditStep].answer2);
     $('#edit-answer3').val(editSteps[currentEditStep].answer3);
-    $('#edit-answer3').val(editSteps[currentEditStep].description);
+    $('#edit-stepDescription').val(editSteps[currentEditStep].description);
     //Decheck radios and check proper one
     $('#edit-radio-answer'+editSteps[currentEditStep].correctAnswer).get(0).checked = true;
 }
@@ -329,6 +329,7 @@ function parseURLHost(urlToParse){
     else if(result == "flickr.com") return "flickr";
     else if(result == "wikipedia.org") return "wikipedia";
     else if(result == "en.wikipedia.org") return "wikipedia";
+    else if(result == "cs.wikipedia.org") return "wikipedia";
     else if(result == "slideslive.com") return "slideslive";
     else if(result == "slideshare.com") return "slideshare";
     else if(result == "slideshare.net") return "slideshare";

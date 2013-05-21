@@ -88,9 +88,10 @@
 }
 
 #profile-profileImage {
-    width: 159px;
+    width: 100%;
     height: 159px;
     display: block;
     background-image: url("profile/me.png");
+    background-position: center;
     background-repeat: no-repeat;
 }

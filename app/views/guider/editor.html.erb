@@ -1,6 +1,19 @@
 <div class="edit-topBar">
   <input type="text" name="edit-guiderName" id="edit-guiderName" class="mainFont" value="<%= guider.name %>">
   <input type="text" name="edit-guiderDescription" id="edit-guiderDescription" class="mainFont" value="<%= guider.description %>">
+
+  <div id="editor-publishButton">
+      <div class="gl-buttonOutside">
+        <div class="clearfix">
+          <div class="gl-buttonInner">
+            <div class="clearfix">
+              <%= link_to("PUBLISH", new_guider_path, :class => "gl-buttonMain") %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
   <div id="edit-saveGuiderButton">Save</div>
 </div>
 

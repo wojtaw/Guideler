@@ -160,6 +160,11 @@ class GuiderController < ApplicationController
         return "GENERAL"
       end
 
+      #check if it is not generic content like image
+      if parsing_link[/.png|.jpg|.jpeg|.gif|.jpeg2000|.bmp\z/i]
+        return "IMAGE"
+      end
+
       if host.start_with?('www.')
         host = host[4..host.length]
       end

@@ -178,6 +178,8 @@ class GuiderController < ApplicationController
         return "FLICKR"
       elsif host == "instagram.com"
         return "INSTAGRAM"
+      elsif host == "scribd.com"
+        return "SCRIBD"
       else
         return "GENERAL"
       end
@@ -206,6 +208,8 @@ class GuiderController < ApplicationController
     elsif service == "INSTAGRAM"
       return parsing_link;
     elsif service == "FLICKR"
+      return parsing_link;
+    elsif service == "SCRIBD"
       return parsing_link;
     else
       return parsing_link

@@ -103,6 +103,23 @@
   color: #fcd116;
 }
 
+#edit-viewButton {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  float: right;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 30px;
+
+}
+
+#edit-viewButton:hover {
+  color: #fcd116;
+}
+
 #editor-publishButton {
   float: right;
 

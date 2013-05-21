@@ -10,6 +10,7 @@ function createStepString(serviceType,externalData){
     else if(serviceType == "FLICKR") stepString += (createFlickrBox(externalData));
     else if(serviceType == "SLIDESLIVE") stepString += (createSLBox(externalData));
     else if(serviceType == "INSTAGRAM") stepString += (createInstagramBox(externalData));
+    else if(serviceType == "SCRIBD") stepString += (createScribdBox(externalData));
 	else if(serviceType == "GENERAL") stepString += (createGeneralBox(externalData));
     else if(serviceType == "CUSTOMCODE") stepString += (createCustomCodeBox(externalData));
     stepString += "</div></div>";
@@ -45,7 +46,7 @@ function createSlideshareBox(externalData){
         type: 'GET',
         url: "http://www.slideshare.net/api/oembed/2?url="+externalData,
         async: false,
-        jsonpCallback: 'jsonCallback',
+        jsonpCallback: 'jsonCallback1',
         contentType: "application/json",
         dataType: 'jsonp',
         success: function(data) {
@@ -60,19 +61,42 @@ function createSlideshareBox(externalData){
 
 function createInstagramBox(externalData){
     var generatedID = generateUniqueID();
-    var htmlString = "<div class='gl-dynamic-generalBox gl-instagramImage' id='gl-instagram-"+generatedID+"'></div>";
+    var htmlString = "<div class='gl-dynamic-generalBox gl-imageContent' id='gl-instagram-"+generatedID+"'></div>";
 
     $.ajax({
         type: 'GET',
         url: "http://api.instagram.com/oembed?url="+externalData,
         async: false,
-        jsonpCallback: 'jsonCallback',
+        jsonpCallback: 'jsonCallback2',
         contentType: "application/json",
         dataType: 'jsonp',
         success: function(data) {
             $('#gl-instagram-'+generatedID).css('background-image',"url('"+data['url']+"')");
         },
         error: function(e) {
+            console.log(e.message);
+        }
+    });
+    return htmlString;
+}
+
+function createScribdBox(externalData){
+    var generatedID = generateUniqueID();
+    var htmlString = "<div class='gl-dynamic-slideAspectRatio center' id=scribd-"+generatedID+"></div>";
+
+    $.ajax({
+        type: 'GET',
+        url: "http://www.scribd.com/services/oembed?url="+externalData,
+        async: false,
+        jsonpCallback: 'jsonCallback3',
+        contentType: "application/json",
+        dataType: 'jsonp',
+        success: function(data) {
+            console.log("success"+data['provider_name']);
+            $('#scribd-'+generatedID).html(data['provider_name']);
+        },
+        error: function(e) {
+            console.log("error");
             console.log(e.message);
         }
     });

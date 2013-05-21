@@ -5,7 +5,11 @@
       <div class="clearfix">
         <div class="gl-buttonInner">
           <div class="clearfix">
-            <%= link_to("CREATE GUIDER", new_guider_path, :class => "gl-buttonMain") %>
+            <% if user_signed_in? %>
+                <%= link_to("CREATE GUIDER", new_guider_path, :class => "gl-buttonMain") %>
+            <% else %>
+                <%= link_to("CREATE GUIDER", new_user_session_path, :class => "gl-buttonMain") %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -13,9 +17,11 @@
 
     <% if user_signed_in? %>
         <%= link_to("Me", display_profile_path, :class => "gl-homepage-menu") %>
+        <%= link_to("Logout", destroy_user_session_path, :class => "gl-homepage-menu") %>
     <% else %>
         <%= link_to("Login", new_user_session_path, :class => "gl-homepage-menu") %>
     <% end %>
+        <%= link_to("Explore", explore_guiders_path, :class => "gl-homepage-menu") %>
 
     <br><br><br><br><br>
 

@@ -164,6 +164,8 @@ function increaseProgress(){
     var currentPercantage = parseInt(progressBar.html());
     var newPercentage = Math.round(100 * (successCount / totalSteps));
 
+    if(newPercentage > 100) newPercentage = 100;
+
     var tmpInterval = setInterval(function(){
         currentPercantage++;
         if(currentPercantage >= newPercentage) window.clearInterval(tmpInterval);

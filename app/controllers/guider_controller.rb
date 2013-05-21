@@ -55,6 +55,17 @@ class GuiderController < ApplicationController
     end
   end
 
+  def explore_guiders
+
+    if user_signed_in?
+      guiders = Guider.where(:published => true).limit(50);
+      render :locals => { :guiders => guiders }, :layout => "application"
+    else
+      redirect_to show_general_error_path(:error_code => 101)
+    end
+  end
+
+
   def new_guider
 
     guider = Guider.new

@@ -88,4 +88,7 @@ Guideler::Application.routes.draw do
 
   #Error pages
   match 'error/:error_code' => 'error#show_general_error', :as => 'show_general_error'
+
+  #explore page
+  match 'explore' => 'guider#explore_guiders', :as => 'explore_guiders'
 end

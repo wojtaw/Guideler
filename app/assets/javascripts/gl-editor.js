@@ -262,6 +262,8 @@ function saveCurrentStep() {
     var tmpCorrectAnswer = $('input[name=edit-correctAnswer]:checked').val();
     if(typeof(tmpCorrectAnswer)=='undefined') tmpCorrectAnswer = 1;
     editSteps[currentEditStep].correctAnswer = tmpCorrectAnswer;
+
+    if(editSteps[currentEditStep].question == "") editSteps[currentEditStep].questionEnabled = false;
 }
 
 function editStep(stepIndex){

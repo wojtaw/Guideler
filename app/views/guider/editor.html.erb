@@ -9,9 +9,9 @@
           <div class="gl-buttonInner">
             <div class="clearfix">
               <% if guider.published %>
-                  <%= link_to("PUBLISH", api_publish_guider_path, :class => "gl-buttonMain") %>
-              <% else %>
                   <%= link_to("PUBLISHED", g_path, :class => "gl-buttonMain") %>
+              <% else %>
+                  <div class="gl-buttonMain" id="edit-publishButton">PUBLISH</div>
               <% end %>
 
             </div>

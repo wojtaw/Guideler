@@ -80,6 +80,7 @@ function editorJSONloadingFinished(){
 function initEditorListeners() {
     $("#edit-newStepButton").click(addStep);
     $("#edit-saveGuiderButton").click(saveEditData);
+    $("#edit-publishButton").click(publishGuider);
     $("#edit-questionSwitch").click(questionEnableSwitch);
     $("#edit-stepLink").blur(linkEntered);
     $('input[name=edit-correctAnswer]').change(colorAnswerField);
@@ -131,6 +132,26 @@ function saveEditData(){
         success: saveSuccess()
     });
 }
+
+
+function publishGuider(){
+    $("#edit-publishButton").html("Publishing...");
+
+    $.ajax({
+        url: '/api/publish_guider/'+guiderEditID,
+        type: 'GET',
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: true,
+        success: guiderPublished()
+    });
+}
+
+function guiderPublished(e){
+    $("#edit-publishButton").html("PUBLISHED");
+}
+
+
 
 //--------REDRAWING GUI
 function redrawEditorGUI(){

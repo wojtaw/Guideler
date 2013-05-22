@@ -85,7 +85,7 @@ Guideler::Application.routes.draw do
   #Technical, API
   match 'api/get_guider_info/:guiderID' => 'guider#guiderJSON', :as => 'api_get_info', :constraints => { :guiderID => guider_regexp }
   match 'api/edit_guider' => 'guider#api_edit_guider', :as => 'api_edit_guider', :constraints => { :guiderID => guider_regexp }
-  match 'api/publish_guider' => 'guider#api_publish_guider', :as => 'api_publish_guider', :constraints => { :guiderID => guider_regexp }
+  match 'api/publish_guider/:guiderID' => 'guider#api_publish_guider', :as => 'api_publish_guider', :constraints => { :guiderID => guider_regexp }
 
   #Error pages
   match 'error/:error_code' => 'error#show_general_error', :as => 'show_general_error'

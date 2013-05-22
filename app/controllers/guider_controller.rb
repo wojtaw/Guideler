@@ -131,12 +131,23 @@ class GuiderController < ApplicationController
   end
 
   def api_publish_guider
-    guider = Guider.find(result['guiderID'])
+    guider = Guider.find(params[:guiderID])
 
-    guider.published = true;
-    guider.save
+    if user_signed_in?
+      if current_user.id == guider.user_id
+        guider.published = true;
+        guider.save
 
-    render :inline => 'SUCCESS'
+        render :inline => 'SUCCESS'
+      else
+        render :inline => 'NOT OWNER'
+      end
+    else
+      render :inline => 'UNAUTHORIZED'
+    end
+
+
+
   end
 
   def guiderJSON

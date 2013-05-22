@@ -32,7 +32,7 @@ function createSoundCloudBox(externalData){
     var generatedID = generateUniqueID();
     var htmlString = "<div class='gl-dynamic-soundcloudEmbed' id='soundcloud-"+generatedID+"'></div> ";
     $.getJSON('http://soundcloud.com/oembed?',
-        {format: 'jsonp', url: externalData, iframe: true},
+        {format: 'json', url: externalData, iframe: true},
         function(data) {
             $('#soundcloud-'+generatedID).html(data['html']);
         }

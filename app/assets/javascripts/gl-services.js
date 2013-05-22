@@ -12,6 +12,7 @@ function createStepString(serviceType,externalData){
     else if(serviceType == "INSTAGRAM") stepString += (createInstagramBox(externalData));
     else if(serviceType == "SCRIBD") stepString += (createScribdBox(externalData));
 	else if(serviceType == "GENERAL") stepString += (createGeneralBox(externalData));
+    else if(serviceType == "GOOGLEMAPS") stepString += (createGMapsBox(externalData));
     else if(serviceType == "IMAGE") stepString += (createImageBox(externalData));
     else if(serviceType == "CUSTOMCODE") stepString += (createCustomCodeBox(externalData));
     stepString += "</div></div>";
@@ -148,6 +149,11 @@ function createSLBox(externalData){
 function createGeneralBox(externalData){
     var htmlString = '<iframe src="'+externalData+'" class="gl-dynamic-generalBox center"></iframe>';
 	return htmlString;	
+}
+
+function createGMapsBox(externalData){
+    var htmlString = '<iframe src="'+externalData+'&output=embed" class="gl-dynamic-generalBox center"></iframe>';
+    return htmlString;
 }
 
 function createImageBox(externalData){

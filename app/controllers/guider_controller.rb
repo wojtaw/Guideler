@@ -56,13 +56,8 @@ class GuiderController < ApplicationController
   end
 
   def explore_guiders
-
-    if user_signed_in?
-      guiders = Guider.where(:published => true).limit(50);
-      render :locals => { :guiders => guiders }, :layout => "application"
-    else
-      redirect_to show_general_error_path(:error_code => 101)
-    end
+    guiders = Guider.where(:published => true).limit(50);
+    render :locals => { :guiders => guiders }, :layout => "application"
   end
 
 
@@ -196,6 +191,8 @@ class GuiderController < ApplicationController
         return "INSTAGRAM"
       elsif host == "scribd.com"
         return "SCRIBD"
+      elsif host == "maps.google.com"
+        return "GOOGLEMAPS"
       else
         return "GENERAL"
       end
@@ -226,6 +223,8 @@ class GuiderController < ApplicationController
     elsif service == "FLICKR"
       return parsing_link;
     elsif service == "SCRIBD"
+      return parsing_link;
+    elsif service == "GOOGLEMAPS"
       return parsing_link;
     else
       return parsing_link

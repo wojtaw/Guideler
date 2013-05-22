@@ -41,7 +41,7 @@ function initEditor(guiderEditID){
     });
 }
 
-function tabCloseConfirmationDialog(){
+function tabCloseConfirmationDialog(e){
     if (!isEditorSaved)
         return "Do you really want to exit without saving?";
 }
@@ -83,6 +83,7 @@ function initEditorListeners() {
     $("#edit-questionSwitch").click(questionEnableSwitch);
     $("#edit-stepLink").blur(linkEntered);
     $('input[name=edit-correctAnswer]').change(colorAnswerField);
+    $("#editor-logoToHomepage").click(tabCloseConfirmationDialog);
 
 
     $(document).bind('keydown', function(e) {

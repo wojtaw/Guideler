@@ -387,4 +387,12 @@ h3 {
     background-position: center;
 }
 
+.gl-logoToHomepage {
+    background-image: url("general/gl-logo-web.png");
+    width: 215px;
+    height: 60px;
+    margin-left: 15px;
+    float: left;
+}
+
 

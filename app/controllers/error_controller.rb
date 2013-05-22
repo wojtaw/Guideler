@@ -12,7 +12,7 @@ class ErrorController < ApplicationController
     elsif params[:error_code] == "104"
       error_message = "Whoops, guider not found! :-/"
     elsif params[:error_code] == "105"
-      error_message = ""
+      error_message = "This guider was not published and can be viewed only by owner"
     elsif params[:error_code] == "106"
       error_message = ""
     else

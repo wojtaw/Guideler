@@ -2,7 +2,19 @@ class GuiderController < ApplicationController
   def player
     guider = Guider.find(params[:guiderID])
 
-    render :locals => { :guider => guider}
+    #is it author
+    if guider.published
+      render :locals => { :guider => guider}
+    elsif user_signed_in?
+      if current_user.id == guider.user_id
+        render :locals => { :guider => guider}
+      else
+        redirect_to show_general_error_path(:error_code => 105)
+      end
+    else
+      redirect_to show_general_error_path(:error_code => 105)
+    end
+
 
   rescue ActiveRecord::StatementInvalid
     redirect_to show_general_error_path(:error_code => 103)

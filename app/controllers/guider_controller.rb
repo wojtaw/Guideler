@@ -130,6 +130,15 @@ class GuiderController < ApplicationController
     render :inline => 'SUCCESS'
   end
 
+  def api_publish_guider
+    guider = Guider.find(result['guiderID'])
+
+    guider.published = true;
+    guider.save
+
+    render :inline => 'SUCCESS'
+  end
+
   def guiderJSON
     guider = Guider.find(params[:guiderID])
 
